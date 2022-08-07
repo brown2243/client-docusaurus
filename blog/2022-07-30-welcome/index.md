@@ -1,5 +1,5 @@
 ---
-slug: post
+slug: post/0
 title: 개발자 1주년 회고 및 주 회고 시작
 authors: [brown]
 tags: [hello, motivation]
