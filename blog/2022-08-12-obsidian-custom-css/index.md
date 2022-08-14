@@ -22,7 +22,7 @@ obsidian 기본 테마도 나름 괜찮지만 새로운 테마를 적용하고, 
 
 `open settings -> appearance -> theme` 보면 사람들이 올려 놓은 테마를 볼 수 있다.
 
-본인은 눈에는 그 중에서 `obsidianate`가 젤 이뻐서 다운 받았다.
+본인의 눈에는 그 중에서 `obsidianate`가 젤 이뻐서 다운 받았다.
 
 [warp](https://www.warp.dev/) 와 느낌이 유사한게 아주 마음에 들었다.
 
