@@ -82,6 +82,8 @@ gtag 추적 아이디는 어짜피 사이트에서 다 보이니 굳이 감출 �
 
 ![google search](20220820192938.png)
 
+참고로 구글 애널리틱스, 서치 콘솔 둘다 등록 하면 `search console insights`라는 페이지를 볼 수 있다.
+
 ## 8. sitemap
 
 사이트 맵 주소는 `$address/sitemap.xml`이다
