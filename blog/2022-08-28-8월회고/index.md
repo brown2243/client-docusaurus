@@ -4,7 +4,7 @@ title: 8월 회고 및 9월 계획
 
 authors: [brown]
 tags: [Monthly retrospective, Monthly Planning]
-Date: 2022-08-28 22:31
+Date: 2022-08-28 22:00
 ---
 
 # 8월 회고 및 9월 계획

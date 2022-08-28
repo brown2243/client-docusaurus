@@ -1,6 +1,6 @@
 ---
 slug: post/10
-title: hello-rust
+title: Chap.1 hello-rust
 
 authors: [brown]
 tags: [hello-rust, rust, rustup, cargo]
