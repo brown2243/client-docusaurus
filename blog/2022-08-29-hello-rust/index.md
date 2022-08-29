@@ -22,13 +22,13 @@ Date: 2022-08-28 22:31
 
 ## 개발환경 세팅
 
-`rustup` : 러스트 버전 및 러스트 관련 툴을 관리하는 커맨드라인 도구
+- `rustup` : 러스트 버전 및 러스트 관련 툴을 관리하는 커맨드라인 도구
 
-`brew install rustup-init`
-`rustup-init`
+- `brew install rustup-init`
+- `rustup-init`
 
-`rustup update` update
-`rustup self uninstall` delete
+- `rustup update` update
+- `rustup self uninstall` delete
 
 - rustup -  `rust` 버전 및 관련 도구들을 위한 커맨드라인 도구이다
   - `rustc` -> 컴파일러: `rust` 코드를 컴퓨터가 이해할 수 있는 언어로 변경해주는 도구
