@@ -1,13 +1,13 @@
 ---
 slug: post/10
-title: Chap.1 hello-rust
+title: Chap.1 Hello-rust
 
 authors: [brown]
 tags: [hello-rust, rust, rustup, cargo]
 Date: 2022-08-28 22:31
 ---
 
-# hello-rust
+# Hello-rust
 
 ---
 
@@ -37,13 +37,13 @@ Date: 2022-08-28 22:31
 
 ## Hello, Rust!
 
-`main.rs` 을 `rustc`로 바이너리파일로 컴파일 -> `main` 실행파일 생성
-`rustc main.rs` -> `./main`
+- `main.rs` 을 `rustc`로 바이너리파일로 컴파일 -> `main` 실행파일 생성
+- `rustc main.rs` -> `./main`
 
 ### Cargo 로 프로젝트 생성하기
 
-`cargo init`
-`cargo project name`
+- `cargo init`
+- `cargo project name`
 
 ```toml
 [package]
