@@ -1,5 +1,5 @@
 ---
-slug: post/18
+slug: post/17
 title: 저급언어, 고급언어
 
 authors: [brown]
