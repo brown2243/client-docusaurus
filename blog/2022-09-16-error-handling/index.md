@@ -1,5 +1,5 @@
 ---
-slug: post/22
+slug: post/21
 title: 2달 정도의 회고
 
 authors: [brown]

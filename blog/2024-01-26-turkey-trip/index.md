@@ -1,5 +1,5 @@
 ---
-slug: post/22
+slug: post/24
 title: 터키 2주 여행 후기 1편
 
 authors: [brown]
