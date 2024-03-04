@@ -11,9 +11,9 @@ Date: 2024-03-04 15:00
 
 ## Intro
 
-예전에 블로그 처음 만들고, 표지도 그대로 두고 글만 썼었다.
+예전에 블로그를 처음 만들고, 기본 프로젝트 상태에서 포스트만 작성했었다.
 
-최근에 블로그를 손 볼 마음으로 확인해보니 docusaurus 버전도 2에서 3로 올라 갔더라.
+그러다 한번 리뉴얼 해볼까 하는 마음으로 확인해보니 docusaurus 버전도 2에서 3로 올라 갔더라.
 
 그래도 algolia Doc Search 기능은 붙여 놨었는데, 이번에 전반적으로 리뉴얼 해볼 겸 다시 붙이는 과정을 정리해보려고 한다.
 
@@ -21,11 +21,11 @@ Date: 2024-03-04 15:00
 
 [docusaurus/typescript-support](https://docusaurus.io/docs/typescript-support)
 
-해당 링크를 참조해 프로젝트를 생성해준다. 그리고 docusaurus.config.ts 부분믄 약간 수정해줘도 일단 블로그를 시작할 수 있다.
+해당 링크를 참조해 프로젝트를 생성해준다. `docusaurus.config.ts`를 약간 수정해줘도 나만의 블로그를 시작할 수 있다.
 
 ### 2. doc search 신청 & algolia 회원가입
 
-[docsearch]https://docsearch.algolia.com/apply/
+[docsearch]https://docsearch.algolia.com/apply/ 해당 링크에서 프로그램 조인을 하고
 
 [algolia](https://www.algolia.com/) 접속해서 가입을 해주자.
 
@@ -68,4 +68,11 @@ Date: 2024-03-04 15:00
 2. `config.json`, 루트에 생성 - [config-file 참조 링크](https://docsearch.algolia.com/docs/legacy/config-file)
 3. `jq`, `docker` 없으면 설치
 4. 스크래퍼 실행 `docker run -it --env-file=.env -e "CONFIG=$(cat ./config.json | jq -r tostring)" algolia/docsearch-scraper`
-   1. start_urls에 등록된 url로 데이터를 긁어
+   1. start_urls에 등록된 url로 데이터를 긁어 알고리아 인덱스에 저장
+5. **검색 기능 on!!!**
+
+![search-test](search-test.png)
+
+이렇게 스크래핑까지 진행해주면, 기본 doc search 기능은 완성이다.
+
+다만 **프로덕션에 배포가 마무리 된 후에, 스크래핑을 진행해야 최신 포스트까지 알고리아 index에 넣을 수 있다는 점** 유의하자.
