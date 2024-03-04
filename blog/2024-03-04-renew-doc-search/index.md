@@ -1,5 +1,5 @@
 ---
-slug: post/26
+slug: doc-search
 title: 블로그 개선 - Algolia Doc Search
 
 authors: [brown]

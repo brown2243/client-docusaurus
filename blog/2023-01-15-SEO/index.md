@@ -1,5 +1,5 @@
 ---
-slug: post/23
+slug: about-seo
 title: SEO 관련 포스팅
 
 authors: [brown]

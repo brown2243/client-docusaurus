@@ -1,5 +1,5 @@
 ---
-slug: post/25
+slug: stable-diffusion-web-ui
 title: web-ui 정리 및 사용 후기
 
 authors: [brown]

@@ -1,7 +1,7 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
-import { PROD_URL } from "./constant";
+import { GTM_ID, PROD_URL } from "./constant";
 
 const config: Config = {
   title: `braurus`,
@@ -36,6 +36,9 @@ const config: Config = {
     [
       "classic",
       {
+        googleTagManager: {
+          containerId: GTM_ID,
+        },
         docs: {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
