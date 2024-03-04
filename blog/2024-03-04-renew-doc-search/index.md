@@ -23,7 +23,9 @@ Date: 2024-03-04 15:00
 
 해당 링크를 참조해 프로젝트를 생성해준다. 그리고 docusaurus.config.ts 부분믄 약간 수정해줘도 일단 블로그를 시작할 수 있다.
 
-### 2. algolia 회원가입
+### 2. doc search 신청 & algolia 회원가입
+
+[docsearch]https://docsearch.algolia.com/apply/
 
 [algolia](https://www.algolia.com/) 접속해서 가입을 해주자.
 
@@ -55,121 +57,15 @@ Date: 2024-03-04 15:00
 3. 프로젝트 실행
    프로젝트 실행시, 알고리아 검색탭이 생성된 걸 볼 수 있다. 하지만 데이터가 크롤링 되지 않아, 사용은 할 수 없다.
 
-### 3. 알고리아 회원가입
+### 4. 알고리아 크롤링
 
-[algolia](https://www.algolia.com/users/sign_in)에서 회원 가입을 진행해준다.
+문서를 살펴보면 알고리아 크롤러를 사용하는게 권장하는 방식인것 같은데 무료요금제에서는 지원을 하지 않는다 ^^...
 
-### 4. create application
+이 시점에서 포스트를 접어야하나 고민하다, [run-your-own](https://docsearch.algolia.com/docs/legacy/run-your-own/) 해당 방식으로 진행 해보겠다.
 
-[어플리케이션을 생성해주는데](https://www.algolia.com/account/plan/create?planName=base&showSearch=true&units=100&showRecommend=false&recommendRequests=10&inCreateAppMode=true&from=dashboard)
-
-1. app 이름 적고
-2. **꼭 FREE Plan을 선택하자!!**
-3. data는 샘플데이터 같은 것 넣으면 된다.
-4. `index name` 은 사용하는 값이다.
-
-### 5. API Key 체크
-
-overview 화면에서 API Keys를 누르자
-
-사용하는 key는 `Application ID`,`Search-Only API Key`,`Admin API Key`이다.
-
-### 6. Data crawling
-
-[최신 권장방식 문서](https://www.algolia.com/doc/tools/crawler/getting-started/overview/)이다.
-
-본인은 아래의 방법을 사용했다.
-
-**이 방식은 Legacy 입니다!**
-
-[관련 문서](https://docsearch.algolia.com/docs/legacy/run-your-own/)
-
-1. 이 단계에서는 도커 이미지를 통한 데이터 크롤링을 위해 `docker`, `jq`가 설치 되어 있어야 한다.
-
-   - `brew install --cask docker`
-   - `brew install jq`
-
-2. `.env` 작성
-   환경 변수를 작성해야 한다.
-   ```
-   APPLICATION_ID=어플아이디
-   API_KEY=어드민키
-   ```
-3. project 최상단에 `config.json` 작성
-   [참조 링크](https://github.com/algolia/docsearch-configs/blob/master/configs/docusaurus-2.json)
-   `index_name`, `start_urls`,`sitemap_urls`만 본인에 맡게 변경하시라.
-   ```
-   {
-       "index_name": "braurus", // 1
-       "start_urls": ["https://braurus.dev/"], // 2
-       "sitemap_urls": ["https://braurus.dev/sitemap.xml"], // 3
-       "sitemap_alternate_links": true,
-       "stop_urls": ["/tests"],
-       "selectors": {
-           "lvl0": {
-           "selector": "(//ul[contains(@class,'menu__list')]//a[contains(@class, 'menu__link menu__link--sublist menu__link--active')]/text() | //nav[contains(@class, 'navbar')]//a[contains(@class, 'navbar__link--active')]/text())[last()]",
-           "type": "xpath",
-           "global": true,
-           "default_value": "Documentation"
-           },
-           "lvl1": "header h1",
-           "lvl2": "article h2",
-           "lvl3": "article h3",
-           "lvl4": "article h4",
-           "lvl5": "article h5, article td:first-child",
-           "lvl6": "article h6",
-           "text": "article p, article li, article td:last-child"
-       },
-       "strip_chars": " .,;:#",
-       "custom_settings": {
-           "separatorsToIndex": "_",
-           "attributesForFaceting": ["language", "version", "type", "docusaurus_tag"],
-           "attributesToRetrieve": [
-           "hierarchy",
-           "content",
-           "anchor",
-           "url",
-           "url_without_anchor",
-           "type"
-           ]
-       }
-   }
-   ```
-4. 스크래퍼 이미지 실행  
-   `docker run -it --env-file=.env -e "CONFIG=$(cat ./config.json | jq -r tostring)" algolia/docsearch-scraper`
-
-5. 알고리아 본인 앱 화면에 보면 데이터가 갱신 되어 있을 것이다.
-
-### 7. `docusaurus.config.js`
-
-[이 문서](https://docusaurus.io/ko/docs/search#using-algolia-docsearch)를 참조 하자!
-
-```
-// 본인 코드
-...
-algolia: {
-    // 알골리아에서 제공한 appId를 사용하세요.
-    appId: "BW2ZDYYT4N",
-    // 공개 API 키: 커밋해도 문제가 생기지 않습니다.
-    apiKey: "4a0c2546c188aacd5f5277a7a9b34896",
-    indexName: "braurus",
-    contextualSearch: true,
-    },
-...
-```
-
----
-
-**드디어 완성이다.**
-
-<br />
-
-검색기능을 붙이고 이 글을 쓰기까지 생각보다 시간이 걸렸지만, 누가 볼 수도 있다고 생각하니 살짝 기대 된다.
-<br />
-
----
-
-### Reference
-
-- **https://younho9.dev/docusaurus-manage-docs-2**
-- https://www.whatap.io/ko/blog/67/
+1. `.env`, 루트에 생성
+   1. 여기 들어갈 api key는 `Admin API Key`로 공개되지 않게 할 것
+2. `config.json`, 루트에 생성 - [config-file 참조 링크](https://docsearch.algolia.com/docs/legacy/config-file)
+3. `jq`, `docker` 없으면 설치
+4. 스크래퍼 실행 `docker run -it --env-file=.env -e "CONFIG=$(cat ./config.json | jq -r tostring)" algolia/docsearch-scraper`
+   1. start_urls에 등록된 url로 데이터를 긁어

@@ -61,7 +61,6 @@ const config: Config = {
     algolia: {
       // The application ID provided by Algolia
       appId: "VOP80TT41G",
-      // Public API key: it is safe to commit it
       apiKey: "54dbc01eb1f1039728b45b55263a4e18",
       indexName: "braurus",
       // Optional: see doc section below
