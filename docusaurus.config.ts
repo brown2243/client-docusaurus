@@ -39,19 +39,13 @@ const config: Config = {
         googleTagManager: {
           containerId: GTM_ID,
         },
-        docs: {
-          sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-        },
+        docs: false,
         blog: {
+          routeBasePath: "/",
           showReadingTime: true,
+          // archiveBasePath: "archive",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -84,19 +78,13 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "My Site",
+      title: "Braurus",
       logo: {
-        alt: "My Site Logo",
+        alt: "Braurus Logo",
         src: "img/favicon/android-chrome-192x192.png",
       },
       items: [
-        // {
-        //   type: "docSidebar",
-        //   sidebarId: "tutorialSidebar",
-        //   position: "left",
-        //   label: "Tutorial",
-        // },
-        { to: "/blog", label: "Blog", position: "left" },
+        // { to: "/archive", label: "Archive", position: "left" },
         {
           href: "https://github.com/brown2243/client-docusaurus",
           label: "GitHub",
