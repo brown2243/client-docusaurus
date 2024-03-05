@@ -19,6 +19,8 @@ Date: 2024-03-04 15:00
 
 <!-- truncate -->
 
+## doc-search 세팅
+
 ### 1. docusaurus 프로젝트 생성
 
 [docusaurus/typescript-support](https://docusaurus.io/docs/typescript-support)
