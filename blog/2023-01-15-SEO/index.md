@@ -21,6 +21,8 @@ date: 2023-01-15 21:15
 
 **그러니 효율적으로 기본만 해주는 것이 좋아 보인다.**
 
+<!-- truncate -->
+
 ## SEO란?
 
 `SEO`는 `Search Engine Optimization` 검색엔진 최적화이다.

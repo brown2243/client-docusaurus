@@ -5,6 +5,8 @@ title: 블로그 개선 - Algolia Doc Search
 authors: [brown]
 tags: [docusaurus, DocSearch, algolia, 알고리아]
 Date: 2024-03-04 15:00
+image: https://i.imgur.com/mErPwqL.png
+hide_table_of_contents: true
 ---
 
 # 블로그 개선 - algolia Doc Search
@@ -16,6 +18,8 @@ Date: 2024-03-04 15:00
 그러다 한번 리뉴얼 해볼까 하는 마음으로 확인해보니 docusaurus 버전도 2에서 3로 올라 갔더라.
 
 그래도 algolia Doc Search 기능은 붙여 놨었는데, 이번에 전반적으로 리뉴얼 해볼 겸 다시 붙이는 과정을 정리해보려고 한다.
+
+<!-- truncate -->
 
 ## 1 docusaurus 프로젝트 생성
 
