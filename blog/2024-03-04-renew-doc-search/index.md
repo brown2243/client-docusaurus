@@ -5,8 +5,6 @@ title: 블로그 개선 - Algolia Doc Search
 authors: [brown]
 tags: [docusaurus, DocSearch, algolia, 알고리아]
 Date: 2024-03-04 15:00
-image: https://i.imgur.com/mErPwqL.png
-hide_table_of_contents: true
 ---
 
 # 블로그 개선 - algolia Doc Search
