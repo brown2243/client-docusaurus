@@ -26,10 +26,10 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "ko",
-    locales: ["ko"],
-    // defaultLocale: 'en',
-    // locales: ['en'],
+    // defaultLocale: "ko",
+    // locales: ["ko"],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
@@ -43,9 +43,7 @@ const config: Config = {
         blog: {
           routeBasePath: "/",
           showReadingTime: true,
-          // archiveBasePath: "archive",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          archiveBasePath: "archive",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -84,7 +82,7 @@ const config: Config = {
         src: "img/favicon/android-chrome-192x192.png",
       },
       items: [
-        // { to: "/archive", label: "Archive", position: "left" },
+        { to: "/archive", label: "Archive", position: "left" },
         {
           href: "https://github.com/brown2243/client-docusaurus",
           label: "GitHub",
