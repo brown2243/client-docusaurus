@@ -1,7 +1,7 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
-import { GTM_ID, PROD_URL } from "./constant";
+import { GTM_ID, G_TAG_ID, PROD_URL } from "./constant";
 
 const config: Config = {
   title: `Braurus`,
@@ -38,6 +38,10 @@ const config: Config = {
       {
         googleTagManager: {
           containerId: GTM_ID,
+        },
+        gtag: {
+          trackingID: G_TAG_ID,
+          anonymizeIP: true,
         },
         docs: false,
         blog: {
@@ -84,7 +88,7 @@ const config: Config = {
       items: [
         { to: "/archive", label: "Archive", position: "left" },
         {
-          href: "https://github.com/brown2243/client-docusaurus",
+          href: "https://github.com/brown2243",
           label: "GitHub",
           position: "right",
         },
