@@ -17,9 +17,9 @@
   },
   "dependencies": {
     "@docusaurus/core": "3.1.1",
-    "@docusaurus/plugin-vercel-analytics": "^0.0.0-5831",
     "@docusaurus/preset-classic": "3.1.1",
     "@mdx-js/react": "^3.0.0",
+    "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.10",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
