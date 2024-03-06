@@ -43,8 +43,6 @@ export default function Home(): JSX.Element {
       title={``}
       description={`Welcome to ${siteConfig.title}, braurus.dev, a blog for software development and tech trends.`}
     >
-      <Analytics />
-      <SpeedInsights />
       <HomepageHeader />
       <main>
         <HomepageFeatures />
