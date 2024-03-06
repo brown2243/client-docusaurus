@@ -6,11 +6,12 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { injectSpeedInsights } from "@vercel/speed-insights";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
+  injectSpeedInsights();
+
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
