@@ -144,6 +144,122 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  plugins: [
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        // fromExtensions: ["html", "htm"], // /myPage.html -> /myPage
+        // toExtensions: ["exe", "zip"], // /myAsset -> /myAsset.zip (if latter exists)
+        redirects: [
+          // /docs/oldDoc -> /docs/newDoc
+          {
+            from: "/blog/post/0",
+            to: "/post/0",
+          },
+          {
+            from: "/blog/post/1",
+            to: "/post/1",
+          },
+          {
+            from: "/blog/post/2",
+            to: "/post/2",
+          },
+          {
+            from: "/blog/post/3",
+            to: "/post/3",
+          },
+          {
+            from: "/blog/post/4",
+            to: "/post/4",
+          },
+          {
+            from: "/blog/post/5",
+            to: "/post/5",
+          },
+          {
+            from: "/blog/post/6",
+            to: "/post/6",
+          },
+          {
+            from: "/blog/post/7",
+            to: "/post/7",
+          },
+          {
+            from: "/blog/post/8",
+            to: "/post/8",
+          },
+          {
+            from: "/blog/post/9",
+            to: "/post/9",
+          },
+          {
+            from: "/blog/post/10",
+            to: "/post/10",
+          },
+          {
+            from: "/blog/post/11",
+            to: "/post/11",
+          },
+          {
+            from: "/blog/post/12",
+            to: "/post/12",
+          },
+          {
+            from: "/blog/post/13",
+            to: "/post/13",
+          },
+          {
+            from: "/blog/post/14",
+            to: "/post/14",
+          },
+          {
+            from: "/blog/post/15",
+            to: "/post/15",
+          },
+          {
+            from: "/blog/post/16",
+            to: "/post/16",
+          },
+          {
+            from: "/blog/post/17",
+            to: "/post/17",
+          },
+          {
+            from: "/blog/post/18",
+            to: "/post/18",
+          },
+          {
+            from: "/blog/post/19",
+            to: "/post/19",
+          },
+          {
+            from: "/blog/post/20",
+            to: "/post/20",
+          },
+          {
+            from: "/blog/post/21",
+            to: "/post/21",
+          },
+          // // Redirect from multiple old paths to the new path
+          // {
+          //   to: "/docs/newDoc2",
+          //   from: ["/docs/oldDocFrom2019", "/docs/legacyDocFrom2016"],
+          // },
+        ],
+        // createRedirects(existingPath) {
+        //   if (existingPath.includes("/community")) {
+        //     // Redirect from /docs/team/X to /community/X and /docs/support/X to /community/X
+        //     return [
+        //       existingPath.replace("/community", "/docs/team"),
+        //       existingPath.replace("/community", "/docs/support"),
+        //     ];
+        //   }
+        //   return undefined; // Return a falsy value: no redirect created
+        // },
+      },
+    ],
+  ],
 };
 
 export default config;
