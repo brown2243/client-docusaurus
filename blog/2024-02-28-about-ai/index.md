@@ -20,17 +20,15 @@ AI 관련으로 엔디비아 주식도 놀랍다. 놀라움의 연속이다.
 
 피할 수 없으면 즐기라했던가, 늦었다고 생각했을 때가 가장 빠른때라던가, AI 관련 프로덕트를 뭐라도 사용 해봐야 할 것만 같다. 그래도 ChatGPT는 자주 사용하니까 이번에 Stable Diffusion으로 이미지 생성을 해보기로 했다.
 
-<!-- truncate -->
-
-## web-ui 세팅
-
 > Stable Diffusion: 텍스트 및 이미지 프롬프트에서 고유한 실사 이미지를 생성하는 생성형 인공 지능(생성형 AI) 모델
 > web-ui: 웹 기반 유저 인터페이스
 
 가장 대중적인 방법인 web-ui로 이미지 생성을 해보자!!
 본인의 기기는 M1 max이다.
 
-### 1. web-ui 설치
+<!-- truncate -->
+
+## 1. web-ui 설치
 
 web-ui는 굉장히 성공적인 프로젝트고 바리에이션도 많다.
 
@@ -57,7 +55,7 @@ sh webui.sh // 프로젝트 설치
 sh webui.sh // 프로젝트 실행
 ```
 
-### 2. model 다운로드
+## 2. model 다운로드
 
 > 어떤 모델이 생성할 수 있는 이미지는 모델 학습에 사용된 이미지에 의해 결정됩니다. 고양이를 학습하지 않은 모델을 사용해서는 고양이를 생성할 수 없고, 고양이만 학습한 모델이라면 고양이 말고는 아무것도 생성하지 못합니다.
 > https://www.internetmap.kr/entry/Stable-Diffusion-Everything-about-models
@@ -72,7 +70,7 @@ sh webui.sh // 프로젝트 실행
 2. 다운받은 모델 파일을 프로젝트의 models/Stable-diffusion 폴더에 넣어준다.
    <br />
 
-### 3. 이미지 생성
+## 3. 이미지 생성
 
 이제는 web-ui를 실행하고, 이미지 생성을 해보자.
 
@@ -93,11 +91,11 @@ _벌써 그럴듯한 이미지를 만들었다._
 1. 부정형 프롬프트가 더 중요하고(좋은 퀄리티를 강조하기보단 나쁜 퀄리티를 배제하는 방향),
 2. 너무 길게 쓰면 오히려 퀄리티가 떨어진다는 것이다.
 
-### 4. 이미지 개선
+## 4. 이미지 개선
 
 여러장을 프롬프트를 바꿔서 실행 해봤지만, 뭔가 다른 사람들이 만들어낸 고퀄리티 이미지 레벨까지는 생성되지 않는다.
 
-#### 4.1 web-ui 세팅 변경
+### 4.1 web-ui 세팅 변경
 
 1. 이미지 사이즈 부터 다양한 옵션들이 있다. 알아보고 사용해보자
    [설정 분석 자료 링크](https://ai-designer-allan.tistory.com/entry/Stable-Diffusion-%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%94%94%ED%93%A8%EC%A0%84-webui-%EA%B8%B0%EB%8A%A5-%EB%B0%8F-%EC%84%B8%ED%8C%85-%EA%B0%92-%EC%95%8C%EC%95%84%EB%B3%B4%EA%B8%B0-txt2img)
@@ -119,7 +117,7 @@ _벌써 그럴듯한 이미지를 만들었다._
 ![default](default.png)
 혹은 `ui-config.json`에서 직접 바꿔도 된다.
 
-#### 4.2 임베딩(Embedding) 세팅
+### 4.2 임베딩(Embedding) 세팅
 
 임베딩은 모델에 영향을 주지 않은 채 프롬프트를 추가 학습하는 방법으로 textual inversion이라고도 하는데 [정말 간단한 텍스트반전 알아보기](https://www.bercon.org/5613138c-676f-4fcc-8088-7299f8b83f65)에 해당 개념에 대한 자세한 설명이 있다.
 
@@ -128,7 +126,7 @@ _벌써 그럴듯한 이미지를 만들었다._
 **임베딩은 trigger word가 틀리면 작동되지 않고, 생성 모델과 임베딩 모델이 일치해야 함**
 로라도 동일할 것으로 예상!
 
-#### 4.3 로라(LoRA) 세팅
+### 4.3 로라(LoRA) 세팅
 
 LORA는 Low-Rank Adaptation of Large Language Models의 약자로 작은 데이터셋으로 특정 이미지, 피사체, 옷 같은 부분을 집중적으로 학습해 해당 그림체로 찍어 낼 수 있도록 한다.
 
@@ -137,7 +135,7 @@ LORA는 Low-Rank Adaptation of Large Language Models의 약자로 작은 데이�
 - 비중이 1이면 해당 로라에서만 데이터을 가져온다는 뜻으로 0 ~ 1 사이 값을 사용한다.
 - 그리고 해당 로라의 트리거 단어도 프롬프트에 넣어주면 완료
 
-#### 4.4 VAE 세팅
+### 4.4 VAE 세팅
 
 VAE(Variational Autoencoder)는 이미지를 선명하거나 부드럽게 만들어주는 보정처리를 한다.
 VAE를 사용해도 변화가 없다면, 모델에 이미 포함되어있다고 한다.
@@ -145,7 +143,7 @@ VAE를 사용해도 변화가 없다면, 모델에 이미 포함되어있다고 
 - [2D VAE](https://huggingface.co/hakurei/waifu-diffusion-v1-4/blob/main/vae/kl-f8-anime2.ckpt)
 - [실사 VAE](https://huggingface.co/Yukihime256/840000/tree/main)
 
-### 5. 정리 및 결과물
+## 5. 정리 및 결과물
 
 ![police1](police1.png)
 ![police2](police2.png)

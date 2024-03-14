@@ -19,15 +19,13 @@ Date: 2024-03-04 15:00
 
 <!-- truncate -->
 
-## doc-search 세팅
-
-### 1. docusaurus 프로젝트 생성
+## 1. docusaurus 프로젝트 생성
 
 [docusaurus/typescript-support](https://docusaurus.io/docs/typescript-support)
 
 해당 링크를 참조해 프로젝트를 생성해준다. `docusaurus.config.ts`를 약간 수정해줘도 나만의 블로그를 시작할 수 있다.
 
-### 2. doc search 신청 & algolia 회원가입
+## 2. doc search 신청 & algolia 회원가입
 
 [docsearch]https://docsearch.algolia.com/apply/ 해당 링크에서 프로그램 조인을 하고
 
@@ -43,7 +41,7 @@ Date: 2024-03-04 15:00
 > It's not intended for production projects.
 > **If your project is live, you'll need to display the Algolia Logo next to the search results** or upgrade to the Algolia Grow plan.
 
-### 3. 도큐사우러스 doc search 문서 참조
+## 3. 도큐사우러스 doc search 문서 참조
 
 아래 문서를 참조하여 순서대로 따라가자.
 
@@ -61,7 +59,7 @@ Date: 2024-03-04 15:00
 3. 프로젝트 실행
    프로젝트 실행시, 알고리아 검색탭이 생성된 걸 볼 수 있다. 하지만 데이터가 크롤링 되지 않아, 사용은 할 수 없다.
 
-### 4. 알고리아 크롤링
+## 4. 알고리아 크롤링
 
 문서를 살펴보면 알고리아 크롤러를 사용하는게 권장하는 방식인것 같은데 무료요금제에서는 지원을 하지 않는다 ^^...
 
