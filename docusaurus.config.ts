@@ -28,8 +28,8 @@ const config: Config = {
   i18n: {
     // defaultLocale: "ko",
     // locales: ["ko"],
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: "ko",
+    locales: ["ko", "en"],
   },
 
   presets: [
