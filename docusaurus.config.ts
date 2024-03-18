@@ -45,6 +45,7 @@ const config: Config = {
         },
         docs: false,
         blog: {
+          blogSidebarCount: 7,
           routeBasePath: "/",
           showReadingTime: true,
           archiveBasePath: "archive",
