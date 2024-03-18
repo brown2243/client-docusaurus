@@ -4,7 +4,18 @@ title: 웹에서 요청과 응답의 전반적인 과정
 
 authors: [brown]
 tags:
-  [IP, URL, Domain, DNS, Network, TCP/IP 4계층 모델, TCP handshaking, TLS, HTTP]
+  [
+    Web,
+    IP,
+    URL,
+    Domain,
+    DNS,
+    Network,
+    TCP/IP 4계층 모델,
+    TCP handshaking,
+    TLS,
+    HTTP,
+  ]
 Date: 2024-03-10 18:00
 endDate: 2024-03-12 18:00
 ---
