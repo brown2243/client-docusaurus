@@ -43,10 +43,12 @@ const config: Config = {
           trackingID: G_TAG_ID,
           anonymizeIP: true,
         },
-        docs: false,
+        docs: {
+          routeBasePath: "/docs",
+        },
         blog: {
-          blogSidebarCount: 7,
           routeBasePath: "/",
+          blogSidebarCount: 7,
           showReadingTime: true,
           archiveBasePath: "archive",
         },
@@ -87,6 +89,7 @@ const config: Config = {
         src: "img/favicon/android-chrome-192x192.png",
       },
       items: [
+        { to: "/docs", label: "Docs", position: "left" },
         { to: "/archive", label: "Archive", position: "left" },
         {
           href: "https://github.com/brown2243",
