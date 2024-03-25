@@ -36,9 +36,9 @@ app.listen(port, () => {
 ```
   "main": "dist/app.js",
   "scripts": {
-    "dev": "nodemon --watch \"src/**/*.ts\" --exec \"ts-node  -r tsconfig-paths/register --transpile-only src/app.ts\"",
+    "dev": "NODE_ENV=development nodemon --watch \"src/**/*.ts\" --exec \"ts-node -r tsconfig-paths/register --transpile-only\" src/app.ts",
     "build": "tsc && tsc-alias",
-    "start": "node dist/app.js"
+    "start": "NODE_ENV=production node dist/app.js"
   },
   "dependencies": {
     "express": "^4.19.1"
@@ -67,6 +67,7 @@ app.listen(port, () => {
 위 처럼 세팅이 완료 됐다면, 이미 typescript express로 개발을 진행하는데 문제 없다.
 lint, axios, winston, typeorm 뭐든지 붙여서 사용하면 된다.
 
+express는 굉장히 자유도가 높은데, [npx express-generator](https://expressjs.com/en/starter/generator.html)의 구조를 참고 하는 것도 좋다.
 그래도 mvc로 구조를 잡고가는게 좋으니, 일단 `app`과 `controller`를 분리하자.
 app에는 router, middleware를 달고 router에서 http 요청에 관한 로직을 넣는 것이다.
 
@@ -118,6 +119,8 @@ appRouter.get("/ping", (req: Request, res: Response, next: NextFunction) => {
 appRouter가 부착된 url + /ping으로 요청이 오면 위의 로직에 따라 timestamp속성을 가진 json이 응답으로 전달된다.
 
 위 화살표 함수로 들어가 있는 handler는 매개변수로 `request`, `response`, `next`라는 3개의 변수를 받는다.
+
+route에서 http req,res 관련한 로직을 처리하고, 비즈니스 로직은 분리하자.
 
 ### request
 
