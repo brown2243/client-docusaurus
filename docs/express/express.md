@@ -1,12 +1,12 @@
 ---
 sidebar_position: 1
 slug: /express
-description: about express.
+description: 가장 유명하고, 널리 사용되는 Node.js 웹 애플리케이션 프레임워크
 ---
 
 # express
 
-- 가장 유명하고 가장 널리 사용되는 Node.js 웹 애플리케이션 프레임워크
+- 가장 유명하고, 널리 사용되는 Node.js 웹 애플리케이션 프레임워크
 - 자유도 높음(정해진 형식 X)
 
 ## 초기 세팅
