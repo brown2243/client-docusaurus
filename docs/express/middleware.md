@@ -78,7 +78,6 @@ https://inpa.tistory.com/entry/EXPRESS-%F0%9F%93%9A-morgan-%EB%AF%B8%EB%93%A4%EC
 - Cross-Origin Resource Sharing(CORS) 지원을 위한 미들웨어
 - 교차 출처 자원 공유를 가능케 하여 다른 도메인에서의 요청을 허용
 - 옵션을 통해 허용할 출처, 메서드, 헤더 등을 설정할 수 있음
--
 
 ### helmet
 
