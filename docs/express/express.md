@@ -160,4 +160,4 @@ res.cookie(name, value, options): 쿠키를 설정
 `next() // pass control to the next handler`
 
 - next()를 호출하면 요청 처리 제어권을 다음 handler로 전달한다.(개별 route가 달린 순서대로)
-- error 객체를 담아 호출해 전역 에러핸들러로 에러처리 가능
+- next()에 인수를 전달하여 호출하면 Error handler middleware로 전달
