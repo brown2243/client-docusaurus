@@ -1,8 +1,19 @@
 ---
-sidebar_position: 10
+sidebar_position: 11
 ---
 
-# garbage-collection
+# execution-context
+
+변수를 선언하고 값을 대입하는 것은 내부적으로 메모리 주소에 해당 값이 기록 되는 것이다.
+
+프로그래밍 언어중에서는 메모리를 직접 관리해야하는 언어(`C`,`C++`)와, 자체적으로 메모리 관리를 해주는 언어로 나뉜다.
+
+`garbage collection`이라는 개념은 사용하지 않는
+
+`javascript`는
+memory safe laugaunge 개념으로 나뉜다.
+
+가비지 콜렉팅이 비싼 작업이다.
 
 자바스크립트는 **도달 가능성(reachability)이라는 개념**을 사용해 메모리 관리를 수행합니다.
 

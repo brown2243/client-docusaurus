@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 10
 slug: /javascript/types
 description: javascript-types
 ---
@@ -180,6 +180,19 @@ for (const value of iterable) {
 }
 ```
 
+### Object와 Map의 차이
+
+둘다 모두 키-밸류의 데이터 구조
+
+- Object의 키는 `String`, `Symbol`이며, Map은 모든 타입의 키를 가질 수 있다.
+- Object는 크기를 수동으로 추적해야하지만, Map은 크기를 쉽게 얻을 수 있다.
+- Object는 메서드도 정의 가능
+- Map은 삽입된 순서대로 반복된다.
+- Map은 키-값 쌍의 추가, 삭제, 검색 등의 연산이 Object에 비해 효율적이다.
+
+따라서 키가 문자열이나 심볼로 고정되어 있고, 객체의 속성과 메서드를 함께 정의하는 경우 Object,
+키로 다양한 타입을 사용해야 하고, 키-값 쌍의 추가/삭제가 빈번하며, 순서가 중요한 경우 Map이 권장 된다.
+
 #### `for of`와 `for in` 차이
 
 - `for in`은 객체의 속성을 순회, `for of`는 iterable 객체의 `Symbol.iterator`를 호출
@@ -192,3 +205,4 @@ for (const value of iterable) {
 - https://developer.mozilla.org/ko/docs/Glossary/Primitive
 - https://poiemaweb.com/js-data-type-variable
 - https://ko.javascript.info/iterable
+- https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Keyed_collections
