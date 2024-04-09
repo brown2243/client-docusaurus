@@ -1,8 +1,10 @@
 ---
-sidebar_position: 11
+sidebar_position: 16
+slug: /javascript/garbage-collection
+description: javascript-garbage-collection
 ---
 
-# execution-context
+# Garbage-collection
 
 변수를 선언하고 값을 대입하는 것은 내부적으로 메모리 주소에 해당 값이 기록 되는 것이다.
 
