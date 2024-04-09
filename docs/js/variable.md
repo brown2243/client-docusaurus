@@ -47,14 +47,14 @@ two = "three"; // 재할당
 
 - ES6 이전의 사용되던 변수 선언 키워드
 - 권장 되지 않음
-- [`함수 스코프`]('https://braurus.dev/studies/javascript/scope#function-scope')를 가짐
+- [`함수 스코프`](https://braurus.dev/studies/javascript/scope#function-scope)를 가짐
 - var로 선언된 변수는 함수 내부에서 선언 된게 아니라면 글로벌 객체의 속성으로 추가 됌
 
 ### `let`, `const`
 
 - ES6에 추가
 - 권장 됌
-- [`블록 스코프`]('https://braurus.dev/studies/javascript/scope#block-scope')를 가짐
+- [`블록 스코프`](https://braurus.dev/studies/javascript/scope#block-scope)를 가짐
 - 전역 스코프에서도 글로벌 객체를 오염시키지 않음
 - 같은 블록에서 let, const 재선언 불가
 - const는 재할당 불가
