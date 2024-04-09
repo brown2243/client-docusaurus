@@ -44,7 +44,7 @@ const config: Config = {
           anonymizeIP: true,
         },
         docs: {
-          routeBasePath: "/docs",
+          routeBasePath: "/studies",
         },
         blog: {
           routeBasePath: "/",
@@ -70,10 +70,10 @@ const config: Config = {
       // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
       externalUrlRegex: "external\\.com|domain\\.com",
       // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
-      replaceSearchResultPathname: {
-        from: "/docs/", // or as RegExp: /\/docs\//
-        to: "/",
-      },
+      // replaceSearchResultPathname: {
+      //   from: "/docs/", // or as RegExp: /\/docs\//
+      //   to: "/",
+      // },
       // Optional: Algolia search parameters
       searchParameters: {},
       // Optional: path for search page that enabled by default (`false` to disable it)
@@ -89,7 +89,7 @@ const config: Config = {
         src: "img/favicon/android-chrome-192x192.png",
       },
       items: [
-        { to: "/docs", label: "Docs", position: "left" },
+        { to: "/studies", label: "Studies", position: "left" },
         { to: "/archive", label: "Archive", position: "left" },
         {
           href: "https://github.com/brown2243",
