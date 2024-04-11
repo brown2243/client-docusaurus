@@ -55,8 +55,8 @@ two = "three"; // 재할당
 - ES6에 추가
 - 권장 됌
 - [`블록 스코프`](https://braurus.dev/studies/javascript/scope#block-scope)를 가짐
-- 전역 스코프에서도 글로벌 객체를 오염시키지 않음
-- 같은 블록에서 let, const 재선언 불가
+- 전역 스코프에서 선언되어도 글로벌 객체를 오염시키지 않음
+- 같은 스코프내에서 let, const 재선언 불가
 - const는 재할당 불가
 
 ## Hoisting
@@ -104,9 +104,12 @@ function foo() {
 - 클래스, 생성자 함수, react 컴포넌트는 Pascal Case - `Person`, `UserProfile`, `MyComponent`...
 - 상수는 Upper Snake Case - `MAX_VALUE`, `API_URL`...
 
-참조
+## 참조
 
 - https://jisop.github.io/TIL/JavaScript/javascript-variable/
 - https://ko.javascript.info/variables
 - https://medium.com/korbit-engineering/let%EA%B3%BC-const%EB%8A%94-%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85-%EB%90%A0%EA%B9%8C-72fcf2fac365
 - https://f-lab.kr/insight/understanding-var-let-const-in-javascript?gad_source=1&gclid=Cj0KCQjwq86wBhDiARIsAJhuphnsR8WcgldDd8M-ppjdnzsCcI0yy5BVzDfw88KtoeTODQye5bRRVqoaAu5nEALw_wcB
+
+created date: 2024-04-09
+modified date: 2024-04-11

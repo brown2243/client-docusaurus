@@ -87,8 +87,11 @@ closure(); // 출력: 15
 - 스코프 충돌 위험: 외부 함수의 변수와 내부 함수의 변수 이름이 충돌가능성
 - 성능 오버헤드: 클로저는 함수 실행 시 추가적인 메모리 할당과 스코프 체인 탐색이 필요하므로 성능 오버헤드가 발생할 수 있음
 
-참조 링크
+## 참조
 
 - https://eun-ng.tistory.com/16
 - https://velog.io/@khd/%EC%8A%A4%EC%BD%94%ED%94%84%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C%EC%A0%84%EC%97%AD%EC%8A%A4%EC%BD%94%ED%94%84-%EC%A7%80%EC%97%AD%EC%8A%A4%EC%BD%94%ED%94%84
 - https://velog.io/@ddhhss0603/%EC%8A%A4%EC%BD%94%ED%94%84%EC%99%80-var
+
+created date: 2024-04-08
+modified date: 2024-04-10
