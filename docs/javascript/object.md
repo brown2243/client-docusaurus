@@ -114,6 +114,8 @@ prototype 객체는 constructor라는 프로퍼티를 가지고 있는데, 이 �
 
 new 키워드와 함께 함수를 호출하면 해당 함수는 생성자로 동작하며, 함수 내부에서 this를 통해 새로운 객체의 프로퍼티를 설정하고 필요한 초기화 작업을 수행한다.
 
+https://roy-jung.github.io/161007_is-class-only-a-syntactic-sugar/
+
 1. 함수를 new 키워드와 함께 호출
 2. 새로운 빈 객체가 생성
 3. 생성된 객체의 `__proto__`가 함수의 prototype 프로퍼티로 설정

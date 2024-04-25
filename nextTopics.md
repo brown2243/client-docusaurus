@@ -1,0 +1,7 @@
+- zustand 내부동작 분석
+- react-query 내부동작 분석
+- web 성능 최적화
+- react app 리렌더링에 관해
+  - 실제로 dom에 변경사항을 반영하는것이 비싼것임을 이해
+- react 18 변경사항
+- next12 - 13,14 차이점
