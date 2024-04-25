@@ -71,3 +71,86 @@ description: about Hash Table
 - https://preamtree.tistory.com/20
 - https://twinparadox.tistory.com/518
 - https://namu.wiki/w/%ED%95%B4%EC%8B%9C
+
+## 간단 구현 예제(체이닝)
+
+```javascript
+class Node {
+  constructor(val) {
+    this.data = val;
+    this.next = null;
+  }
+}
+
+class LinkedList {
+  constructor(...args) {
+    this.head = null;
+    args.forEach((data) => {
+      this.append(data);
+    });
+  }
+  append(data) {
+    const node = new Node(data);
+    if (!this.head) {
+      this.head = node;
+      return;
+    }
+    let cur = this.head;
+    while (cur.next) {
+      cur = cur.next;
+    }
+    cur.next = node;
+  }
+}
+
+class HashTable {
+  constructor(size) {
+    this.size = size;
+    this.bucket = new Array(size);
+  }
+
+  hash(key) {
+    let total = 0;
+    for (let i = 0; i < key.length; i++) {
+      total += key.charCodeAt(i);
+    }
+    return total % this.size;
+  }
+
+  set(key, value) {
+    const index = this.hash(key);
+    const data = [key, value];
+    if (!this.bucket[index]) {
+      this.bucket[index] = new LinkedList();
+    }
+    let head = this.bucket[index].head;
+    while (head) {
+      if (head.data[0] === key) {
+        head.data[1] = value;
+        return;
+      }
+      head = head.next;
+    }
+    this.bucket[index].append(data);
+  }
+  get(key) {
+    const index = this.hash(key);
+    let head = this.bucket[index].head;
+    while (head.data[0] !== key) {
+      if (!head.next) {
+        throw new Error("invalid");
+      }
+      head = head.next;
+    }
+    return head.data[1];
+  }
+}
+
+const table = new HashTable(50);
+table.set("test", 50);
+table.set("b", 400);
+console.log(table);
+console.log(table.get("b"));
+table.set("b", 300);
+console.log(table.get("b"));
+```
