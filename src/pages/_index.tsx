@@ -7,13 +7,9 @@ import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
 
-import { inject } from "@vercel/analytics";
-import { injectSpeedInsights } from "@vercel/speed-insights";
-
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
-  inject();
-  injectSpeedInsights();
+
   return (
     <header className={clsx("hero hero--primary", styles.heroBanner)}>
       <div className="container">
