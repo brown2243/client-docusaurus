@@ -27,7 +27,6 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
   const {
     navbar: { hideOnScroll, style },
   } = useThemeConfig();
-  console.log("NavbarLayout");
   const mobileSidebar = useNavbarMobileSidebar();
   const { navbarRef, isNavbarVisible } = useHideableNavbar(hideOnScroll);
   return (
