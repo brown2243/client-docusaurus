@@ -1,4 +1,9 @@
+const isClientSide = () =>
+  "document" in globalThis && "window" in globalThis && "history" in globalThis;
 const initBgm = async () => {
+  if (!isClientSide()) {
+    return;
+  }
   const audioContext = new AudioContext();
   let source = null;
   let audioBuffer = null;
