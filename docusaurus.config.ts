@@ -264,6 +264,7 @@ const config: Config = {
       },
     ],
   ],
+  clientModules: ["bgmInjector"],
 };
 
 export default config;
