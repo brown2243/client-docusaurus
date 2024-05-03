@@ -1,5 +1,5 @@
 ---
-sidebar_position: 11
+sidebar_position: 13
 description: javascript-object
 ---
 
@@ -22,7 +22,7 @@ description: javascript-object
 3. prototype으로 생성
    - js
 
-## 객체 내부구조
+## 객체 내부구조 및 그에 관한 생각
 
 객체는 해시테이블의 개념을 넘어서기에 객체가 해시테이블이라고 할수는 없다.
 
@@ -30,110 +30,22 @@ description: javascript-object
 
 python은 내부의 딕셔너리(해시테이블)기반으로 객체를 구현한다고 한다.
 
-C, C++, java는 객체를 구현하기 위해 내부적으로 해시테이블을 사용하지 않는데 이는 컴파일 시점에 객체에 필요한 메모리 크기를 알 수 있어,
+자바에서는 객체는 class의 인스턴스라고 가르친다. 객체를 생성할 방법이 class 밖에 없기 때문이다.
 
-해시 테이블을 사용하지 않고도 효율적으로 메모리를 할당할 수 있다.
+자바, 파이썬, 자바스크립트에서의 객체는 heap영역에 저장되지만, c++에서는 stack영역에도 저장 될 수 있다.
 
-반면에 js와 python은 런타임에서 객체에 필요한 메모리를 알 수 있기에 인접한 메모리공간을 사용하지 못하고 객체를 구현할 때 해시 테이블을 사용하여 속성과 값을 매핑하고 관리한다.
+이는 자바, c++은 컴파일단계에서 해당 클래스의 인스턴스의 메모리 사이즈를 알 수 있기 때문이다.
 
-객체의 저장위치는 C, C++은 객체가 stack, heap 영역 둘다 저장 될 수 있으며, java, js, python에서는 heap영역에만 저장된다.
+여기서 자바는 왜 객체가 컴파일 시점에 필요한 메모리 사이즈를 알 수 있음에도 heap 영역에 저장되는건지 궁금한데, 가비지콜렉터를 고려해서 그렇게 설계한 것으로 추정된다.
 
-## Prototype
+여러 가변 자료구조를 들고 있는 객체가 스택에 저장되어 호출 후 제거 될 때, 가변 자료구조들은 heap 영역에 흩어져서 남아있을 텐데,
 
-JS는 프로토타입 기반으로 객체를 생성하고 다루는 방식이 클래스 기반의 언어와는 조금 달랐었다.
+객체가 heap에 저장되고 참조 되지 않은 시점에서 다같이 제거하기 위해서가 아닐까 추측해본다.
 
-대부분의 프로그래밍 언어에서 객체 생성 방법이 class를 사용하고, js에도 class가 도입 된 후부터 prototype 방식으로 객체를 생성하는 건
+어쨌든 자바와 c++에서의 객체는 연속된 메모리 공간을 할당받으며, 해당 객체의 프로퍼티에 대한 접근을 포인터 연산으로 처리할 것이다.
 
-통일성을 위해 시대의 흐름에 따라 보내줘야 할 것 같다. 어짜피 내부적으로는 프로토타입으로 동작한다.
+이 때문에, 동적으로 객체에 대한 프로퍼티의 추가 및 제거가 안되는 것이다.
 
-### `__proto__` 프로퍼티
+반면에 자바스크립트와 파이썬에서는 객체가 해시테이블(딕셔너리)로 구현 된다. 객체 생성 시점에서 해당객체가 필요한 메모리 사이즈를 알 수가 없기에,
 
-js의 모든 객체는 `__proto__` 프로퍼티를 가지고 있는데 이 프로퍼티의 값은 `object`, `null` 만 할당 될 수 있다.
-
-```javascript
-a = {}
-a.__proto__
-{__defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, __lookupSetter__: ƒ, …}
-a.toString()
-'[object Object]'
-a.__proto__ = null
-null
-a.toString()
-// Uncaught TypeError: a.toString is not a function
-```
-
-해당 프로퍼티는 프로토 타입 체이닝에 사용된다. 일반적으로 prototype으로 객체를 생성할 때, 생성자 함수를 사용하지만
-
-`__proto__` 프로퍼티를 직접 바꿀 수도 있다.
-
-```javascript
-function Test(){
-    this.a = 'a'
-    this.b = 'b'
-}
-t = new Test()
-Test {a: 'a', b: 'b'}
-tt = {}
-tt.__proto__ = t
-Test {a: 'a', b: 'b'}
-//
-tt.a
-'a'
-t.a = 'aa'
-'aa'
-tt.a
-'aa'
-//
-tt.b += 'b'
-'bb'
-t.b
-'b'
-tt.b
-'bb'
-```
-
-### Prototype Chain
-
-Prototype Chain이란 객체에서 프로퍼티나, 메서드를 찾는 방식이다.
-
-위 예제에서 a라는 객체를 생성 했을 때, a 객체가 가지고 있지 않은 toString() 메서드를 호출 했다.
-
-이는 Prototype Chain이 동작한 것으로 a 객체에 해당 프로퍼티나 메서드가 없을 때, `__proto__`에 등록 된 객체에서 해당 값을 찾아보는 방식이다.
-
-해당 값을 찾을 때까지, 값을 찾거나 null을 만날 때까지 상위 prototype을 타고 올라가며 값을 찾는다.
-
-### 생성자 함수
-
-객체를 프로토 타입으로 다룰 때, `__proto__`를 직접 건드리기 보다는 생성자 함수를 활용한다.
-
-function 키워드로 선언된 함수는 전부 생성자 함수가 될 수 있는데 컨벤션으로 첫글자를 대문자로 한다.
-
-function 키워드로 선언된 함수는 `prototype`이라는 특별한 프로퍼티를 가지는데 이 프로퍼티는 객체로, 해당 함수를 생성자로 사용하여 만들어진 객체들의 프로토타입을 정의한다.
-
-prototype 객체는 constructor라는 프로퍼티를 가지고 있는데, 이 프로퍼티는 함수 자신을 가리키는 참조이다.
-
-new 키워드와 함께 함수를 호출하면 해당 함수는 생성자로 동작하며, 함수 내부에서 this를 통해 새로운 객체의 프로퍼티를 설정하고 필요한 초기화 작업을 수행한다.
-
-https://roy-jung.github.io/161007_is-class-only-a-syntactic-sugar/
-
-1. 함수를 new 키워드와 함께 호출
-2. 새로운 빈 객체가 생성
-3. 생성된 객체의 `__proto__`가 함수의 prototype 프로퍼티로 설정
-4. 생성된 객체가 this 키워드로 바인딩
-5. 함수 본문이 실행됩니다. 이때 this는 새로 생성된 객체를 참조
-6. 함수가 명시적으로 객체를 반환하지 않으면, 새로 생성된 객체가 반환
-
-```javascript
-function Person(name, age) {
-  this.name = name;
-  this.age = age;
-}
-
-Person.prototype.sayHello = function () {
-  console.log(this.name, this.age);
-};
-
-const person = new Person("John", 25);
-console.log(person.constructor === Person); // 출력: true
-person.sayHello();
-```
+해시테이블로 데이터에 대한 주소값을 관리하는 것이다. 그렇기에 동적으로 프로피티에 대한 추가 제거가 가능하다.
