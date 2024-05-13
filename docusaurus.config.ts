@@ -6,7 +6,7 @@ import { GTM_ID, G_TAG_ID, PROD_URL } from "./constant";
 const config: Config = {
   title: `Braurus`,
   tagline: "",
-  favicon: "img/favicon.ico",
+  favicon: "favicon.ico",
 
   // Set the production url of your site here
   url: PROD_URL,
