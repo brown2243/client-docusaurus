@@ -16,6 +16,9 @@
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --bgm-color: rgba(36, 37, 38, 0.8);
+  --fs-lg: 20px;
+  --fs-md: 16px;
+  --fs-sm: 14px;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -74,4 +77,105 @@
   width: 12px;
   height: 12px;
   background: var(--bgm-color);
+}
+
+/* Link preview */
+.link-preview-container {
+  margin: 1rem 0;
+}
+
+.link-preview-card {
+  height: 100%;
+  display: flex;
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+  flex-grow: 1;
+  min-width: 0;
+  border: 1px solid var(--ifm-color-primary-light);
+  border-radius: var(--ifm-global-radius, 10px);
+  transition: background 0.2s ease-in;
+  background-color: var(--ifm-card-background-color, rgba(255, 255, 255, 0.05));
+}
+
+.link-preview-content {
+  flex: 3 1 180px;
+  padding: 0.75rem 0.875rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.link-preview-title {
+  font-size: var(--fs-lg);
+  line-height: 1.5;
+  color: var(--ifm-color-content);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  margin-bottom: 0.25rem;
+}
+
+.link-preview-description {
+  font-size: var(--fs-sm);
+  line-height: 1.33;
+  color: var(--ifm-color-content-secondary);
+  overflow: hidden;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.link-preview-footer {
+  margin: auto 0 0 0;
+
+  display: flex;
+  align-items: center;
+}
+
+.link-preview-favicon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.375rem;
+}
+
+.link-preview-url {
+  font-size: var(--ifm-font-size-small, 12px);
+  color: var(--ifm-link-color);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.link-preview-image-container {
+  flex: 1 1 180px;
+  position: relative;
+  max-width: 180px;
+}
+
+.link-preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .link-preview-card {
+    flex-direction: column-reverse;
+  }
+  .link-preview-content {
+    flex: 1;
+  }
+  .link-preview-description {
+    -webkit-line-clamp: 3;
+  }
+
+  .link-preview-image-container {
+    max-width: 100%;
+    height: 120px;
+  }
 }
