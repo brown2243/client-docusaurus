@@ -1,13 +1,13 @@
 ---
-slug: 검색에 관해서
-title: 검색에 관해서
+slug: 검색기능-관련-소소한-이야기
+title: 검색기능 관련 소소한 이야기
 
 authors: [brown]
 tags: [검색, search, react table, es-hangul, 초성검색]
 Date: 2024-09-04 22:00
 ---
 
-# 검색에 관해서
+# 검색기능 관련 소소한 이야기
 
 <br />
 

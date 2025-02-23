@@ -3,7 +3,7 @@ slug: 개발-잡담
 title: 개발 잡담
 
 authors: [brown]
-tags: [개발, 업무 자동화]
+tags: [잡담, 개발, 업무 자동화]
 Date: 2025-01-06 19:00
 ---
 
