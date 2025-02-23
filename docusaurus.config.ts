@@ -60,6 +60,12 @@ const config: Config = {
   ],
   // themes: ["@docusaurus/theme-search-algolia"],
   themeConfig: {
+    metadata: [
+      {
+        name: "description",
+        content: "개발 및 다양한 주제에 대해 작성하는 블로그입니다.",
+      },
+    ],
     algolia: {
       // The application ID provided by Algolia
       appId: "VOP80TT41G",

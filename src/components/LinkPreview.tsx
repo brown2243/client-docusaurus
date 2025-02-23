@@ -6,16 +6,15 @@ const LinkPreview = ({ url }) => {
     title: string;
     description: string;
     image: string;
-    origin: string;
+    favicon: string;
   } | null>(null);
 
   useEffect(() => {
     (async () => {
       try {
-        let origin = "";
         const urlObj = new URL(url);
-        origin = urlObj.origin;
-
+        const domain = urlObj.hostname;
+        const favicon = `https://www.google.com/s2/favicons?domain=${domain}`;
         const res = await fetch(
           `https://api.microlink.io?url=${encodeURIComponent(url)}`
         );
@@ -24,7 +23,7 @@ const LinkPreview = ({ url }) => {
           title: data.data.title || url,
           description: data.data.description || "설명 없음",
           image: data.data.image?.url || "",
-          origin,
+          favicon,
         });
       } catch (error) {
       } finally {
@@ -75,11 +74,11 @@ const LinkPreview = ({ url }) => {
           <div className="link-preview-description">{meta.description}</div>
           <div className="link-preview-footer">
             <picture className="link-preview-favicon">
-              <source
-                srcSet={`${meta.origin}/favicon.ico`}
+              {/* <source
+                srcSet={`${meta.favicon}/favicon.ico`}
                 type="image/x-icon"
-              />
-              <source srcSet={`${meta.origin}/favicon.png`} type="image/png" />
+              /> */}
+              <source srcSet={`${meta.favicon}`} type="image/png" />
               <img src="./favicon.ico" alt="favicon" />
             </picture>
 
