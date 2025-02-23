@@ -81,28 +81,29 @@
 
 /* Link preview */
 .link-preview-container {
-  margin: 1rem 0;
+  margin: 1rem -0.25rem;
 }
 
 .link-preview-card {
   height: 100%;
+  width: 100%;
   display: flex;
+
   color: var(--ifm-font-color-base);
   text-decoration: none;
-  flex-grow: 1;
-  min-width: 0;
   border: 1px solid var(--ifm-color-primary-light);
   border-radius: var(--ifm-global-radius, 10px);
   transition: background 0.2s ease-in;
   background-color: var(--ifm-card-background-color, rgba(255, 255, 255, 0.05));
+  overflow: hidden;
 }
 
 .link-preview-content {
   flex: 3 1 180px;
   padding: 0.75rem 0.875rem;
-
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .link-preview-title {
@@ -112,7 +113,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-
   margin-bottom: 0.25rem;
 }
 
@@ -147,7 +147,10 @@
 .link-preview-url {
   font-size: var(--ifm-font-size-small, 12px);
   color: var(--ifm-link-color);
+
+  white-space: nowrap;
   overflow: hidden;
+  width: 400px;
   text-overflow: ellipsis;
 }
 
@@ -155,6 +158,7 @@
   flex: 1 1 180px;
   position: relative;
   max-width: 180px;
+  min-width: 180px;
 }
 
 .link-preview-image {
