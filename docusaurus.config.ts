@@ -157,6 +157,14 @@ const config: Config = {
 
   plugins: [
     [
+      "vercel-analytics",
+      {
+        debug: true,
+        mode: "auto",
+      },
+    ],
+
+    [
       "@docusaurus/plugin-client-redirects",
       {
         // fromExtensions: ["html", "htm"], // /myPage.html -> /myPage

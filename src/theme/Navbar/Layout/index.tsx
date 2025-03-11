@@ -10,7 +10,6 @@ import NavbarMobileSidebar from "@theme/Navbar/MobileSidebar";
 import type { Props } from "@theme/Navbar/Layout";
 
 import styles from "./styles.module.css";
-import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function NavbarBackdrop(props: ComponentProps<"div">) {
@@ -54,7 +53,6 @@ export default function NavbarLayout({ children }: Props): JSX.Element {
       {children}
       <NavbarBackdrop onClick={mobileSidebar.toggle} />
       <NavbarMobileSidebar />
-      <Analytics />
       <SpeedInsights />
     </nav>
   );
