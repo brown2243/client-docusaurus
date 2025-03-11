@@ -68,8 +68,8 @@ const config: Config = {
     ],
     algolia: {
       // The application ID provided by Algolia
-      appId: "VOP80TT41G",
-      apiKey: "54dbc01eb1f1039728b45b55263a4e18",
+      appId: "E4SFC6MK1N",
+      apiKey: "1d930172b420be076364ff5d12e6d306",
       indexName: "braurus",
       // Optional: see doc section below
       contextualSearch: true,
