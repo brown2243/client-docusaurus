@@ -66,7 +66,7 @@ const config: Config = {
     ],
     algolia: {
       appId: "E4SFC6MK1N",
-      apiKey: "1d930172b420be076364ff5d12e6d306",
+      apiKey: "9fa8995538ca578305f853bbcd7949a2",
       indexName: "braurus",
       contextualSearch: false,
       searchParameters: {},
