@@ -1,0 +1,667 @@
+---
+draft: true # 초안 상태 (true면 프로덕션에서 숨겨짐)
+sidebar_position: 0
+---
+
+# Next topics
+
+# 컴공 커리큘럼
+
+✅ 1학년: 기초 컴퓨터공학 + 수학 기초
+프로그래밍 기초
+
+C 언어 / Python / Java 등
+
+프로그래밍 기본 문법, 입출력, 조건문, 반복문, 함수 등
+
+컴퓨터개론 / 정보기술의 이해
+
+컴퓨터의 역사, 하드웨어/소프트웨어 구성, 컴퓨터 구조의 기초
+
+이산수학
+
+논리, 집합, 함수, 수열, 관계, 그래프, 트리, 부울대수
+
+선형대수학 / 미적분학 / 공업수학
+
+벡터, 행렬, 연립방정식, 미분/적분 기초
+
+논리회로 / 디지털 시스템 기초
+
+AND, OR, NOT 게이트, 플립플롭, 진리표, 부울대수
+
+📌 목표: 코딩에 익숙해지고, 컴퓨터공학의 수학적 기반을 다지기
+
+✅ 2학년: 전산 필수 핵심 과목 (필수 4대장)
+자료구조 (Data Structures)
+
+배열, 연결리스트, 스택, 큐, 트리, 힙, 그래프, 해시, 탐색/정렬 알고리즘
+
+컴퓨터 구조 (Computer Organization / Architecture)
+
+CPU, 메모리, 버스, 캐시, 명령어 세트, 파이프라인, 어셈블리어
+
+운영체제 (Operating Systems)
+
+프로세스/스레드, 스케줄링, 동기화(Mutex, Semaphore), 메모리 관리, 파일 시스템
+
+알고리즘 (Algorithms)
+
+분할 정복, 탐욕법, 동적 계획법, DFS/BFS, 시간복잡도 분석, NP 문제
+
+📌 목표: 코어 CS(Computer Science) 과목을 배우고, 문제 해결력을 키움
+💡 자료구조 + 운영체제 + 컴구조 + 알고리즘 = 대부분의 코딩 면접 필수
+
+✅ 3학년: 전공 심화 & 실무 지향
+데이터베이스 (Database Systems)
+
+관계형 모델, SQL, 정규화, 트랜잭션, 인덱스, NoSQL 소개
+
+컴퓨터 네트워크
+
+OSI/TCP 계층, IP, TCP/UDP, HTTP, DNS, 라우팅, 소켓 프로그래밍
+
+소프트웨어 공학
+
+요구사항 분석, 설계 패턴, 테스트, 애자일 개발, Git, 팀 프로젝트
+
+인공지능 / 머신러닝 (선택)
+
+지도/비지도 학습, 회귀, 분류, 신경망, Scikit-learn
+
+웹프로그래밍 / 모바일 프로그래밍 (선택)
+
+HTML/CSS/JS, React, Android, iOS
+
+📌 목표: 개발 실무에 필요한 기술 익히고, 팀 프로젝트를 통해 실습 경험
+💡 졸업작품, 포트폴리오, 인턴 준비 시작
+
+✅ 4학년: 심화 선택 + 졸업 프로젝트
+졸업 프로젝트 / 캡스톤 디자인
+
+팀 단위로 실전 프로젝트 진행, 발표 및 문서화
+
+정보보안
+
+암호학, 인증, 해킹 기법, 보안 프로토콜
+
+인공지능 심화 / 딥러닝 / 데이터마이닝
+
+IoT / 클라우드 / 컴파일러 / 병렬프로그래밍 / 블록체인 (선택)
+
+📌 목표: 특정 분야 심화 및 진로 방향 정하기 (대학원/취업)
+
+📌 요약 로드맵 (한 눈에 보기)
+학년 핵심 과목
+1학년 프로그래밍 기초, 이산수학, 논리회로, 선형대수
+2학년 자료구조, 컴퓨터 구조, 운영체제, 알고리즘
+3학년 DB, 네트워크, SW공학, AI/ML, 웹/모바일 프로그래밍
+4학년 캡스톤 디자인, 보안, 선택 심화 과목 (AI, 클라우드 등)
+
+# 컴퓨터 네트워크: 과목 커리큘럼
+
+## 전체 목차
+
+1. **컴퓨터 네트워크 소개** – 인터넷의 구조와 프로토콜, 네트워크 성능 (지연, 처리량 등), **계층적 아키텍처** (OSI 7계층 모델 vs TCP/IP 4계층 모델)
+2. **애플리케이션 계층** – 네트워크 **애플리케이션 구조** (클라이언트-서버 vs P2P), **주요 프로토콜** (HTTP, FTP, SMTP/POP3, DNS), **소켓 프로그래밍**
+3. **전송 계층** – **전송 서비스와 프로토콜** (UDP, TCP), **신뢰성 있는 데이터 전송** (ARQ 메커니즘), **혼잡 제어** 및 **흐름 제어** (TCP의 AIMD 알고리즘 등)
+4. **네트워크 계층: 데이터 평면** – **포워딩 vs 라우팅**의 개념, **IP 프로토콜** (IPv4/IPv6, 주소 체계, NAT, DHCP), **라우터의 구조** (포워딩 테이블, longest prefix matching)
+5. **네트워크 계층: 제어 평면** – **라우팅 알고리즘** (링크 상태 vs 거리 벡터), **자율 시스템 (AS)**과 **경로 프로토콜** (OSPF, BGP), **소프트웨어 정의 네트워킹**(SDN)
+6. **링크 계층과 LAN** – **링크 계층 서비스** (프레이밍, 오류 검출), **다중 접속 프로토콜** (ALOHA, CSMA/CD, CSMA/CA), **LAN** (이더넷, 스위치, MAC 주소, ARP, VLAN)
+7. **무선 및 이동 네트워크** – **무선 LAN(Wi-Fi)**의 구조와 MAC, **이동통신망** (셀룰러 네트워크 구조, 핸드오프), **모바일 IP** 개념 (네트워크 단의 이동성 처리)
+8. **네트워크 보안** – **암호학 기초** (대칭키 vs 공개키), **인증과 무결성** (해시, 디지털 서명), **보안 프로토콜** (TLS/SSL), **네트워크 공격 및 방어** (IP 스푸핑, DDoS, 방화벽 등)
+
+---
+
+## 1. 컴퓨터 네트워크 소개
+
+**핵심 개념 요약:** 컴퓨터 네트워크란 **정보를 주고받기 위해 컴퓨터들이 연결된 시스템**으로, **프로토콜**에 따라 데이터가 교환된다. 인터넷은 전세계 네트워크의 집합이며 **네트워크의 엣지(종단)**와 **코어(라우터로 구성된 망)** 구조를 가진다. **패킷 교환 방식**으로 동작하며, 데이터는 **패킷** 단위로 전달된다. 네트워크 성능을 평가하는 주요 지표로 **지연(latency)**, **처리량(throughput)**, **패킷 손실율** 등이 있다. **계층적 아키텍처**를 통해 복잡성을 관리하는데, OSI 모델은 7계층, TCP/IP 모델은 4~5계층으로 구성된다 ([Network Layers Explained: OSI & TCP/IP Models [with examples]](https://www.plixer.com/blog/network-layers-explained/#:~:text=1,SNMP%2C%20HTTP%2C%20FTP)) ([Network Layers Explained: OSI & TCP/IP Models [with examples]](https://www.plixer.com/blog/network-layers-explained/#:~:text=The%20TCP%2FIP%20model%20is%20a,framework%2C%20with%20only%204%20layers)). 각 계층은 **추상화**를 제공하여 상위 계층의 동작을 단순화하고, **캡슐화(encapsulation)**를 통해 데이터에 계층별 헤더를 추가하여 전송한다.
+
+**심화 설명:** 현대 컴퓨터 네트워크(특히 인터넷)는 전 세계 수십억 대의 장치를 연결하는 인프라로서, **프로토콜(protocol)**이라 불리는 일련의 규칙에 의해 통신이 이루어집니다. 프로토콜은 통신하는 **엔티티들이 주고받는 메시지의 형식과 순서, 그리고 메시지를 송수신하거나 이벤트가 발생했을 때 취할 행동을 정의**합니다 ([ELEC331 :: Chapter 1](https://www.muchen.ca/documents/ELEC331/ELEC331-Chapter1.html#:~:text=Protocol)). 예를 들어, 인간 사이의 대화 규칙(인사 → 대답 → 본론 등)에 비유할 수 있으며, 컴퓨터 네트워크에서는 HTTP, TCP, IP와 같은 프로토콜들이 이러한 역할을 합니다.
+
+네트워크의 물리적 구조를 보면, **엣지(Edge)**에는 PC, 스마트폰, 서버와 같은 **종단 시스템(End System)**들이 있고, 이들은 **액세스 네트워크**를 통해 인터넷에 접속합니다. **코어(Core)**에는 패킷을 목적지까지 **라우팅**해주는 **라우터(router)**들이 계층적으로 연결되어 있습니다. 인터넷은 이러한 네트워크들의 **네트워크 (network of networks)**로서 동작하며, ISP(인터넷 서비스 제공자)들의 망이 상호 연결되어 거대한 전세계망을 형성합니다. 데이터는 송신지에서 **패킷(packet)**으로 쪼개어 전송되며, 각 패킷은 **발신지 IP 주소**와 **수신지 IP 주소** 등의 정보를 헤더에 담고 네트워크를 통과합니다.
+
+**패킷 교환 vs 회선 교환:** 인터넷은 **패킷 교환(packet switching)** 방식을 사용하여 효율적으로 회선을 공유합니다. 패킷 교환에서는 각 패킷이 독립적으로 전송되어 **공유된 링크 자원**을 필요 시에만 사용하므로, 다수의 사용자가 트래픽이 적을 때는 대역폭을 효과적으로 공유할 수 있습니다. 반면 구전화망(PSTN)은 **회선 교환(circuit switching)**을 사용하여 통화 기간 내내 회선을 독점하는데, 이는 안정적인 대역폭을 보장하지만 미사용 시간에도 자원을 차지하는 비효율이 있습니다. 오늘날 대부분 데이터 네트워크는 패킷 교환을 택하며, 라우터 내에서 **저장-전달(store-and-forward)** 방식으로 패킷을 받고 처리하여 다음 홉으로 보냅니다.
+
+**네트워크 성능:** 패킷이 네트워크를 통과할 때 겪는 **지연(delay)**은 여러 요소로 구성됩니다 ([ELEC331 :: Chapter 1](https://www.muchen.ca/documents/ELEC331/ELEC331-Chapter1.html#:~:text=Physical%20Media%20Guided%20Media%20Unguided,Sniffing%20IP%20Spoofing%20Exercise%201)). 송신 측에서의 **처리 지연**과 **큐잉 지연**(라우터에서 패킷이 대기열에 대기하는 시간), 링크를 따라 전송되는 **전송 지연**(패킷의 비트들이 링크를 지나는 시간), 신호가 선을 따라 이동하는 **전파 지연** 등이 모두 합쳐져 종단 간 지연이 결정됩니다. 만약 라우터의 대기열이 가득 차면 **패킷 손실**이 발생할 수 있습니다. 한편 **처리량(throughput)**은 단위 시간당 성공적으로 전달되는 데이터 양을 의미하며, 애플리케이션 요구(예: 스트리밍 최소 5Mbps 등)를 만족해야 합니다. 네트워크는 종종 **애버리지 처리량**과 **순간 처리량**을 구분하며, 혼잡 시에는 처리량이 떨어질 수 있습니다.
+
+**계층형 아키텍처와 OSI 모델:** 복잡한 네트워킹 시스템을 설계하고 이해하기 쉽게 하기 위해 **계층(layer)** 개념을 사용합니다. 각 계층은 특정 통신 기능을 담당하고, 인접 계층 간에만 상호작용하며, 상위 계층은 하위 계층의 동작 세부사항을 몰라도 서비스를 이용할 수 있습니다. **OSI 7계층 모델**은 물리-데이터링크-네트워크-전송-세션-표현-응용의 7단계로 이상적인 참조 모델을 제시하며, **TCP/IP 모델**은 실제 인터넷에서 사용되는 4계층 혹은 5계층 모델로, OSI의 응용/표현/세션을 **응용 계층**으로 통합하고, 하위에 **전송 계층**, **인터넷(네트워크) 계층**, **네트워크 액세스 계층**(데이터링크+물리)을 둔 형태입니다 ([Network Layers Explained: OSI & TCP/IP Models [with examples]](https://www.plixer.com/blog/network-layers-explained/#:~:text=1,SNMP%2C%20HTTP%2C%20FTP)) ([Network Layers Explained: OSI & TCP/IP Models [with examples]](https://www.plixer.com/blog/network-layers-explained/#:~:text=The%20TCP%2FIP%20model%20is%20a,framework%2C%20with%20only%204%20layers)). 아래 그림은 OSI 모델과 TCP/IP 모델의 계층 비교를 보여줍니다.
+
+([TCP/IP Model - GeeksforGeeks](https://www.geeksforgeeks.org/tcp-ip-model/)) _OSI 7계층 모델(왼쪽)과 TCP/IP 4계층 모델(오른쪽) 비교 ([TCP/IP Model - GeeksforGeeks](https://www.geeksforgeeks.org/tcp-ip-model/#:~:text=,Network%20Access%20Layer))._
+
+각 계층은 자신의 **프로토콜**들을 통해 동작합니다. 예를 들어 **응용 계층**에는 HTTP(S), FTP, SMTP 같은 프로토콜이 있고, **전송 계층**에는 TCP와 UDP, **네트워크 계층**에는 IP, **링크 계층**에는 이더넷, Wi-Fi 등이 있습니다. 송신 측 데이터는 **캡슐화(encapsulation)** 과정을 거쳐 상위 계층 데이터에 하위 계층 헤더(메타데이터)를 덧붙이며 내려가고, 수신 측에서는 **역캡슐화**하여 상위 계층으로 전달합니다. 이러한 계층화로 인해 모듈화와 상호 운용성이 향상되어, 예를 들어 IP와 호환되는 한 이더넷이든 Wi-Fi든 링크 계층 기술을 자유롭게 바꿀 수 있습니다.
+
+마지막으로, 네트워크를 **악의적인 공격**으로부터 보호하는 개념을 **네트워크 보안**이라 하며, 이는 후반부(섹션 8)에서 자세히 다룹니다. 네트워크 보안의 기초로, 도청(패킷 스니핑), 신원 위장(IP 스푸핑), 서비스 거부 공격(DoS) 등의 위협과 이를 방어하는 암호화, 인증, 방화벽 기술 등이 있습니다.
+
+## 2. 애플리케이션 계층
+
+**핵심 개념 요약:** **애플리케이션 계층**은 사용자와 가장 가까운 계층으로, **네트워크를 이용하는 응용프로그램들의 논리적 상호작용**을 담당합니다. 대표적인 애플리케이션 계층 프로토콜로 **월드와이드웹의 HTTP**, **파일 전송의 FTP**, **전자메일의 SMTP/POP3/IMAP**, **도메인 이름 해석의 DNS** 등이 있습니다. 애플리케이션은 **클라이언트-서버(Client-Server)** 구조나 **피어-투-피어(P2P)** 구조로 설계될 수 있습니다 ([computer-networking-top-down-approach-notes/Chapter 2: Application Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%202:%20Application%20Layer.md#:~:text=%2A%20Client,without%20a%20dedicated%20server%20intermediary)). 서로 다른 시스템의 프로세스들 간 통신은 **소켓(socket)**이라는 **API**를 통해 이루어지며 ([computer-networking-top-down-approach-notes/Chapter 2: Application Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%202:%20Application%20Layer.md#:~:text=communicate%20with%20each%20other%20by,for%20building%20network%20applications)), 프로그래머는 소켓 인터페이스를 사용하여 네트워크를 투명하게 활용할 수 있습니다. 애플리케이션 계층 프로토콜은 일반적으로 **전송 계층** (TCP/UDP)의 서비스를 이용하며, 특정 **포트 번호**를 통해 프로세스를 식별합니다 (예: HTTP는 포트 80).
+
+**심화 설명:** 애플리케이션 계층에서는 **네트워크 활용 응용 프로그램**들이 동작하며, 사용자에게 보이는 서비스들이 여기에서 구현됩니다. 웹 브라우징, 이메일 송수신, 파일 다운로드, 화상 통화 등이 모두 애플리케이션 계층에서 해당 프로토콜을 통해 이루어집니다. 애플리케이션 프로토콜은 **분산 시스템** 형태로, **동작하는 프로세스들 간의 메시지 교환 규약**을 정의합니다. 예를 들어 HTTP 프로토콜은 웹브라우저(클라이언트)와 웹서버(서버)가 어떤 형식으로 메시지를 주고받을지를 결정합니다.
+
+### 애플리케이션 구조: 클라이언트-서버 vs P2P
+
+네트워크 애플리케이션은 **클라이언트-서버(client-server)** 구조 또는 **피어 투 피어(Peer-to-Peer)** 구조로 설계될 수 있습니다. **클라이언트-서버 모델**에서는 항상 켜져 있는 **서버**가 있고, 다수의 **클라이언트**들이 서버에 요청을 보내 서비스를 받습니다 ([computer-networking-top-down-approach-notes/Chapter 2: Application Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%202:%20Application%20Layer.md#:~:text=%2A%20Client,without%20a%20dedicated%20server%20intermediary)). 서버는 고정된 IP 주소(도메인 이름으로 접근)로 클라이언트의 요청을 처리하며, 웹 서버, 메일 서버 등이 여기에 속합니다. 클라이언트들 간에는 직접 통신하지 않고 반드시 서버를 통해 간접 통신하며, 서버는 중앙집중식 자원으로 트래픽 부하, 확장성 이슈를 관리해야 합니다.
+
+반면 **P2P 구조**에서는 **동등한 지위**의 노드들이 서로 직접 통신하여 자원을 공유합니다 ([computer-networking-top-down-approach-notes/Chapter 2: Application Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%202:%20Application%20Layer.md#:~:text=Telnet%2C%20and%20email.%20%2A%20Peer,applications%20face%20challenges%20related%20to)). 전통적인 서버 없이도 동작 가능하며, 각 피어가 동시에 클라이언트이자 서버 역할을 수행합니다. 예를 들어 토렌트(BitTorrent) 파일 공유, IPTV(P2P 기반 스트리밍) 등이 P2P 패러다임을 활용합니다. P2P는 **자체 확장성(self-scalability)**이 뛰어나, 노드가 추가될수록 자원 제공량도 늘어나지만, 노드의 가변성과 보안/신뢰 문제, 검색의 어려움 등의 챌린지가 있습니다 ([computer-networking-top-down-approach-notes/Chapter 2: Application Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%202:%20Application%20Layer.md#:~:text=intermediary.%20,due%20to%20their%20highly%20decentralized)).
+
+### 프로세스 통신과 소켓
+
+네트워크 애플리케이션에서 통신의 끝점은 **프로세스(process)**입니다. 서로 다른 호스트에서 동작하는 두 프로세스는 **메시지 교환**을 통해 통신하며, 이때 운영체제가 제공하는 **소켓(socket)** 인터페이스를 사용합니다. 소켓은 프로세스와 운영체제 네트워크 스택 사이의 문지기 역할로, 프로세스는 소켓을 통해 메시지를 보내고 받습니다 ([computer-networking-top-down-approach-notes/Chapter 2: Application Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%202:%20Application%20Layer.md#:~:text=communicate%20with%20each%20other%20by,for%20building%20network%20applications)). 소켓 프로그래밍을 통해 개발자는 마치 **파일 I/O**를 다루듯이 네트워크 통신을 다룰 수 있습니다. 예를 들어, Python 언어에서는 다음과 같이 소켓을 생성하고 HTTP 요청을 보내는 식으로 클라이언트를 구현할 수 있습니다:
+
+```python
+# 간단한 TCP 클라이언트 예제 (파이썬)
+import socket
+
+# www.example.com 웹 서버에 TCP 연결 생성
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+sock.connect(("www.example.com", 80))  # 80번 포트 (HTTP 기본 포트)
+
+# HTTP GET 요청 전송
+request = b"GET / HTTP/1.1\r\nHost: www.example.com\r\n\r\n"
+sock.send(request)
+
+# 응답 수신 및 출력 (일부만 표시)
+response = sock.recv(4096)
+print(response.decode()[:128])  # 응답 데이터의 처음 128글자 출력
+
+sock.close()
+```
+
+위 코드에서 볼 수 있듯, 클라이언트는 TCP 소켓을 열고 서버(`www.example.com:80`)에 연결한 뒤, HTTP 프로토콜 형식에 맞게 요청을 보냅니다. 그런 다음 서버의 응답을 받아 처리합니다. **서버 측 프로그래밍**도 유사하게 소켓을 바인드(bind)하고 대기(listen)하다가 접속을 받아들여(accept) 요청을 처리합니다.
+
+프로세스 식별을 위해 **IP 주소 + 포트번호** 조합이 사용됩니다 ([computer-networking-top-down-approach-notes/Chapter 2: Application Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%202:%20Application%20Layer.md#:~:text=,mail%20server%20on%20port%2025)). 예컨대 하나의 호스트에서 여러 서버 프로세스(웹, FTP, SSH 등)가 동시에 동작할 수 있는데, 이들은 각기 다른 포트 번호를 사용하여 커널이 적절한 프로세스로 데이터를 **디멀티플렉싱(demultiplexing)** 하도록 합니다. 잘 알려진 서비스들은 **잘 알려진 포트 번호**를 사용 (HTTP 80, HTTPS 443, SMTP 25 등)하며, 클라이언트는 임시로 높은 포트 번호(ephemeral port)를 할당받아 통신합니다.
+
+### 주요 애플리케이션 프로토콜
+
+여러 응용 분야별로 **전용 프로토콜**들이 애플리케이션 계층에 정의되어 있습니다. 이들은 **텍스트 기반**인 경우가 많아 사람이 읽을 수 있는 형태로 메시지를 주고받거나, 또는 이진(binary) 프로토콜로 효율을 추구하기도 합니다.
+
+- **HTTP (HyperText Transfer Protocol):** 웹 상에서 **하이퍼텍스트 전송**을 위한 프로토콜로 **무상태(stateless)** 프로토콜입니다 ([computer-networking-top-down-approach-notes/Chapter 2: Application Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%202:%20Application%20Layer.md#:~:text=2,and%20HTTP)). 기본적으로 클라이언트(브라우저)가 서버에 **요청(request)**을 보내면, 서버는 해당 자원에 대한 **응답(response)**을 보내는 방식으로 작동합니다. HTTP는 애플리케이션 계층이므로 **전송 계층에 TCP**를 사용하여 연결을 맺은 후 통신합니다. 기본 동작은 **TCP 3-way handshake** 후 요청/응답을 주고 한 번의 연결을 종료하는 **비지속(non-persistent) HTTP**였으나, HTTP/1.1부터는 **지속적 연결(persistent connection)**을 기본으로 하여 하나의 TCP 연결로 다수의 객체(예: 웹페이지 내 이미지들)를 연속 전송합니다 ([computer-networking-top-down-approach-notes/Chapter 2: Application Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%202:%20Application%20Layer.md#:~:text=2,Connections)). HTTP 메시지는 인간이 읽을 수 있는 헤더(예: `GET /index.html HTTP/1.1`, Host, User-Agent 등)와 본문으로 구성됩니다. 또한 **쿠키(cookie)**와 **세션**을 통해 기본 무상태 프로토콜 위에 상태 정보를 유지하는 메커니즘을 제공합니다. 최근 HTTP/2, HTTP/3(QUIC 기반)로 발전하면서 하나의 연결에서 **다중화(multiplexing)**, **헤더 압축**, **서버 푸시** 등의 성능 개선이 도입되었습니다 ([computer-networking-top-down-approach-notes/Chapter 2: Application Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%202:%20Application%20Layer.md#:~:text=2)).
+
+- **전자 메일 프로토콜:** 인터넷 전자우편은 여러 프로토콜이 협업합니다. 사용자가 메일을 작성하여 **메일 서버**에 전송할 때는 **SMTP(Simple Mail Transfer Protocol)**를 사용하고, 메일 서버 간에도 SMTP로 메일을 교환합니다. SMTP는 TCP 25번 포트로 동작하며, 발신자 메일 서버가 수신자 메일 서버에게 메일을 **"푸시"**하는 프로토콜입니다. 한편 사용자가 자신의 메일 서버에 접속하여 메일을 가져올 때는 **POP3(Post Office Protocol)** 또는 **IMAP(Internet Message Access Protocol)**를 사용합니다. POP3는 메일을 내려받아 로컬에 저장하고 보통 서버에서 삭제하는 단순한 방식(오프라인 접근)이고, IMAP은 서버 상의 메일을 원격으로 관리(동기화)하며 부분 다운로드 및 폴더 관리가 가능한 프로토콜입니다. SMTP/POP3/IMAP 모두 기본적으로는 **평문 텍스트 명령**을 사용하나, 현재는 보안 상 TLS를 입혀 **SMTP-S**, **IMAP-S** 등의 형태로 사용됩니다. 메일 전송의 일반적 경로는 다음과 같습니다 ([computer-networking-top-down-approach-notes/Chapter 2: Application Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%202:%20Application%20Layer.md#:~:text=2)) ([computer-networking-top-down-approach-notes/Chapter 2: Application Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%202:%20Application%20Layer.md#:~:text=,allowing%20users%20to%20manage%20emails)): 사용자의 메일 클라이언트(UA)가 SMTP로 송신 메일 서버(MTA)에 메일 전달 → SMTP로 수신 측 MTA에 전달 → 수신자가 IMAP/POP3로 자신의 MTA에서 메일 수신.
+
+- **DNS (Domain Name System):** DNS는 **도메인 이름을 IP주소로 변환**(또는 그 반대)해주는 **분산형 데이터베이스**이자 프로토콜입니다. 사람 친화적인 도메인 (예: `www.example.com`)을 컴퓨터가 이용하는 IP 주소 (`93.184.216.34` 등)로 해석해주는 **인터넷 전화번호부** 역할을 합니다 ([computer-networking-top-down-approach-notes/Chapter 2: Application Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%202:%20Application%20Layer.md#:~:text=2)). DNS는 **계층적 구조**를 가지는데, **루트 DNS 서버** → **TLD(최상위 도메인) 서버** → **권한 권한(Name 서버)** 순으로 분산되어 운영됩니다. 예를 들어 클라이언트가 `www.example.com`을 해석할 때, 로컬 DNS 리졸버가 먼저 루트 서버에 `.com` 도메인에 대한 질의, `.com` TLD 서버가 `example.com`에 대한 권한 서버 정보 응답, 마지막으로 `example.com` 권한 DNS 서버가 `www.example.com` 호스트의 A 레코드(IP 주소)를 응답하는 식입니다. 이 과정을 **재귀적 질의(recursive query)**로 로컬 DNS가 대신 수행해줄 수도 있고, 또는 단계별로 **반복적 질의(iterative query)**를 통해 직접 물어볼 수도 있습니다 ([computer-networking-top-down-approach-notes/Chapter 2: Application Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%202:%20Application%20Layer.md#:~:text=2,Queries)). DNS는 UDP 53번 포트를 주로 사용하며, **캐싱**을 통해 응답 속도를 높입니다. DNS 응답에는 **TTL(Time to Live)** 값이 있어 캐시 유효 기간을 결정합니다. DNS는 또한 부가적으로 **메일 서버용 MX 레코드**, **IP→이름 역방향 조회(PTR 레코드)**, **서비스 레코드(SRV)** 등 다양한 레코드를 제공합니다. DNS 프로토콜 메시지 포맷은 식별자, 플래그, 질의/응답 개수와 질의/응답 RRs(Resource Records) 목록으로 구성되며, 보안을 위해 DNSSEC(도메인 이름 시스템 보안 확장) 등이 도입되어 있습니다.
+
+- **FTP (File Transfer Protocol):** FTP는 초창기 파일 전송 프로토콜로, 별도의 **제어 연결**(TCP 21 포트)과 **데이터 전송 연결**(TCP 20 포트)을 사용하는 특징이 있습니다. 사용자가 FTP 클라이언트를 통해 서버에 접속(login 필요)하면 제어 연결을 통해 **명령어**(예: LIST, RETR, STOR 등)를 보내고 파일 목록 조회나 전송 요청을 합니다. 파일 전송 시에는 데이터 연결이 열려 실제 파일이 흐르며, 전송 모드로 ASCII와 바이너리 모드 등을 지원합니다. FTP는 설계상 보안이 취약해 패스워드조차 평문으로 전송하기 때문에, 현재는 SSL/TLS를 입힌 FTPS 또는 전혀 다른 프로토콜인 SFTP(SSH File Transfer Protocol)로 대체되는 추세입니다.
+
+- **기타 프로토콜:** 이외에도 원격 터미널 접속을 위한 **SSH/Telnet**, 네트워크 시간 동기화를 위한 **NTP(Network Time Protocol)** ([TCP/IP Model - GeeksforGeeks](https://www.geeksforgeeks.org/tcp-ip-model/#:~:text=fill%20out%20forms%2C%20sign%20in%2C,transaction%2C%20where%20your%20computer%20reads)), 멀티미디어 스트리밍을 위한 RTP/RTSP, VoIP를 위한 SIP, P2P 파일 공유 프로토콜 등 다양한 애플리케이션 계층 프로토콜이 존재합니다. 최근에는 애플리케이션 계층에서 **암호화와 인증**이 중요해지면서, 많은 트래픽이 TLS 위에서 동작(HTTPS 등)하여 보안을 기본 제공하는 추세입니다.
+
+### 웹 기술의 최신 동향 (HTTP/2, HTTP/3)
+
+애플리케이션 계층의 발전 예로 웹 분야를 보면, HTTP/1.x의 한계를 극복하기 위해 **HTTP/2**와 **HTTP/3(QUIC)**이 등장했습니다. HTTP/2는 주요 목표로 **지연 감소**와 **네트워크 효율 개선**을 내세워, 하나의 TCP 연결에서 여러 요청을 동시에 처리하는 **다중화(multiplexing)**, 헤더 압축(HPACK) 등의 기술을 도입했습니다 ([computer-networking-top-down-approach-notes/Chapter 2: Application Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%202:%20Application%20Layer.md#:~:text=2)). 이를 통해 이전의 HTTP/1.1에서 개별 객체마다 직렬화되던 요청들이 병렬화되어 페이지 로딩 성능이 향상됩니다. 또한 서버가 클라이언트 요청을 기다리지 않고 리소스를 푸시할 수 있는 **서버 푸시** 기능도 추가되었습니다.
+
+**HTTP/3**는 전송 계층에 의존적인 HTTP/2의 한계를 더 극복하고자, **UDP 기반의 QUIC 프로토콜**을 전송 계층으로 삼는 차세대 HTTP입니다. QUIC는 UDP 위에서 동작하며, TCP에 대비 연결 설정 지연을 줄이고(핸드셰이크 최적화), 패킷 손실 시 개별 스트림만 재전송하여 홀드업 문제(head-of-line blocking)를 없애주는 등 개선을 제공합니다. 이는 애플리케이션 계층과 전송 계층의 경계를 다소 재구성한 사례로 볼 수 있으며, 웹 트래픽의 상당 부분이 HTTP/3로 전환되고 있습니다. 이러한 **프로토콜의 진화**는 애플리케이션 계층이 사용자의 요구(더 빠른 응답, 보안 등)에 맞춰 지속적으로 발전하고 있음을 보여줍니다.
+
+## 3. 전송 계층
+
+**핵심 개념 요약:** **전송 계층(Transport Layer)**은 호스트 내에서 **프로세스 대 프로세스 간 통신**을 제공하는 계층으로, 대표적으로 **UDP**와 **TCP** 프로토콜이 있다. **UDP(User Datagram Protocol)**는 **비연결형(Connectionless)** 프로토콜로 단순한 메시지 전달 기능만 제공하며, 신뢰성이나 순서 보장을 하지 않는다. 반면 **TCP(Transmission Control Protocol)**는 **연결 지향(Connection-oriented)** 프로토콜로, **신뢰성 있는 데이터 전송**(데이터의 손실/중복/순서 뒤바뀜 방지)과 **흐름 제어(flow control)**, **혼잡 제어(congestion control)** 등의 기능을 제공한다 ([computer-networking-top-down-approach-notes/Chapter 3: Transport Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%203%3A%20Transport%20Layer.md#:~:text=Services%20Provided%20Process%20to%20process,to%20additional%20services%20and%20mechanisms)). 전송 계층은 IP의 종단 간 전달을 **프로세스 간 전달로 확장**하며 (이를 **다중화/역다중화**라 한다 ([computer-networking-top-down-approach-notes/Chapter 3: Transport Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%203%3A%20Transport%20Layer.md#:~:text=,transport%20layer%20multiplexing%20and%20demultiplexing))), 포트 번호를 통해 애플리케이션을 식별한다. **신뢰성 보장**을 위해 TCP는 **확인 응답(ACK)**과 **재전송** 메커니즘(ARQ)을 사용하고, **3-way 핸드셰이크**로 연결을 설정하며 **4-way**로 해제한다. 혼잡 상황에서는 **AIMD (Additive Increase Multiplicative Decrease)** 등의 알고리즘으로 송신 윈도우를 조절하여 네트워크 안정성을 유지한다 ([Transmission Control Protocol - Wikipedia](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#:~:text=Modern%20implementations%20of%20TCP%20contain,four%20intertwined%20algorithms%3A%20slow)).
+
+**심화 설명:** 전송 계층은 응용 프로세스들이 네트워크를 통해 **신뢰성 있고 효율적인 통신을 할 수 있도록 해주는 기능적 범위**를 제공합니다. OSI 모델에서는 전송 계층의 대표적인 기능으로 **종단간(end-to-end) 연결 관리**, **에러 복구**, **트래픽 조절** 등을 꼽으며, 인터넷 프로토콜 스택에서는 주로 TCP와 UDP를 통해 이러한 기능들이 구현됩니다.
+
+### 전송 계층 서비스 개요
+
+전송 계층은 **두 호스트** 간 이미 이루어진 네트워크 계층의 전달 기능(IP)을 활용하여, **종단 대 종단(end-to-end)**의 논리적 통신을 **프로세스 대 프로세스** 통신으로 발전시킵니다 ([computer-networking-top-down-approach-notes/Chapter 3: Transport Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%203%3A%20Transport%20Layer.md#:~:text=,to%20be%20an%20unreliable%20service)). 전송 계층 프로토콜은 **송신 측**에서 애플리케이션 데이터에 전송 계층 헤더(예: TCP/UDP 헤더)를 붙여 **세그먼트(segment)**를 만들고, **수신 측**에서 그 헤더를 해석하여 상위 애플리케이션으로 데이터를 전달합니다. 이때 세그먼트의 헤더에는 **소스 및 목적지 포트 번호**가 포함되어 있어서, 수신 호스트의 커널이 어떤 애플리케이션 소켓으로 데이터를 넘길지 결정합니다 (이 과정을 **역다중화(demux)**라고 함). **잘 알려진 포트**(예: 80, 443, 53 등)는 서버 프로세스와 매핑되고, **임시 포트**는 클라이언트 소켓에 할당되어 통신 쌍을 고유식별합니다.
+
+전송 계층이 응용에 제공하는 **서비스 품질**은 프로토콜마다 다릅니다. 예를 들어 **UDP**는 최소한의 기능만 제공하기 때문에 **비신뢰적 전송**, **순서 무보장**, **베스트 에포트 지연 특성**을 갖습니다. 반면 **TCP**는 **가상 회선 연결**을 수립하여, 신뢰적이고 순서제어된 바이트 스트림을 제공하며, 흐름 제어를 통해 수신 측 버퍼 오버플로를 방지하고, 혼잡 제어를 통해 네트워크 혼잡을 완화합니다. **TCP과 UDP 중 선택**은 애플리케이션 요구사항에 따릅니다 ([computer-networking-top-down-approach-notes/Chapter 2: Application Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%202:%20Application%20Layer.md#:~:text=,apps%20can%20tolerate%20some%20loss)). 예컨대, **실시간 스트리밍/VoIP**는 약간의 손실을 허용하더라도 지연이 작아야 하므로 UDP를 선호하고, **파일 다운로드/웹**은 정확한 전송이 중요하므로 TCP를 사용합니다.
+
+전송 계층에서는 **보안**도 하나의 고려사항이 될 수 있습니다. 기본 TCP/UDP는 보안을 제공하지 않지만, **TLS**와 같은 상위 계층 프로토콜과 결합하여 암호화를 적용하기도 합니다 ([computer-networking-top-down-approach-notes/Chapter 2: Application Layer.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%202:%20Application%20Layer.md#:~:text=,integrity%2C%20and%20end%20point%20authentication)). (TLS는 전통적으로 애플리케이션에 라이브러리 형태로 적용되지만 **“TCP위에 동작하는 보안 계층”**으로 간주됩니다.)
+
+### UDP: 단순하고 경량의 전송 프로토콜
+
+**UDP(User Datagram Protocol)**는 인터넷의 두 주요 전송 프로토콜 중 가볍고 단순한 쪽입니다. UDP 세그먼트 헤더는 **4개의 필드(소스 포트, 목적지 포트, 길이, 체크섬)**로 매우 간단합니다. **연결 설정(handshake)**이 전혀 없고, 수신 측에서 패킷을 받으면 즉시 상위 프로세스에 전달합니다. 즉, 어떠한 순서 제어나 재전송 메커니즘이 없으므로 전송 중 손실/오류가 발생해도 UDP 계층에서 복구하지 않습니다. 이러한 **비신뢰성**과 **무상태성** 덕분에 **지연 시간이 매우 낮고 오버헤드가 적다**는 장점이 있습니다 ([Difference Between CSMA/CA and CSMA/CD - GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-csma-ca-and-csma-cd/#:~:text=CSMA%2FCA%20stands%20for%20Carrier%20Sense,it%20is%20also%20operated%20in)). 따라서 DNS 질의처럼 짧고 간단한 요청/응답 교환, 또는 실시간 미디어 스트리밍처럼 약간의 손실보다 지연이 중요한 응용에서 UDP를 사용합니다. UDP는 **베스트 에포트 전달**만 하기 때문에, 신뢰성을 요구하는 응용은 상위에서 자체적인 오류복구를 구현해야 합니다.
+
+UDP의 또다른 특성으로 **멀티캐스팅** 지원을 들 수 있습니다. 하나의 UDP 패킷을 여러 수신자에게 **브로드캐스트/멀티캐스트**로 전송할 수 있어, 같은 데이터를 다수에게 보낼 때 효율적입니다 (TCP는 1:1 연결지향이므로 멀티캐스트가 어려움). 또한 UDP는 **헤더 체크섬** 필드를 포함하여 도착 시 간단한 오류 검출을 수행합니다. 하지만 이는 오류가 있음을 알릴 뿐 **재전송은 하지 않으므로**, 상위 계층(예: 애플리케이션)이 필요 시 조치를 취해야 합니다.
+
+### TCP: 신뢰성과 연결 지향 전송
+
+**TCP(Transmission Control Protocol)**는 인터넷에서 가장 널리 사용되는 전송 프로토콜로, 신뢰성 있고 연결 지향적인 **바이트 스트림 서비스**를 제공합니다. TCP가 제공하는 핵심 기능은 다음과 같습니다:
+
+- **연결 지향성:** 통신 시작 전에 송신자와 수신자 간에 **3-way 핸드셰이크** 과정을 거쳐 논리적 연결을 수립합니다. 이때 초기 **시퀀스 번호(ISN)**를 서로 교환하여 바이트 흐름의 시작을 맞추고, 각 연결을 고유 식별합니다 ([TCP 3-Way Handshake Process - GeeksforGeeks](https://www.geeksforgeeks.org/tcp-3-way-handshake-process/#:~:text=,acknowledges%20the%20response%20of%20the)). 연결 종료 시에는 **4-way 핸드셰이크**로 우아하게 연결을 해제하며, 자원 정리를 합니다.
+
+- **신뢰성 있는 전달:** TCP는 데이터가 손실되거나 손상되면 재전송하여 결국 목적지에 도달하도록 합니다. **양측**은 주고받은 데이터에 대해 **확인 응답(ACK)**을 주고받으며, 송신 측은 보낸 세그먼트에 대한 ACK를 일정 시간 내 받지 못하면 해당 세그먼트를 **재전송**합니다. 이를 위한 기본 메커니즘으로 **타이머(RTO)**를 관리하고, 중복 ACK로 빠르게 손실을 탐지하는 **빠른 재전송(Fast Retransmit)**도 사용합니다. TCP 세그먼트 헤더에는 **순서 번호(sequence number)**와 **확인 응답 번호(ACK number)** 필드가 있어 바이트 스트림 내 위치를 추적합니다 ([TCP 3-Way Handshake Process - GeeksforGeeks](https://www.geeksforgeeks.org/tcp-3-way-handshake-process/#:~:text=application%20that%20is%20sending%20the,It%20is%20an)) ([TCP 3-Way Handshake Process - GeeksforGeeks](https://www.geeksforgeeks.org/tcp-3-way-handshake-process/#:~:text=%2A%20Sequence%20Number%3A%20A%2032,It%20is%20an)). 수신 측은 누적 ACK을 보내는 방식(cumulative ACK)으로 연속된 수신 바이트를 확인하며, **슬라이딩 윈도우(sliding window)** 프로토콜을 통해 파이프라이닝된 다중 패킷 전송도 가능하게 합니다. 신뢰성은 **순서 제어**와 **오류 검출**도 포함하는데, TCP는 바이트 스트림 순서를 유지하며, 세그먼트에 **체크섬**을 포함시켜 오류 발생 시 세그먼트를 폐기하도록 합니다.
+
+- **흐름 제어(flow control):** 수신자의 버퍼 오버플로를 방지하기 위해, 수신 측은 자신의 **수신 윈도우 크기(RcvWindow)**를 TCP 헤더의 윈도우 필드로 광고합니다. 송신 측은 이 값을 넘지 않도록 **송신 윈도우**를 조절하여, **수신 측이 처리할 수 있는 만큼만** 데이터 양을 보내게 됩니다. 예를 들어 수신 애플리케이션이 데이터를 느리게 소비하면, 수신 버퍼가 차서 윈도우 크기가 0까지 줄어들 수 있고, 이 경우 송신 측은 윈도우가 열릴 때까지 전송을 일시 중단합니다. 이렇게 TCP는 **엔드투엔드 흐름 제어**로 양단 간 속도 균형을 맞춥니다.
+
+- **혼잡 제어(congestion control):** TCP의 가장 중요한 공헌 중 하나는 **네트워크 혼잡 상황**을 감지하고 송신 속도를 조절하는 **혼잡 제어 알고리즘**입니다. TCP는 패킷 손실을 **혼잡의 신호**로 간주하고, 손실 발생 시 송신 속도를 줄여 네트워크 부하를 완화합니다 ([Transmission Control Protocol - Wikipedia](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#:~:text=,13)) ([Transmission Control Protocol - Wikipedia](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#:~:text=The%20final%20main%20aspect%20of,and%20avoid%20congestive%20collapse%2C%20a)). 전통적인 TCP Tahoe/Reno 알고리즘은 **AIMD( additive increase, multiplicative decrease )** 원리를 따릅니다. 송신자는 연결 초기에는 **느린 시작(slow start)** 단계에서 지수적으로 윈도우(혼잡 윈도우, cwnd)를 증가시켜 네트워크 용량을 탐색합니다. 혼잡 이벤트(타임아웃 혹은 3중 중복 ACK)가 발생하면 cwnd를 크게 줄입니다 (multiplicative decrease, 일반적으로 1로 감소 혹은 절반으로 감소). 이후에는 혼잡이 없을 때 선형적으로 윈도우를 증가시킵니다 (additive increase, RTT마다 약 한 세그먼드씩 증가). 이러한 과정을 통해 네트워크 대역폭을 사용하면서도 **공정성(fairness)**을 유지하고 **혼잡 붕괴(collapse)**를 방지합니다 ([Transmission Control Protocol - Wikipedia](https://en.wikipedia.org/wiki/Transmission_Control_Protocol#:~:text=Modern%20implementations%20of%20TCP%20contain,four%20intertwined%20algorithms%3A%20slow)). 최신 TCP 구현들은 **Fast Recovery**, **Fast Open**, **Selective Acknowledgment (SACK)**, **Explicit Congestion Notification (ECN)** 등의 기법도 사용하여 성능을 향상시킵니다.
+
+이러한 TCP의 동작은 **가상 회선** 추상화를 제공합니다. 즉, IP 네트워크 위에 마치 전용 회선을 쓴 듯이 **순서가 어긋나지 않고, 안정적으로, 흐름이 조절된 바이트 스트림**을 사용할 수 있게 되는 것입니다. 물론 TCP의 대가로 **추가적인 지연**(예: 연결 설정 1 RTT, 손실 시 재전송 지연)과 **헤더 오버헤드**(일반적으로 20바이트 TCP 헤더)가 발생합니다. 하지만 대부분의 신뢰성 요구 응용에 TCP는 적합하며, 인터넷 트래픽의 상당 부분(웹, 이메일 등)이 TCP 위에서 이루어집니다.
+
+### TCP 연결 설정 (3-way 핸드셰이크)과 해제
+
+TCP의 **3-way 핸드셰이크** 과정을 더 자세히 살펴보면, 다음 3단계로 이루어집니다 ([TCP 3-Way Handshake Process - GeeksforGeeks](https://www.geeksforgeeks.org/tcp-3-way-handshake-process/#:~:text=,acknowledges%20the%20response%20of%20the)):
+
+1. **SYN:** 클라이언트가 서버에 접속 요청을 보내는 단계로, TCP 헤더의 **SYN 플래그**를 1로 설정한 세그먼트를 보냅니다. 이 세그먼트에는 클라이언트가 선택한 **초기 순번(ISN)** `x`가 담겨 있습니다. (플래그 외에 SYN 세그먼트도 순번 번호를 차지함)
+
+2. **SYN+ACK:** 서버는 SYN 세그먼트를 수신하면, 자신도 SYN 플래그를 1로 하고 ACK 플래그도 1로 설정한 세그먼트를 응답합니다. 이때 ACK 번호는 `x+1`로 하여 클라이언트의 ISN+1을 확인하고, 동시에 서버의 ISN `y`를 SYN으로 보냅니다. (즉, 하나의 세그먼트가 SYN과 ACK 역할을 동시에 수행)
+
+3. **ACK:** 클라이언트는 서버로부터 SYN+ACK를 받고, 이제 ACK 플래그를 1로 한 세그먼트를 보냅니다. ACK 번호는 `y+1`로 서버의 ISN을 확인응답합니다. 이로써 연결이 맺어지며, 이후부터는 양측 모두 데이터를 주고받을 준비가 완료됩니다 ([TCP 3-Way Handshake Process - GeeksforGeeks](https://www.geeksforgeeks.org/tcp-3-way-handshake-process/#:~:text=,acknowledges%20the%20response%20of%20the)).
+
+위 핸드셰이크로 서로의 초기 시퀀스 번호를 교환하고, 양측이 상대방의 송수신 준비 상태를 확인함으로써 **신뢰성 있는 연결**을 시작할 수 있습니다. 연결을 **해제**할 때는 FIN 플래그를 사용하여 유사하게 4단계를 거칩니다: 한 쪽이 FIN을 보내 종료 의사를 표시 → 상대가 ACK → 상대도 FIN 전송 → 처음 측이 ACK. 이를 **4-way 핸드셰이크**로 부르며, 양측 연결 종료를 독립적으로 수행함으로써 반이중 종료(half-close) 상태도 처리 가능합니다.
+
+**연결 상태와 소켓 프로그래밍:** TCP 연결은 양 끝단 호스트에서 **소켓 쌍 (source IP, source port, dest IP, dest port)**으로 고유 식별됩니다. 서버 측에서는 소켓을 생성 후 `bind()`로 포트를 할당하고 `listen()`으로 대기, 클라이언트의 SYN 도착 시 `accept()`를 통해 새 소켓(클라이언트와 연결된 소켓)이 반환됩니다. 이 과정에서 OS 내부적으로 위 3-way 핸드셰이크를 처리하는 것입니다. 일단 연결이 맺어지면, 프로그래머는 `send()`와 `recv()`(혹은 high-level stream API)를 사용하여 **바이트 스트림**을 주고받을 수 있고, TCP가 이를 세그먼트 단위로 쪼개어 IP를 통해 보내줍니다.
+
+### 혼잡 제어의 동작 예시
+
+TCP 혼잡 제어는 네트워크 상황에 따라 동적으로 송신 윈도우(cwnd)를 변경합니다. **Slow Start** 단계에서는 cwnd를 1 MSS(MSS: maximum segment size)로 시작하여, ACK 하나를 받을 때마다 cwnd를 +1 MSS씩 증가시킵니다. 결과적으로 RTT 당 cwnd가 약 두 배로 늘어나는 **지수 성장**을 보입니다. 이 빠른 증가로 네트워크 용량을 신속히 찾아내지만, **임계 혼잡 임계치(ssthresh)**에 도달하거나 손실이 발생하면 slow start가 끝납니다. 손실을 감지하는 방법에는 **타임아웃**과 **중복 ACK**가 있습니다. 타임아웃은 심각한 혼잡으로 간주되어 cwnd를 1로 줄이고 ssthresh를 절반으로 낮춘 후 다시 slow start를 시작합니다. 반면 3개의 중복 ACK (즉, 연속된 ACK 번호가 변하지 않고 세 번 수신)는 해당 세그먼트가 손실되었음을 시사하며, 이때 **Fast Retransmit**으로 즉시 누락 세그먼트를 재전송하고 cwnd를 절반으로 줄인 뒤 **Fast Recovery** 단계로 들어갑니다. Fast Recovery에서는 slow start로 내려가지 않고, 손실되지 않은 구간의 ACK가 올 때까지 선형 증가(additive increase)를 지속합니다. 이러한 알고리즘들은 TCP Tahoe, Reno, NewReno 등으로 발전해왔고, 오늘날에는 CUBIC (Linux 기본) 등 다양한 혼잡 제어 알고리즘이 있습니다. 중요한 것은 TCP가 **네트워크 내부 상태를 직접 알지 못하면서도** 이러한 종단 간 제어 메커니즘만으로 **공정하고 효율적인 네트워크 자원 분배**를 이루어낸다는 점입니다.
+
+### 최신 전송 계층 동향
+
+전송 계층은 과거의 TCP/UDP 양대 체제에서 최근 몇 가지 변화가 일어나고 있습니다. 예를 들어 **QUIC**은 구글이 시작한 새로운 전송 프로토콜로 UDP 위에서 사용자 공간에서 구현되며, TCP가 커널에 내장되어 혁신이 어려운 부분을 극복하고자 합니다. QUIC은 이미 HTTP/3에 채택되어 널리 쓰이고 있으며, **0-RTT 연결 설정**, **향상된 혼잡 제어**, **내장 보안(TLS 1.3)** 등의 특징을 가집니다. 또한 전송 계층에 보안을 추가하는 시도인 **TCP+TLS** 외에도, IP계층 보안인 **IPsec**(VPN 등에 활용)이나 **DTLS(UDP용 TLS)** 등도 실무에서 활용됩니다. 요컨대, 전송 계층은 여전히 인터넷 성능과 신뢰성을 좌우하는 중요한 영역으로서, 연구와 개선이 활발히 진행 중입니다.
+
+## 4. 네트워크 계층: 데이터 평면
+
+**핵심 개념 요약:** **네트워크 계층(Network Layer)**은 **패킷을 송신 호스트에서 수신 호스트까지 전달**하는 역할을 담당한다. 크게 **데이터 평면(data plane)**과 **제어 평면(control plane)** 기능으로 나뉘는데, 데이터 평면은 **로컬한 포워딩(forwarding)** 동작이고, 제어 평면은 **라우팅 경로 결정(routing)**을 의미한다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=>)) ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=>)). **포워딩(forwarding)**이란 라우터가 들어온 패킷의 목적지 주소를 보고 **적절한 출력 링크로 보내는 동작**이며, 각 라우터는 이를 위한 **포워딩 테이블**을 가진다. **라우팅(routing)**은 네트워크 전반에서 **패킷 경로를 계산**하는 과정으로, 라우팅 알고리즘/프로토콜에 의해 각 라우터의 포워딩 테이블이 구축된다. 데이터 평면에서 핵심 프로토콜은 **IP(Internet Protocol)**로, IPv4와 IPv6 버전이 있다. IPv4에서는 **32비트 주소 체계**를 사용하며, 주소 부족 문제로 **사설 IP와 NAT(Network Address Translation)**, **IPv6(128비트 주소)**로의 전환 등이 도입되었다. 호스트는 **DHCP**를 통해 동적으로 IP를 할당받을 수 있다. **라우터의 구조**는 입력 포트, 스위칭 패브릭, 출력 포트, 그리고 제어 프로세서로 구성되며, 패킷 **Longest Prefix Matching** 등의 방식으로 고속 포워딩을 수행한다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=,packet%20basis>)) ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=Prefix%20Link%20Interface%2011001000%2000010111,the%20prefixes%20in%20the%20table>)). 또한 **ARP** 프로토콜은 IP주소를 링크계층 MAC주소로 해석하여 동일 네트워크 내 전달을 돕는다.
+
+**심화 설명:** 네트워크 계층은 인터넷의 **중추**로서, 서로 다른 네트워크를 넘어 **종단 간 연결을 실현**하는 계층입니다. IP (Internet Protocol)가 네트워크 계층의 핵심이며, 모든 인터넷 장비는 IP 프로토콜을 구현하고 있습니다. 네트워크 계층의 기능은 크게 두 가지 측면에서 이해할 수 있습니다: **데이터 평면**과 **제어 평면**.
+
+### 포워딩과 라우팅: 데이터 평면 vs 제어 평면
+
+- **데이터 평면(Data Plane)**: 개별 **라우터 내에서 일어나는 동작**으로, 들어온 패킷을 **포워딩 엔진**이 분석하여 출력 링크로 내보내는 과정입니다. 예를 들어 라우터에 패킷이 도착하면, 먼저 **헤더 처리**(에러 체크, TTL 감소 등)를 한 후 **목적지 IP 주소**를 기반으로 **포워딩 테이블(Forwarding Table)** 조회를 합니다. 포워딩 테이블에는 **목적지 주소 Prefix -> 출력 링크** 매핑이 저장되어 있어, 가장 긴 prefix를 매치(**Longest Prefix Match** 알고리즘)하여 해당 인터페이스로 패킷을 전송합니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=Prefix%20Link%20Interface%2011001000%2000010111,the%20prefixes%20in%20the%20table>)). 이때 포워딩은 주로 라우터의 **하드웨어(ASIC 등)**에서 이루어져 수십 Gb/s의 속도로 수행됩니다. 요약하면, 포워딩은 "이 패킷을 어디로 보낼 것인가?"라는 **로컬 의사결정**입니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=>)).
+
+- **제어 평면(Control Plane)**: **네트워크-wide**한 관점에서 경로를 결정하는 **라우팅 알고리즘**들이 실행되는 부분입니다. 각 라우터는 이웃 라우터들과 정보를 교환하여 네트워크 토폴로지나 거리비용 정보를 얻고, 이를 바탕으로 **최적 경로 계산**을 수행합니다. 라우팅 알고리즘에는 **링크 상태(Link State)** 방식과 **거리 벡터(Distance Vector)** 방식 등이 있으며, 전자는 전체 망 정보를 이용해 (예: Dijkstra 알고리즘) 경로를 계산하고 후자는 인접 노드와 거리 정보를 주고받으며 점진적으로 최적 경로를 찾습니다 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=Distance%20Vector%20Algorithm%3A%20Each%20router,RIP%20protocol>)). 제어 평면의 결과로 생성된 **라우팅 테이블**은 최종적으로 각 라우터의 포워딩 테이블로 반영되어, 데이터 평면 동작을 안내합니다. 라우팅 프로토콜의 예와 자세한 내용은 다음 섹션(제어 평면)에서 다루겠습니다.
+
+**SDN (Software-Defined Networking)** 개념의 등장으로 제어 평면과 데이터 평면의 분리가 강조되었습니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=header%20values%20to%20determine%20the,outgoing%20link%20interface>)) ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=%2A%20%60Software,based%20implementations>)). 전통적 라우터는 제어/데이터 평면을 모두 구현하지만, SDN 아키텍처에서는 **중앙의 소프트웨어 컨트롤러**가 여러 장비의 제어 논리를 맡고, 실제 장비들은 단순 포워딩만 수행합니다. 이런 접근은 네트워크 정책 관리의 유연성을 높이고 프로그래밍 가능성을 제공합니다 (예: OpenFlow 프로토콜을 통해 컨트롤러가 스위치의 포워딩 테이블을 제어).
+
+요약하면, 데이터 평면은 **단일 패킷의 분배 행위**, 제어 평면은 **전체 경로 설정 행위**입니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=,take%20from%20source%20to%20destination>)). 비유하자면, 도로교통에서 데이터 평면은 교차로에서 신호등이 차량을 좌회전/우회전/직진으로 보낼지를 결정하는 것이고, 제어 평면은 도시 전체의 신호체계를 조율하여 최적의 교통 흐름을 만드는 행위에 해당합니다.
+
+### IPv4: 주소와 패킷 구조
+
+**IPv4**는 현재까지도 인터넷에서 주류로 사용되는 네트워크 계층 프로토콜입니다. IPv4 패킷(데이터그램)의 헤더는 여러 필드로 구성되며, 주요 필드는 다음과 같습니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=Field%20Description%20Version%20number%20Specifies,IPv4%20or%20IPv6>)) ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=Time,but%20omitted%20in%20IPv6%20for>)):
+
+- **Version:** IP 버전을 나타내는 4비트 값으로 IPv4는 4 (IPv6는 6).
+- **Header Length:** 헤더 길이(32비트 워드 단위). 옵션이 없을 경우 5 (5x4 = 20바이트).
+- **Type of Service (DSCP/ECN):** 서비스 품질(QoS) 관련 필드, 패킷의 우선순위나 처리 특성을 표시.
+- **Total Length:** 패킷 전체(헤더+데이터) 길이 (최대 65,535 바이트).
+- **Identification, Flags, Fragment Offset:** 패킷 **단편화(fragmentation)** 관련 필드로, 네트워크 중간의 MTU 제한으로 패킷을 쪼갤 때 사용. Identification은 조각들을 식별하는 ID, Offset은 조각 순서, Flags에는 더 있는지(MF) 등의 정보 포함.
+- **Time To Live (TTL):** 패킷 생존 시간. 각 라우터를 지날 때 1씩 감소하고 0이 되면 폐기되며 루프 방지 역할.
+- **Protocol:** 상위 계층 프로토콜 식별 (TCP=6, UDP=17 등). 이를 통해 수신측에서 어떤 전송 계층으로 전달할지 결정.
+- **Header Checksum:** 헤더의 오류 검출용 값 (수신 시 검사하여 헤더 오류 발견 시 폐기).
+- **Source IP / Destination IP:** 32비트 발신지와 목적지 IP 주소.
+- **Options (가변길이, 선택사항):** Timestamp, Record Route 등의 잘 쓰이지 않는 옵션들. (일반 패킷엔 없으며, 보안이나 디버깅 목적으로 가끔 사용)
+- **Data(payload):** 상위 계층(전송 계층)의 세그먼트(예: TCP 세그먼트) 혹은 ICMP 등의 데이터.
+
+일반적으로 IPv4 헤더는 **20바이트**(옵션 없음)이며, 따라서 예를 들어 TCP(20바이트) + IPv4(20바이트) = 40바이트 오버헤드가 생깁니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=Note%3A%20An%20IP%20datagram%20typically,layer%20message>)). IPv4 주소는 **점으로 구분된 10진 표기**(예: 192.168.0.1)로 쓰며, 내부적으로는 32비트 2진수입니다.
+
+**IPv4 주소 할당과 계층:** IPv4 주소는 **네트워크 부분**과 **호스트 부분**으로 논리적으로 나뉩니다. 초기에는 클래스 A/B/C로 정해진 경계(8/16/24비트 네트워크부)가 있었으나, 현재는 **CIDR (Classless Inter-Domain Routing)** 방식으로 **임의의 프리픽스 길이**를 사용합니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=4>)). CIDR 표기 (`주소/프리픽스길이` 예: 203.0.113.0/25)로 네트워크를 표현하며, 라우팅 테이블 크기를 줄이고 주소 할당의 유연성을 높였습니다. 한 기관(ISP나 기업)에 할당된 IP 블록(prefix)은 그 기관 내부에서 다시 서브넷팅 될 수 있습니다. 예를 들어 /24 네트워크를 /26 여러 개로 쪼개서 부서별로 사용할 수 있습니다.
+
+IP 주소는 전 세계적으로 **ICANN** 및 하부 RIR(지역 인터넷 레지스트리)에 의해 관리되며, 기관에게 블록이 할당됩니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=The%20Internet%20Corporation%20for%20Assigned,manage%20addresses%20within%20their%20regions>)). **호스트 설정**은 보통 **DHCP**를 통해 자동화되는데, **DHCP (Dynamic Host Configuration Protocol)** 서버는 호스트가 부팅 시 **브로드캐스트 Discover** 메시지를 보내면 **Offer**(IP 제안), **Request**, **ACK**의 4단계 교환으로 IP, 서브넷 마스크, 게이트웨이, DNS 등 정보를 임대 형태로 제공합니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=1>)) ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=,DHCP%20Request>)). DHCP를 통해 네트워크 관리자는 일일이 수동 설정할 필요 없이 동적으로 IP를 배정할 수 있고, 주소 재사용과 이동성에 유리합니다.
+
+**IP 단편화(Fragmentation)와 재조립:** IPv4는 경로 중간의 링크 MTU(Maximum Transmission Unit)보다 패킷이 클 경우 **단편화**를 합니다. 예컨대 이더넷 MTU 1500바이트보다 큰 IP 패킷이 들어오면, 여러 조각으로 잘라 각각에 동일한 Identification 번호를 부여하고 Fragment Offset을 설정해 전송합니다. 수신 측에서는 같은 ID의 패킷들을 모아 Offset 순서대로 데이터를 재조립합니다. 단편화는 IP 계층에서 투명하게 처리되지만, **과도한 단편화는 성능 저하**를 유발합니다. IPv6에서는 이를 제거하고 송신 측에서만 패킷 분할(경로 MTU 탐색)하도록 설계되었습니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=Data%20Variable%20Payload%20portion%20of,length%20header>)) ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=Fragmentation%2FReassembly%20N%2FA%20IPv6%20does%20not,header%3B%20included%20as%20one%20of>)).
+
+**ICMP (Internet Control Message Protocol):** IP와 연관된 중요한 보조 프로토콜로 **ICMP**가 있습니다. 이는 IP가 비신뢰적이므로 오류 상황을 알리거나(예: 목적지 도달 불가, TTL 초과 등) 진단 기능(예: ping의 에코 요청/응답)을 제공하기 위한 프로토콜입니다. ICMP 메시지는 IP 패킷에 실려 전송되며, IP 프로토콜 번호 1로 구분됩니다. 예를 들어, **Traceroute** 도구는 IP 패킷의 TTL을 1부터 늘려가며 보내고, 중간 라우터들이 보내오는 "TTL exceeded" ICMP 메시지로 경유지를 알아내는 원리를 이용합니다.
+
+### NAT와 사설 IP
+
+IPv4 주소 공간이 한정되어(약 43억 개) 고갈 문제를 겪게 되자, **사설 IP 주소(private IP)**와 **NAT(Network Address Translation)** 기술이 널리 사용되었습니다. **사설 IP**는 인터넷 공인망에 직접 연결되지 않는 **내부 네트워크에서 자유롭게 사용**하도록 예약된 주소 블럭(예: 10.0.0.0/8, 192.168.0.0/16 등)입니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=,network%20from%20the%20outside%20world>)). 가정이나 기업의 내부 네트워크에서는 이러한 사설 주소를 각 기기에 할당하고, **NAT 라우터**가 대표로 **단 하나의 공인 IP**로 외부와 통신합니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=,7>)) ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=,server%20for%20internal%20network%20devices>)).
+
+NAT 라우터는 내부 호스트가 외부로 패킷을 보낼 때 출발지 IP를 자신의 공인 IP로 대체하고, 필요한 경우 출발지 포트 번호도 고유값으로 변경하며, 이를 **NAT 테이블**에 매핑으로 저장합니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=,source%20IP%20address%20and%20port>)). 외부에서 응답 패킷이 돌아오면 NAT 테이블을 참조해 원래 내부 호스트의 IP와 포트로 다시 복원하여 전달합니다. 이렇게 함으로써 수십, 수백 대의 장치가 하나의 공인 IP로 인터넷에 나갈 수 있습니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=,only%20within%20the%20given%20network>)) ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=,source%20IP%20address%20and%20port>)). NAT의 장점은 주소 부족 문제를 완화하고 내부망 구조를 외부에 감추는 **보안 효과**도 있다는 점입니다. 그러나, NAT 환경에서는 외부에서 내부호스트를 직접 연결하기 어렵다는 문제(예: P2P나 VoIP 초기 신호 전달 문제) 등이 있어, 이를 해결하기 위한 NAT 트래버설(STUN/TURN) 기법들도 발전했습니다.
+
+### IPv6: 차세대 인터넷 프로토콜
+
+**IPv6**는 IPv4의 후계로 개발된 프로토콜로, **128비트 주소 공간**을 제공하여 사실상 무한에 가까운 IP 주소를 이용할 수 있습니다. IPv6 헤더는 IPv4에 비해 구조가 단순화되고 성능이 향상되었습니다. 주요 특징은 다음과 같습니다:
+
+- **방대한 주소 공간:** 128비트 주소로 전 세계의 많은 디바이스에 고유 주소 할당이 가능하고, 주소 부족 문제가 해결되었습니다. 일반 표기는 16비트씩 8묶음의 **16진수**로 표시 (예: `2001:0db8:85a3::8a2e:0370:7334`).
+
+- **간소화된 헤더:** IPv6 헤더는 고정 40바이트 크기로 설계되어, IPv4의 불필요하거나 중복된 필드가 제거되었습니다. 예를 들어 **헤더 체크섬**이 제거되어 처리 지연을 줄였고 (무결성 검사는 전송 계층/링크 계층에서 수행하므로), **Fragmentation 필드**도 없어 중간 라우터에서는 조각화를 하지 않습니다 (대신 ICMPv6 "Packet Too Big" 메시지로 송신자에게 알려 송신자가 조절) ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=Data%20Variable%20Payload%20portion%20of,length%20header>)). IPv6에서는 **Extension Header**라는 개념으로, 필요한 경우에만 추가 헤더(예: 라우팅, fragmentation, 인증)를 붙여 효율성을 높입니다.
+
+- **Flow Label:** IPv6 헤더에 20비트 **흐름 레이블(Flow Label)** 필드가 있어, 패킷 흐름(예: 스트림)별 식별을 통해 QoS 등을 구현할 수 있도록 하였습니다 (현재 널리 활용되지는 않음).
+
+- **ICMPv6 및 기타:** IPv6에는 대응되는 ICMPv6, Neighbor Discovery (ARP를 대체), 자동 주소 구성(SLAAC) 등의 부가 기능이 있습니다. **SLAAC**를 통해 호스트는 라우터 광고를 받아 프리픽스 정보를 얻고, 자신의 MAC주소 등을 이용해 고유 IPv6 주소를 스스로 구성할 수 있습니다.
+
+IPv6는 1990년대 후반에 표준화되어 오랜 시간 병행 운영되고 있습니다. 전환을 위해 **이중 스택(dual-stack)** 운영 (장비가 IPv4와 IPv6 둘다 처리)과, **터널링(tunneling)** 기법이 사용됩니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=,IPv6>)) ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=cellular%20networks,routers%2C%20a%20tunnel%20is%20established>)). 예를 들어 IPv4 only 구간을 통과해야 할 경우, IPv6 패킷을 IPv4 패킷의 페이로드에 실어 보내는 터널링이 활용됩니다. 현재 많은 OS와 라우터들이 IPv6를 지원하며, 컨텐츠 제공과 ISP에서도 IPv6 트래픽 비중이 서서히 증가하고 있습니다.
+
+### 라우터의 내부 구조와 포워딩 속도 향상
+
+한편, 네트워크 계층을 논할 때 **라우터(router)**의 하드웨어 구조를 이해하는 것도 중요합니다. 라우터는 일반적으로 다음 구성 요소로 이루어집니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=,Router>)) ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=2>)):
+
+- **입력 포트 (Input Port):** 수신 링크로부터 프레임을 받아들이고, 우선 해당 링크의 **링크 계층 프로토콜 처리**(예: 이더넷이라면 MAC 헤더 처리)를 수행합니다. 그리고 IP 패킷을 추출하여 **포워딩 엔진**에 넘깁니다. 고속 처리 요구로 각 입력 포트에 **온전한 포워딩 기능**(lookup)을 구현하기도 합니다 (분산 처리). 또한 혼잡시 패킷을 임시 저장하기 위한 입력 큐(buffer)가 있을 수 있습니다.
+
+- **스위칭 패브릭 (Switching Fabric):** 입력 포트에서 나온 패킷을 적절한 **출력 포트**로 실어 나르는 라우터 내부의 통신망입니다. 방법에는 **메모리 방식** (초기 소프트웨어 라우터, CPU 介입), **버스 방식** (공유 버스 통해 전송), **크로스바 교차망** (동시 다중 전송 가능) 등이 있습니다. 현대 라우터는 크로스바 등을 사용하여 병렬 처리를 지원합니다. 스위칭 패브릭 용량이 라우터 스루풋을 좌우하므로 매우 고속 설계가 필요합니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=2>)).
+
+- **출력 포트 (Output Port):** 포워딩된 패킷을 받아 **출력 링크**로 내보내는 부분입니다. 출력 포트에서도 **링크 계층 캡슐화**를 수행하여 프레임으로 만들어 내보내며, 라우터 내부 속도가 링크 속도보다 빨라야 출력 큐에서 대기가 적습니다. 그러나 다수 입력이 한 출력으로 몰릴 경우 **출력 포트 혼잡** 및 **큐잉 지연**이 발생하며, 심할 경우 패킷 폐기(drop)도 일어납니다 (이때 상위 TCP에서 혼잡신호로 감지).
+
+- **라우팅 프로세서 (제어부):** 일반 CPU가 동작하며, **라우팅 프로토콜 실행**, **포워딩 테이블 계산 및 업데이트**, **관리 (CLI, SNMP)** 등을 수행합니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=4>)). SDN 환경에서는 라우팅 프로세서 대신 외부 컨트롤러가 라우팅 결정하고, 라우터는 단순 포워딩 장비가 될 수도 있습니다.
+
+고속 라우터에서는 **TCAM (Ternary Content Addressable Memory)** 등을 활용한 병렬 주소 검색으로 나노초 단위의 포워딩 결정이 가능하도록 합니다. 또한, 대형 라우터는 메모리 적중률 향상을 위해 **계층적 포워딩 테이블** (예: FIB compression)이나 **분산 아키텍처**로 확장성을 높입니다.
+
+마지막으로, 네트워크 계층 데이터 평면과 연결되는 링크 계층의 MAC 주소 문제: **ARP(Address Resolution Protocol)**는 같은 링크상에서 IP -> MAC 주소 변환을 해주는 프로토콜입니다 ([computer-networking-top-down-approach-notes/Chapter 6: Link Layer and LANs.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%206%3A%20Link%20Layer%20and%20LANs.md#:~:text=6)). 호스트 A가 같은 서브넷의 B에게 IP로 패킷을 보내려면 B의 MAC주소가 필요합니다. ARP 요청 브로드캐스트(`"Who has IP 10.0.0.5? Tell 10.0.0.1"`)에 대해 해당 IP를 가진 호스트가 ARP 응답으로 자신의 MAC을 알려주고, 양측은 이를 캐시에 저장합니다. 라우터도 마찬가지로 인접 기기의 MAC을 ARP로 알아내어 IP 패킷을 전달합니다. ARP는 **비용(network overhead)**이 크지 않지만, 네트워크 계층과 링크 계층을 이어주는 중요한 역할을 합니다.
+
+정리하면, 데이터 평면에서 가장 중요한 프로토콜은 IP이며, IP 패킷의 포워딩(스위칭)은 라우터 하드웨어에 의해 고속 처리됩니다. 주소체계(IPv4/IPv6)와 관련 프로토콜(DHCP, ARP, ICMP, NAT 등)을 이해하는 것은 네트워크 계층 동작을 전체적으로 조망하는 데 필수적입니다.
+
+## 5. 네트워크 계층: 제어 평면
+
+**핵심 개념 요약:** 네트워크 계층의 **제어 평면(Control Plane)**은 **라우팅 알고리즘과 프로토콜**을 통해 각 라우터의 포워딩 테이블을 설정하는 역할을 합니다. 라우팅 알고리즘에는 **거리 벡터(Distance Vector)**와 **링크 상태(Link State)**의 두 가지 주요 접근법이 있다 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=Distance%20Vector%20Algorithm%3A%20Each%20router,RIP%20protocol>)). 거리 벡터 알고리즘에서는 각 라우터가 **인접 이웃들과 거리 정보를 주고받아** 최적 경로를 찾고 (예: **RIP 프로토콜**), 링크 상태 알고리즘에서는 **모든 링크의 상태 정보를 네트워크 전체에 홍보**하여 각 라우터가 **전체 지도**를 바탕으로 최단 경로를 계산한다 (예: **OSPF 프로토콜**) ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=Link%20State%20Algorithm%3A%20Routers%20share,OSPF%20protocol>)). 인터넷은 규모로 인해 **계층적 라우팅**을 사용하며, **자율 시스템(AS)** 단위로 내부 라우팅(**Intra-AS**, 예: OSPF)과 외부 라우팅(**Inter-AS**, 예: BGP)으로 구분된다. **OSPF(Open Shortest Path First)**는 링크 상태 기반의 **IGP**로, 다익스트라 알고리즘을 통해 각 라우터가 주어진 AS 내 최단 경로 트리를 계산하고, 영역(area) 개념 등을 지원한다 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=5,First>)) ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=,path%20tree%20to%20all%20subnets>)). **BGP(Border Gateway Protocol)**는 **글로벌 인터넷의 AS 간 경로 교환**을 위한 프로토콜로, 경로 속성(**AS-PATH**, **NEXT-HOP** 등)을 기반으로 정책적인 라우팅 결정을 한다 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=,HOP>)) ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=%2A%20BGP%20Attributes%3A%20%2A%20%60AS,based%20on%20cost%20and%20policy>)). BGP를 통해 전 세계 ISP들이 경로 정보를 광고함으로써 인터넷이 연결되며, 각 AS는 **경로 제어 정책** (예: 피어링, 트랜짓 계약)을 반영한 라우팅을 수행한다. 또한 **SDN**과 같은 접근에서는 제어 평면이 하나의 중앙 컨트롤러로 구현되어, OpenFlow 등의 프로토콜로 스위치들의 포워딩 정책을 내려보낸다. 제어 평면의 설계 목표는 **신속한 수렴**(토폴로지 변화 시 빠르게 안정화), **규모 확장성**, 그리고 **정책 반영**이다.
+
+**심화 설명:** 제어 평면에서는 네트워크를 어떻게 **항법**할지 결정하는 지능이 자리합니다. 즉, 각 라우터들이 서로 정보를 교환하며 **최적의 경로를 산출**하고, 그 결과를 데이터 평면(포워딩)에 적용하게 됩니다. 인터넷과 같은 거대 규모 네트워크에서는 라우팅을 계층적으로 나누고, 다양한 프로토콜이 조합되어 동작합니다.
+
+### 라우팅 알고리즘의 개요
+
+라우팅 알고리즘은 그래프 이론에 기반하며, 라우터를 정점(vertex), 링크를 간선(edge)으로 보고, 간선 가중치(비용)는 거리, 지연, 대역폭 등으로 설정됩니다. **최단 경로 알고리즘**을 통해 한 노드에서 다른 노드까지의 최소 비용 경로를 찾는 것이 핵심이며, 라우팅 알고리즘이 이를 분산 환경에서 구현합니다.
+
+- **링크 상태 알고리즘(Link State):** 각 라우터가 **전체 네트워크 토폴로지와 링크 비용 정보**를 알아낸다고 가정합니다. 현실에서는 각 라우터가 인접 링크의 상태(업/다운, 비용)를 주기적으로 **플러딩(flooding)**하여 네트워크 전체로 전파합니다. 결과적으로 모든 라우터가 동일한 **링크 상태 데이터베이스(LSDB)**를 갖게 되고, 이를 기반으로 **다익스트라(Dijkstra) 알고리즘**을 실행하여 자신을 루트로 하는 최단 경로 트리를 계산합니다 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=5,First>)). 대표적인 링크 상태 프로토콜이 **OSPF**와 **IS-IS**입니다. 링크 상태 알고리즘은 **수렴 속도**가 빠르고, 항상 최단 경로를 찾지만, **메시지 오버헤드**와 **메모리/CPU 부하**가 비교적 높습니다. OSPF는 영역 단위로 계층화를 지원하며, 각 영역의 링크 상태는 영역 내에서만 플러딩되고, 영역 간에는 요약 정보만 교환함으로써 확장성을 개선합니다 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=,Hierarchy%20Support>)).
+
+- **거리 벡터 알고리즘(Distance Vector):** 각 라우터가 **목적지까지의 추정 거리(메트릭) 벡터**를 인접 라우터들에게 주고받으며, 단계적으로 개선해나가는 방식입니다. 초기에는 인접 간선 비용만 알고, 그 이후로 **Bellman-Ford 방정식**에 따라 "나를 거쳐 목적지까지 가는 거리 = 인접 라우터까지 비용 + 그 라우터의 목적지까지 추정 거리"로 계산합니다. 이웃들 중 이 값이 최소인 경로를 채택하고, 그 비용을 자신의 거리 벡터에 반영하여 다시 광고합니다. 이러한 **분산적 벨만-포드**는 단순하지만, **수렴이 느리거나 루프 형성 문제**가 있을 수 있습니다 (예: count-to-infinity 문제). 이를 완화하기 위해 **split horizon, poisoned reverse** 같은 기법을 사용합니다 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=Feature%20Distance%20Vector%20Routing%20Link,bandwidth%20usage%20Lower%20bandwidth%20usage>)). 대표적인 거리 벡터 프로토콜은 **RIP** (Routing Information Protocol)로, hop count(최대 15)를 비용으로 사용하며 30초마다 전체 테이블을 브로드캐스트합니다. 거리 벡터 방식은 작은 네트워크에서 구현이 용이하지만, 대규모 망에는 부적합합니다. Cisco의 EIGRP는 향상된 거리 벡터 알고리즘을 사용한 프로토콜입니다.
+
+두 알고리즘의 비교를 표로 요약하면 다음과 같습니다 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=Feature%20Distance%20Vector%20Routing%20Link,IS>)):
+
+| 특징            | **거리 벡터 (DV)**                                                                                                                                                                                                                                                                                                                                                                                                                                       | **링크 상태 (LS)**                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 정보 공유       | 인접 라우터와 **거리/경로 정보** 교환 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=Feature%20Distance%20Vector%20Routing%20Link,count%20Based%20on%20shortest%20path>)) | **전체 망 링크 정보**를 홍보 (플러딩) ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=Link%20State%20Algorithm%3A%20Routers%20share,OSPF%20protocol>)) |
+| 경로 계산       | 이웃 정보 기반, 반복적 수렴 (BF 알고리즘)                                                                                                                                                                                                                                                                                                                                                                                                                | 전체 토폴로지 기반, 개별 계산 (다익스트라)                                                                                                                                                                                                                                                                                                                                                                                           |
+| 업데이트 트리거 | **주기적** 또는 변화 시 (선형적)                                                                                                                                                                                                                                                                                                                                                                                                                         | **이벤트** 기반 (변화 시 즉각 플러딩)                                                                                                                                                                                                                                                                                                                                                                                                |
+| 장점            | 오버헤드 낮음, 구현 단순                                                                                                                                                                                                                                                                                                                                                                                                                                 | 항상 최적 경로 보장, 빠른 수렴                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 단점            | 수렴 느림, 일시적 루프 가능                                                                                                                                                                                                                                                                                                                                                                                                                              | 메모리/CPU 부담, 오버헤드 높음                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 예시 프로토콜   | RIP, BGP (path-vector)                                                                                                                                                                                                                                                                                                                                                                                                                                   | OSPF, IS-IS                                                                                                                                                                                                                                                                                                                                                                                                                          |
+
+여기서 BGP는 경로 벡터(Path Vector)라고도 분류되는데, 기본 원리는 DV와 비슷하나 거리 대신 **경로 자체(AS 경로)**를 교환합니다.
+
+### 내부 라우팅 (Intra-AS) – OSPF 등
+
+**자율 시스템(AS)**은 하나의 행정 도메인(예: 한 ISP나 기업 네트워크)으로, 내부에서는 자체적인 라우팅 정책과 프로토콜을 사용할 수 있습니다. **Interior Gateway Protocol (IGP)**이라 불리는 내부 라우팅 프로토콜들이 여기에 속하며, 가장 많이 쓰이는 것이 **OSPF(Open Shortest Path First)**입니다.
+
+**OSPF**의 특징:
+
+- **링크 상태 프로토콜:** 앞서 설명한대로, 모든 라우터가 인접 링크 상태를 플러딩하여 전체 망 정보를 획득하고, 다익스트라 알고리즘으로 최단 경로를 계산합니다 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=5,First>)).
+- **보안 인증:** 라우팅 정보 위변조를 막기 위해 **인증** 기능을 내장 (평문 패스워드 또는 MD5 해시)하여 허가된 라우터만 정보를 교환하게 합니다 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=1>)).
+- **다중 경로 허용:** 동일 비용의 경로가 여러 개 존재하면 **부하 분산**을 위해 여러 경로를 모두 사용하는 **Equal-Cost Multi-Path (ECMP)**를 지원합니다 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=,Multiple%20Same%20Cost%20Paths>)).
+- **계층적 구성:** 대규모 AS의 경우 OSPF를 **영역(area)**으로 나눌 수 있습니다 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=4>)). 하나의 백본 영역(Area 0)과 여러 개의 일반 영역이 트리 구조로 연결되며, 각 영역 내에서는 상세 LSDB를 유지하되, 영역 간에는 요약된 경로만 주고받습니다. **Area Border Router (ABR)**가 영역 간 라우팅을 담당하고, **AS Boundary Router (ASBR)**는 OSPF망과 외부(BGP 등) 연결 지점에서 외부 경로를 OSPF에 임포트합니다.
+
+OSPF는 IP 내장 프로토콜 번호 89으로 동작하며, Hello 패킷으로 이웃을 탐색/유지하고, LSA(Link State Advertisement)로 링크 상태를 알립니다. 대규모 엔터프라이즈나 ISP 내부에서 표준 IGP로 활용됩니다. 대안으로 **IS-IS** (다른 계층적 링크상태 프로토콜, 주로 통신사업자 사용)도 있습니다.
+
+### 외부 라우팅 (Inter-AS) – BGP
+
+AS와 AS 사이, 즉 인터넷 전체를 연결하는 라우팅 프로토콜은 **BGP(Border Gateway Protocol)**입니다. BGP는 일종의 **경로 벡터(path-vector)** 프로토콜로서, 각 경로에 대해 단순 거리 대신 **정책적 속성 정보**를 함께 고려합니다. 인터넷에서는 단순 최단거리보다 **사업적 관계와 정책**이 라우팅 결정에 중요합니다. BGP는 이러한 정책을 구현할 수 있도록 설계되었습니다.
+
+**BGP 동작 개요:**
+
+- **BGP 피어링:** 두 AS에 걸쳐 있는 라우터들(경계 라우터, **게이트웨이 라우터**) 간에 **TCP 연결(179번 포트)**을 맺고 BGP 세션을 형성합니다. **External BGP (eBGP)**는 서로 다른 AS 간에, **Internal BGP (iBGP)**는 동일 AS 내 다른 경계 라우터 간에 설정됩니다 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=,routers%20of%20the%20same%20AS>)). eBGP로 외부 경로를 받고, iBGP로 AS 내에 그 경로를 전파합니다.
+
+- **프리픽스 광고:** BGP는 **CIDR 프리픽스 단위**로 경로 정보를 주고받습니다. 예를 들어 AS2가 AS3 통해서 192.0.2.0/24 경로를 얻었다면, AS1에게 AS2 -> AS3 -> (prefix) 형태로 광고합니다. 이때 BGP 업데이트 메시지에 **경로 속성 (attributes)**들이 포함됩니다 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=,HOP>)):
+
+  - **AS-PATH:** 이 경로를 거쳐온 AS들의 목록 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=the%20prefix%20several%20BGP%20attributes,HOP>)). 루프 방지를 위해 활용 (자신의 ASN이 이미 AS-PATH에 있으면 그 경로 무시).
+  - **NEXT-HOP:** 이 경로를 사용하려면 다음에 도달해야 할 BGP 상대방의 IP ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=%3E%20The%20AS,PATH>)). (대개 인접 AS 경계라우터의 주소)
+  - 그 외에도 **LOCAL-PREF, MED, Community, Origin** 등의 속성이 있습니다.
+
+- **경로 선택:** 하나의 목적지 프리픽스에 대해 다수의 경로(다른 AS 경유)가 들어올 수 있습니다. BGP는 **우선순위 규칙**에 따라 경로를 선택합니다. 일반적으로 **Local Preference(로컬 정책)** -> AS-PATH 짧은 것 -> MED -> eBGP 우선 -> IGP 비용 ... -> router ID 등 순서로 비교합니다. 이 중 **Local Preference**는 운영자 설정값으로, 예를 들어 한 AS에 두 개의 상위 ISP 연결이 있으면, 특정 경로를 주 연결로 삼기 위해 LocalPref 값을 높게 줄 수 있습니다. **AS-PATH**가 짧은 경로는 기본적으로 선호되지만, 꼭 짧다고 선택되는 것은 아니며, **사업 관계**에 따라 일부 경로는 아예 사용하지 않도록 설정되기도 합니다 (예: 피어간 트래픽 정책).
+
+- **정책에 따른 필터링:** BGP의 강점은 **임의의 라우팅 정책**을 스크립팅하듯 구현 가능하다는 것입니다. 운영자는 수신한 경로를 필터링하거나 속성을 조정해서 (**route maps**) 아웃바운드/인바운드 트래픽을 제어합니다. 예를 들어 고객에게서 받은 경로만 상위 ISP에게 광고하고, 피어에게 받은 경로는 다른 피어에게 다시 광고하지 않는 등 **통상적인 BGP 정책**이 존재합니다. 이를 통해 **트랜짓 AS**는 거쳐가는 트래픽에 대해 정책 통제를 하고, **Stub AS** (고객)은 주 ISP가 아닌 경로는 쓰지 않도록 설정하는 등 시나리오가 실현됩니다.
+
+BGP는 흔히 “**인터넷의 접착제(glue)**”로 불립니다 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=BGP%20,facilitating%20communication%20across%20multiple%20ASs>)). 왜냐하면 각각 독립적으로 운영되는 수천 개의 AS를 하나로 이어주는 유일한 프로토콜이기 때문입니다. BGP 없이는 글로벌 인터넷 경로 정보의 확산이 불가능합니다. 현재 IPv4/IPv6 합쳐 약 90만 개 이상의 경로(prefix)가 BGP를 통해 전 세계에 공유되고 있으며, 이를 **DFZ(Default Free Zone)** 라우터들이 유지합니다. BGP 설계는 **신뢰하지 않는 환경**에서 동작하기 때문에, 보안 문제가 제기되어 왔고, 이를 해결하기 위해 **RPKI** 등의 솔루션이 도입되어 경로 인증을 제공하려는 노력이 진행 중입니다.
+
+**Hot-Potato 라우팅:** 대형 네트워크 (특히 ISP)에서는 **핫 포테이토 라우팅**이라 하여, 외부에서 들어온 트래픽을 **가능한 빨리 내보내는** 전략을 씁니다 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=5,BGP>)) ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=,end%20costs%20outside%20the%20AS>)). 이는 자기 AS 내부에서 오래 머무르면 자기 자원 소모가 크므로, 경로가 여러 개 있다면 가장 가까운 egress로 패킷을 넘겨버리는 것입니다. BGP에서 이는 IGP cost (NEXT-HOP까지 내부 거리)를 고려하여 결정합니다 ([computer-networking-top-down-approach-notes/Chapter 5: Network Layer (Control Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%205%3A%20Network%20Layer%20(Control%20Plane).md#:~:text=,Cost%20Calculation>)). 예를 들어 동일 프리픽스에 대해 두 업스트림 경로가 있다면, 그 중 내부 거리(IGP cost)가 작은 경로를 택하는 식입니다.
+
+### SDN과 중앙집중 제어
+
+전통적인 라우팅은 위와 같은 **분산 알고리즘**으로 수행되지만, 근래 **SDN(Software-Defined Networking)** 패러다임에서는 라우터/스위치의 제어판을 중앙화하는 접근을 취합니다. SDN 컨트롤러는 네트워크 토폴로지와 상태를 모두 파악하고, 전체 최적화나 정책 적용을 중앙에서 계산하여, 각 스위치/라우터의 **포워딩 테이블(혹은 흐름 테이블)**을 원격으로 구성합니다 ([computer-networking-top-down-approach-notes/Chapter 4: Network Layer (Data Plane).md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](<https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%204%3A%20Network%20Layer%20(Data%20Plane).md#:~:text=header%20values%20to%20determine%20the,outgoing%20link%20interface>)). 이때 남는 것은 일종의 **OpenFlow 스위치**로, 패킷 헤더를 매칭해서 지정된 출력으로 보내는 역할만 담당합니다.
+
+SDN의 이점은 **프로그램 가능성**과 **유연성**입니다. 운영자는 컨트롤러의 소프트웨어를 통해 라우팅을 포함한 다양한 네트워크 동작을 제어할 수 있습니다. 예컨대, 특정 애플리케이션 트래픽을 우회시키거나, 장애 시 미리 정의된 대체 경로로 즉시 스위치하도록 구현할 수 있습니다. 또한 다수 장비에 일관된 정책(QoS, ACL 등)을 손쉽게 반영할 수 있습니다.
+
+그러나 SDN도 규모가 커지면 컨트롤러의 부하와 지연, 장애 시 단일점 문제 등이 있으므로 **계층적 컨트롤러** 구조나 **혼합형 제어** 등으로 발전하고 있습니다. 현재 OpenFlow 외에도 NETCONF, P4, gRPC 등의 다양한 southbound 인터페이스가 연구/사용되고 있습니다.
+
+### 라우팅의 설계 이슈와 사례
+
+마지막으로, 제어 평면에 관련된 몇 가지 흥미로운 주제들을 살펴보겠습니다:
+
+- **라우팅 수렴 시간:** 네트워크에 장애(링크 다운 등)가 발생하거나 새로운 라우터가 추가되면, 라우팅 프로토콜이 **수렴(convergence)**하는 데 시간이 걸립니다. 이 기간 중에는 일부 패킷이 잘못된 경로로 흐르거나 블랙홀에 빠질 수 있습니다. 링크 상태 프로토콜은 빠르게 새 경로를 계산하지만, 플러딩 지연이 있고, 거리 벡터는 원리상 더 느리게 수렴합니다 (특히 count-to-infinity 문제). 현재 인터넷 BGP의 수렴은 수 초~수 분까지 걸릴 수 있으며, 이를 개선하기 위한 패스트 수렴 기법들이 연구되어 왔습니다.
+
+- **멀티캐스트 라우팅:** 멀티캐스트(한 소스 -> 다수 목적지) 전송을 효율화하기 위한 멀티캐스트 라우팅 프로토콜도 제어 평면의 일부입니다. DVMRP (거리벡터 기반), MOSPF (링크상태 OSPF 확장), PIM-SM/DM 등이 존재하며, 수신자가 그룹을 가입하면 해당 트리(branch)를 설정하여 다중 송신을 최적화합니다. 하지만 인터넷 멀티캐스트는 구현상의 복잡함과 경제적 모델 부재로 크게 확산되진 못했습니다.
+
+- **모바일/Ad-hoc 라우팅:** 이동 노드로 구성된 MANET이나 VANET 등에서는 전통 프로토콜로 어려워서, AODV, DSR 같은 특수한 라우팅 프로토콜이 사용됩니다. 또한 호스트가 IP를 바꾸지 않고 이동하는 **Mobile IP** 개념에서는 홈 에이전트, 외부 에이전트 등을 두고 삼각 라우팅으로 전달하는 방법도 과거 제안되었으나, 현재는 주로 상위 계층 (예: 애플리케이션이 재연결)에서 해결하거나 MIPv6 등이 국부적으로 쓰입니다.
+
+- **라우팅 정책 충돌:** 인터넷처럼 탈중앙 환경에서는 각자 이익에 따른 정책이 충돌할 수 있습니다. BGP는 때때로 **경로 전달 거부**나 **경로 역설** 등의 문제를 일으켜 특정 목적지에 경로가 없는데도 수렴했다고 잘못 판단하는 경우가 있습니다. 이런 정책 충돌은 이론적으로 NP-hard임이 증명되어, 완벽 해결은 어렵고 사후 대응(필터)으로 처리하는 경우가 많습니다.
+
+결론적으로, 제어 평면은 인터넷이 분산 시스템으로서 동작하게 하는 **두뇌** 역할을 하며, 다양한 프로토콜들의 협업과 정책 적용으로 현실 인터넷 트래픽을 지휘하고 있습니다. OSPF와 BGP라는 두 대표 프로토콜을 중심으로, 내부/외부 라우팅이 유기적으로 연결되어 오늘날의 글로벌 인터넷이 실현되고 있습니다.
+
+## 6. 링크 계층과 LAN
+
+**핵심 개념 요약:** **링크 계층(Link Layer)**은 동일 네트워크(링크) 상에 직접 연결된 장치들 간의 데이터 전송을 담당하며, **프레임(frame)** 단위의 통신을 제공합니다 주요 기능으로 **프레이밍(데이터를 프레임으로 encapsulation)**, **주소 지정(MAC 주소)**, **오류 검출 및 수정**이 있습니다. **MAC 주소(Media Access Control)**는 LAN에서 장치를 식별하는 48비트 주소로, NIC마다 고유하게 할당됩니다. 링크 계층은 또한 **매체 접근 제어(MAC) 프로토콜**을 통해 **공유 매체에 여러 노드가 접근**할 때 충돌을 조정합니다. MAC 프로토콜 유형에는 **채널 분할(예: TDMA, FDMA)**, **랜덤 접근(예: ALOHA, CSMA/CD, CSMA/CA)**, **교섭 접근(예: 토큰 링)** 등이 있다 . 유선 LAN의 대표 기술인 **이더넷(Ethernet)**은 CSMA/CD 기반으로 동작하며, **Ethernet 프레임 구조**에는 목적지/출발지 MAC, EtherType, 데이터, CRC 등이 포함된다. **스위치(switch)**는 링크 계층 장비로 MAC 주소 학습을 통해 프레임을 적절한 포트로 전달하며, 스위치를 계층적으로 연결한 **스위치드 LAN**이 현대 이더넷 네트워크의 핵심이다. **ARP(Address Resolution Protocol)**는 IP MAC 주소 변환을 수행하여 네트워크 계층과 링크 계층을 연결한다. 또한 하나의 물리적 LAN을 논리적으로 분할하는 **가상 LAN (VLAN)** 기술이 존재하며, IEEE 802.1Q 태깅으로 구현된다.
+
+링크 계층은 종종 **신뢰성**이 필요한 경우 **에러 수정(예: 재전송)**을 제공하기도 하지만, 대부분의 LAN 프로토콜 (이더넷 등)은 높은 신뢰의 물리계층을 전제로 오류 검출(CRC)까지만 수행하고 상위 계층에 맡긴다.
+
+**심화 설명:** 링크 계층은 인접 노드 간 통신의 상세를 다루는 계층으로, OSI 7계층 중 2계층에 해당합니다. **LAN (Local Area Network)** 환경에서 매우 중요한 역할을 하며, 유선이든 무선이든 네트워크 인터페이스(NIC)가 필요한 모든 통신은 링크 계층 프로토콜이 관여합니다. 링크 계층의 장치는 네트워크 어댑터, 스위치, AP 등이며, **프레임**은 링크 계층의 PDU(Protocol Data Unit)입니다.
+
+### 링크 계층 서비스와 LAN 주소
+
+링크 계층이 상위 (네트워크 계층)에게 제공하는 서비스는 환경에 따라 다를 수 있지만, 일반적으로 다음이 포함됩니다:
+
+- **Framing (프레이밍):** 상위 계층(IP 패킷)의 데이터를 받아 **프레임 헤더와 트레일러**를 씌워 전송 가능한 단위(frame)로 만든다 ([computer-networking-top-down-approach-notes/Chapter 6: Link Layer and LANs.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%206%3A%20Link%20Layer%20and%20LANs.md#:~:text=The%20Link%20Layer%2C%20part%20of,reliable%20delivery%2C%20and%20error%20detection)). 헤더에는 목적지와 출발지의 **링크 계층 주소(MAC)**, 제어 정보 등이 있고, 트레일러에는 **FCS(Frame Check Sequence)**같이 오류 검출 정보(CRC)가 담긴다.
+
+- **링크 접근 및 공유(media access):** broadcast 링크(예: 이더넷, WLAN)에서는 다수 노드가 하나의 채널을 공유하므로 **MAC(Media Access Control) 프로토콜**로 누구가 언제 전송할지 조절한다 ([computer-networking-top-down-approach-notes/Chapter 6: Link Layer and LANs.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%206%3A%20Link%20Layer%20and%20LANs.md#:~:text=6,Protocols)). 충돌 방지/해결 메커니즘을 제공하거나, 아예 충돌이 없게 시간/주파수 분할을 한다.
+
+- **신뢰성 & 흐름 제어 (선택적):** 링크 계층에서도 에러가 잦은 매체(예: 무선)에서는 **ARQ(Automatic Repeat reQuest)** 프로토콜을 적용해 손실 프레임을 재전송해주거나, 빠른 송신 노드가 느린 수신 노드로 과도하게 보내지 않도록 **흐름 제어**를 하기도 한다. 이 기능은 꼭 링크 계층에 있는 것은 아니며(주로 전송계층에 있음), 이더넷 등에서는 사용하지 않고 일부 PPP나 무선 링크에 한정된다.
+
+- **오류 검출 & 교정:** 거의 모든 링크 계층 프레임에 **CRC** 또는 체크섬이 포함돼 수신 측이 프레임 오류를 감지할 수 있습니다 ([computer-networking-top-down-approach-notes/Chapter 6: Link Layer and LANs.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%206%3A%20Link%20Layer%20and%20LANs.md#:~:text=6,Techniques)) ([computer-networking-top-down-approach-notes/Chapter 6: Link Layer and LANs.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%206%3A%20Link%20Layer%20and%20LANs.md#:~:text=,zero%2C%20an%20error%20is%20detected)). 오류 검출 후, 링크계층에서 자동 수정(재전송)을 할 수도 있고 (예: 802.11 무선은 ACK를 통해 재전송함), 아니면 상위 계층으로 오류 프레임을 버리고 상위에 맡길 수도 있습니다. 이더넷은 후자 (검출만) 방식입니다.
+
+**MAC 주소**: 링크 계층 주소는 흔히 **MAC(Media Access Control) 주소**라 불리며, 세계적으로 유일하도록 **48비트** 크기로 제조 시 할당됩니다. 예를 들어 `00:1A:2B:3C:4D:5E`처럼 16진 12자리로 표현합니다. NIC 제조사는 IEEE에서 **OID(Organization Unique Identifier)**를 배정받아 앞 24비트를 고유값으로 쓰고, 뒷 24비트를 일련번호로 붙여 맥주소를 만든다. MAC주소는 LAN에서 **프레임의 목적지**로 쓰이며, 스위치 등의 장비는 이 MAC를 기반으로 프레임을 전달합니다. IP와 달리 MAC는 **위치에 종속**되며, 네트워크 카드를 바꾸면 주소도 바뀝니다 (ARP로 IP< >MAC 대응을 동적으로 알아냄). 일반적으로 **브로드캐스트 MAC (FF:FF:FF:FF:FF:FF)**으로 모든 노드에게 보낼 수도 있고, **멀티캐스트 MAC**도 특정 비트 패턴으로 정해져 있습니다.
+
+### 다중 접속 프로토콜 (MAC Protocols)
+
+**다중 접속(Multiple Access)** 프로토콜은 하나의 공유 통신 매체를 여러 노드가 효율적으로 사용하도록 하는 규칙입니다 ([computer-networking-top-down-approach-notes/Chapter 6: Link Layer and LANs.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%206%3A%20Link%20Layer%20and%20LANs.md#:~:text=6,Protocols)). 주요 분류와 예시는 다음과 같습니다:
+
+- **채널 분할(Channel Partitioning):** 매체 리소스를 분할하여 각 노드에 **고정 할당**하거나, 필요 시 쓸 수 있게 하는 방법입니다. 대표적으로 **TDMA (Time Division Multiple Access)** – 시간을 슬롯으로 나눠 노드별로 할당 ([computer-networking-top-down-approach-notes/Chapter 6: Link Layer and LANs.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%206%3A%20Link%20Layer%20and%20LANs.md#:~:text=6)), **FDMA (Frequency Division)** – 주파수 대역을 나눠 할당, **CDMA (Code Division)** – 신호에 코드 분할 (동시 전송해도 상호 간섭 최소화). 이 방식은 **충돌이 아예 없음**과 **예측 가능** 장점이 있으나, 할당된 리소스를 안 쓰면 낭비됩니다. 유선 이더넷에는 쓰이지 않고, 위성 통신이나 옛날 LAN 토큰링(일종의 TDM) 등에 아이디어가 쓰였으며, 셀룰러 망 2G (GSM) 등에서 TDMA/FDMA 조합을 사용했습니다.
+
+- **랜덤 접근(Random Access):** 노드들이 **충돌을 허용**하면서, 충돌 시 재시도(retry)하는 방식입니다. 별도의 예약 없이 **누구든 준비되면 전송**하며, 충돌 시 임의 지연 후 재전송하는 **백오프(backoff)** 알고리즘이 핵심입니다. 고부하에서는 충돌 많아 비효율적일 수 있으나, 낮은 부하에서는 대기시간 없이 즉시 전송 가능해 효율이 높습니다. **ALOHA**(무선 원격 노드간 최초 랜덤접근)부터 시작하여, 유선 LAN **CSMA/CD**, 무선 LAN **CSMA/CA** 등이 여기에 속합니다.
+
+  - **CSMA(Carrier Sense Multiple Access)**: 보내기 전에 **채널 감시(carrier sense)**하여 **빈 채널이면 전송**, 사용 중이면 대기합니다. 이로써 충돌 확률을 낮춥니다.
+  - **CSMA/CD (Collision Detection):** 주로 유선에서, 전송 중에도 신호를 모니터링하여 **충돌 발생을 실시간 감지**하면 즉시 전송을 중단하고 짧은 **재처리 신호(jam)**를 보낸 뒤, **랜덤 백오프** 후 재시도합니다 ([Difference Between CSMA/CA and CSMA/CD - GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-csma-ca-and-csma-cd/#:~:text=How%20does%20CSMA%2FCA%20prevent%20collisions,in%20wireless%20networks)). 이더넷이 채택했으며, 1-persistent CSMA/CD 알고리즘이 표준입니다. 충돌 검출로 불필요한 전송 낭비를 줄여줍니다.
+  - **CSMA/CA (Collision Avoidance):** 무선에서는 송신 중 자신 신호 때문에 충돌 감지가 어려워 (Half-duplex 제한) **충돌 회피** 기법을 씁니다. 전송 전 채널 감시 후 **여유 시간(IFS)**를 두고, **랜덤 백오프 카운트다운**을 거쳐 충돌 가능성 줄이기 ([Difference Between CSMA/CA and CSMA/CD - GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-csma-ca-and-csma-cd/#:~:text=Advantages%20of%20CSMA%2FCA)). 또한 수신 측은 프레임 수신 시 **ACK**을 보내 성공적 전송을 알립니다 (ACK 없으면 송신측 재전송). IEEE 802.11 Wi-Fi가 사용하며, **RTS/CTS (Request-to-Send / Clear-to-Send)** 핸드셰이크를 옵션으로 두어 **숨은 터미널(hidden terminal) 문제**를 완화합니다 ([Hidden node problem - Wikipedia](https://en.wikipedia.org/wiki/Hidden_node_problem#:~:text=Practical%20protocol%20solutions%20exist%20to,particularly%20for%20short%20data%20packets)). CSMA/CA는 충돌 발생 자체를 최대한 피하려는 전략이며, 성공 시까지 대기시간 때문에 throughput이 다소 낮을 수 있습니다 ([Difference Between CSMA/CA and CSMA/CD - GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-csma-ca-and-csma-cd/#:~:text=Disadvantages%20of%20CSMA%2FCA)).
+
+- **교섭(turn-taking) 프로토콜:** 노드들이 **순서**를 정해 **차례로 전송 기회**를 가져가는 방식입니다. 예전 토큰링/토큰버스 LAN이 여기에 속합니다. **Token Passing** 기법에서는 네트워크를 순환 형태로 연결하고, **토큰** 패킷이 망을 돈다. 토큰을 받은 노드만 정해진 시간 동안 전송하고, 다시 토큰을 넘겨준다. 이를 통해 충돌 없이 공정하게 매체를 공유하지만, 토큰 분실이나 고장 시 복잡한 회복 절차가 필요합니다. (토큰링 IEEE 802.5, FDDI 등에서 사용되었으나 현재 거의 사장)
+
+현대 이더넷은 사실상 **스위치 기반**이어서, 전통적인 CSMA/CD 동작은 거의 사라졌습니다. **스위치 포트 간 점대점 풀-이중 링크** 환경에서는 충돌이 발생하지 않으므로 **CSMA/CD는 비활성화**됩니다. 그러나 초창기 공유 버스 이더넷(허브 기반)에서는 CSMA/CD가 핵심이었습니다.
+
+### 유선 LAN – Ethernet과 스위치
+
+**이더넷(Ethernet)**은 1970년대 Xerox PARC에서 개발된 이래 지속적으로 확장/발전하여, 오늘날 전 세계 LAN 표준으로 자리잡았습니다. 초기 10Mbps 공유 버스 이더넷(굵은 동축 케이블)부터, 트위스티드 페어 선을 사용하는 스타 토폴로지(허브/스위치) 형태, 그리고 현재 100Gbps 이상의 광 이더넷까지 다양한 형태가 존재합니다. IEEE 802.3 표준으로 관리되며, 물리 계층과 MAC 계층 정의를 포함합니다.
+
+- **Ethernet 프레임 구조:** 이더넷 프레임은 아래와 같습니다 ([computer-networking-top-down-approach-notes/Chapter 6: Link Layer and LANs.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%206%3A%20Link%20Layer%20and%20LANs.md#:~:text=,Layer%20Addresses)) ([computer-networking-top-down-approach-notes/Chapter 6: Link Layer and LANs.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%206%3A%20Link%20Layer%20and%20LANs.md#:~:text=6)):
+
+  - Preamble (8바이트): 7바이트의 1010.. 패턴 + 1바이트의 SFD(Start Frame Delimiter)로 수신측 동기 맞춤.
+  - **목적지 MAC (6바이트)** – **출발지 MAC (6바이트)** – **EtherType(2바이트)**: 상위 프로토콜 식별 (예: 0x0800은 IPv4, 0x86DD는 IPv6).
+  - **데이터(payload)**: 46~1500바이트 (최소 길이 미만이면 패딩 추가). 상위 계층 패킷 (IP 등)이 들어감.
+  - **CRC (4바이트)**: 사이클릭 중복 검사로 프레임 오류 검출. 수신측은 CRC를 재계산해 일치 여부로 오류 판단.
+
+  에러 검출된 프레임은 버려집니다. 상위 (전송계층 등)에서 재전송을 할 것으로 기대하므로, Ethernet 자체는 재전송을 안 합니다.
+
+- **반이중 vs 전이중:** 초기 허브나 공유 매체에서 Ethernet은 반이중(송수신 교대로)로 CSMA/CD 필요했습니다. 그러나 **스위치** 등장 이후, 포인트 투 포인트 링크로 연결되고 각 포트가 전이중(full-duplex)을 지원하므로, 동시에 송수신 가능하고 충돌이 없어 MAC 프로토콜이 단순화되었습니다. 지금은 대부분 전이중, 기가비트 이상은 반드시 전이중입니다.
+
+- **이더넷 스위치:** **스위치(switch)**는 여러 이더넷 포트를 지닌 링크 계층 장비로, 들어온 프레임의 목적지 MAC을 보고 적절한 출력 포트로만 전송하여 **분할된 충돌 도메인**과 **높은 총 용량**을 제공합니다. 스위치는 내부에 고속 스위칭 패브릭(버스 또는 크로스바)과 **MAC 주소 테이블**(CAM 기반)을 가지고 있습니다. **MAC 주소 학습(learning)**: 초기에는 주소 테이블이 비어있고, 들어오는 프레임의 출발지 MAC과 들어온 포트를 매핑하여 테이블에 기록합니다. 목적지 MAC에 해당 포트 정보를 찾으면 그 포트로만 전달하고, 없으면 **플러딩(flooding)** – 모든 포트로 브로드캐스트합니다 ([computer-networking-top-down-approach-notes/Chapter 6: Link Layer and LANs.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%206%3A%20Link%20Layer%20and%20LANs.md#:~:text=Scope%20Limited%20to%20the%20local,in%20the%20OS%27s%20ARP%20cache)). 이를 통해 동적으로 네트워크 토폴로지를 학습하고, 시간 경과로 테이블이 구축되어 효율적인 전달을 합니다. 이 과정은 **자주성(plug-and-play)**으로, 추가 설정 없이 스위치를 연결하기만 하면 동작합니다.
+
+  다만 스위치를 고리 형태 등 **루프**가 생기도록 연결하면, 플러딩 프레임이 무한 반복되어 브로드캐스트 폭주가 발생할 수 있습니다. 이를 방지하기 위해 **스패닝 트리 프로토콜(STP)**이 스위치들 사이에 동작하여, 물리적 루프가 있어도 **논리적으로 사이클 없는 트리**를 구성합니다. 루프 포트는 차단되고, 링크 장애 시에만 다시 활성화되어 경로를 확보합니다. STP(IEEE 802.1D)는 메시지 교환을 통해 루트 브리지 선출, 각 브리지별 최단 경로 포트 등을 결정합니다.
+
+- **LAN 확장성과 VLAN:** 스위치 기반 LAN은 수백~수천대 노드로 확장될 수 있지만, 모든 장비가 단일 브로드캐스트 도메인에 있으면 브로드캐스트 트래픽 과다나 보안 문제가 생깁니다. 이를 논리적으로 분할하기 위해 **가상 LAN(VLAN)**을 사용합니다 ([computer-networking-top-down-approach-notes/Chapter 6: Link Layer and LANs.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%206%3A%20Link%20Layer%20and%20LANs.md#:~:text=6,VLANs)). VLAN을 쓰면 하나의 스위치 장비에서도 포트들을 그룹화하여 서로 다른 LAN처럼 동작시킬 수 있습니다. 예를 들어 스위치 포트 1-4는 VLAN A, 5-8은 VLAN B로 지정하면, A와 B 사이에는 브로드캐스트가 통하지 않고, 서로 별개 네트워크가 됩니다 ([computer-networking-top-down-approach-notes/Chapter 6: Link Layer and LANs.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%206%3A%20Link%20Layer%20and%20LANs.md#:~:text=,broadcast%20domains%20within%20each%20VLAN)) ([computer-networking-top-down-approach-notes/Chapter 6: Link Layer and LANs.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%206%3A%20Link%20Layer%20and%20LANs.md#:~:text=match%20at%20L552%20,broadcast%20traffic%20within%20the%20VLAN)). VLAN간 통신은 라우터(3계층)에서 처리해야 합니다. VLAN 식별은 IEEE 802.1Q 태그(4바이트)가 프레임에 추가되어 이루어지며, **Trunk 포트**를 통해 여러 VLAN의 프레임을 한 연결로 운반할 수 있습니다 ([computer-networking-top-down-approach-notes/Chapter 6: Link Layer and LANs.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%206%3A%20Link%20Layer%20and%20LANs.md#:~:text=VLAN%20Trunking)). 예컨대 두 스위치를 연결하는 트렁크는 VLAN A, B 모두의 트래픽을 태그붙여 전달하고, 각 스위치가 자기 포트 소속 VLAN에 맞게 필터링합니다 ([computer-networking-top-down-approach-notes/Chapter 6: Link Layer and LANs.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%206%3A%20Link%20Layer%20and%20LANs.md#:~:text=VLAN%20Trunking)).
+
+### 무선 링크와 CSMA/CA (802.11 WLAN)
+
+링크 계층은 유선뿐 아니라 **무선 LAN**(Wi-Fi)에서도 중요한 역할을 합니다. IEEE 802.11 무선 LAN의 MAC 프로토콜은 **CSMA/CA + ACK**입니다. 앞서 설명했듯, 노드는 전송 전 채널을 감지하고 (CS) 일정 시간 **DIFS** 동안 빈 채널이어야 전송을 시작합니다. 만약 채널이 사용중이면, 잔여 백오프 카운트를 보존하고 (채널이 idle되면 재개) **랜덤 백오프**을 거쳐 전송합니다. 수신 측은 프레임을 받으면 짧은 간격 **SIFS** 후 ACK 프레임을 보냅니다 ([[PDF] Computer Networking Overview IEEE 802.11 MAC Protocol: CSMA/CA](https://www.cs.cmu.edu/~prs/15-441-F14/lectures/24-wireless.pdf#:~:text=,due%20to%20lack%20of)). 송신 측은 ACK를 못 받으면 충돌이나 손실로 간주하여 재시도합니다. 또한 **RTS/CTS**: 긴 프레임 전송 전에 RTS(송신자가 보낼 의사)와 CTS(AP나 수신자가 clear to send) 교환을 통해 숨은 노드 문제를 줄일 수 있습니다 ([Hidden node problem - Wikipedia](https://en.wikipedia.org/wiki/Hidden_node_problem#:~:text=Practical%20protocol%20solutions%20exist%20to,particularly%20for%20short%20data%20packets)). RTS 받으면 그 정보를 듣는 모든 노드는 해당 기간 동안 전송을 미뤄 충돌 방지합니다. 다만 RTS/CTS 자체가 오버헤드라 작은 프레임엔 안쓰고, 임계 크기 이상만 사용하도록 합니다.
+
+802.11에서는 **비컨(Beacon)** 프레임으로 AP가 주기적으로 네트워크 존재를 알리고 동기화 신호를 줍니다. 노드는 비컨을 듣고 필요 시 **연결(association)**을 요청하며, 인증/암호(WPA2 등) 절차 후 네트워크에 참여합니다. AP는 연결된 스테이션의 리스트를 관리하고, 프레임을 주고받을 때 목적지에 따라 무선->유선 브릿징도 수행합니다.
+
+무선 링크는 유선과 달리 오류율이 높고, 전송률이 신호세기나 간섭에 따라 가변적입니다. 802.11은 자동으로 **데이터율 조정**(예: 신호약하면 낮은 MCS 모드 사용)을 하고, FEC 등도 활용합니다. 또한 동시에 전송 충돌 외에 **숨은 단말(Hidden terminal)**이 CSMA의 한계인데, RTS/CTS가 그 보완책입니다. **노출된 단말(Exposed terminal)** 문제도 있어서 (A는 B에게 전송중, C는 B와 거리 멀어 방해 안되지만 A 신호 들려서 전송 지연), 완전 해결은 어렵습니다.
+
+**이더넷 vs 802.11 MAC:** CSMA/CD는 간단하지만, CSMA/CA는 ACK과 백오프 등 부가기능 때문에 **MAC 계층 효율**이 떨어지는 경향이 있습니다 ([Difference Between CSMA/CA and CSMA/CD - GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-csma-ca-and-csma-cd/#:~:text=Disadvantages%20of%20CSMA%2FCA)). 그래서 802.11은 raw PHY rate 대비 실제 사용자 처리율이 낮게 나옵니다. 이를 개선하려고 프레임 묶음 전송이나 효율적인 scheduling (802.11e EDCA 등 QoS) 등이 발전했습니다.
+
+### 링크 계층의 오류 검출과 ARQ
+
+링크 계층 프레임은 종종 **CRC (Cyclic Redundancy Check)**로 오류 검출을 합니다 ([computer-networking-top-down-approach-notes/Chapter 6: Link Layer and LANs.md at main · VasanthVanan/computer-networking-top-down-approach-notes · GitHub](https://github.com/VasanthVanan/computer-networking-top-down-approach-notes/blob/main/Chapter%206%3A%20Link%20Layer%20and%20LANs.md#:~:text=,zero%2C%20an%20error%20is%20detected)). CRC는 수학적으로 프레임 비트를 다항식으로 보고, 미리 정한 **생성 다항식(G)**로 나누어 나머지를 구해 전송합니다. 수신측도 동일 연산을 수행해 나머지가 0이면 무오류로 간주합니다. CRC는 잡음으로 인한 비트 오류를 **높은 확률로 잡아내지만**, 암묵적으로 신뢰성은 상위로 넘기는 경우가 많습니다. 그러나 일부 링크(예: 점대점 전용선 PPP, X.25 등의 옛 프로토콜)에서는 **링크 계층 ARQ** (Stop-and-Wait ARQ 등)을 구현하여 오류시 재전송하는데, 오늘날엔 대부분 종단의 TCP가 신뢰성을 맡으므로, 링크 계층은 단순히 오류를 검출하고 버리는 정도로 충분합니다.
+
+예를 들어, **Stop-and-Wait ARQ**는 링크 계층에서 간단히 쓸 수 있는 방식입니다: 프레임 하나 보내고 ACK 기다리기, 타임아웃 시 재전송. 하지만 효율이 RTT에 제약받아 낮습니다. 향상된 **슬라이딩 윈도우 ARQ**(Go-Back-N, Selective Repeat)도 링크 계층에 적용 가능하지만, 주로 전송계층 TCP에 구현되므로 링크에서는 드뭅니다. 다만 **위성 링크** 같이 딜레이가 큰 채널에서는 링크에서도 pipelining ARQ를 쓸 수 있습니다.
+
+### 링크 계층 장비: 허브, 브리지, 스위치, NIC
+
+- **허브(Hub):** 1계층 장비로 단순 전기적 신호 중계기입니다. 입력 신호를 재생성(amplify)하여 모든 다른 포트로 내보냅니다. 충돌 도메인이 하나로 유지되므로, CSMA/CD 환경에서 쓰입니다. 요즘은 거의 사용 안 하고 스위치로 대체되었습니다.
+
+- **브리지(Bridge):** 2계층 장비로, 두 개의 LAN을 연결합니다. MAC 주소 기반으로 프레임을 넘길지 말지 결정(스위치의 초기 형태)하며, 두 LAN을 분리된 충돌 도메인으로 만들어줍니다. 현대의 **스위치**는 다포트 브리지와 거의 동일 개념이므로, 브리지라는 용어는 주로 2포트 (LAN to LAN) 연결에 국한되지만, 현재는 스위치로 통합해서 부릅니다.
+
+- **스위치(Switch):** 앞서 설명했듯 멀티포트 브리지로, 현재 링크 계층 핵심 요소입니다. 스위치끼리 이어 다단계로 연결된 **스위칭 패브릭 망**은 큰 2계층 네트워크를 형성합니다. 그러나 지나친 규모의 2계층 망은 브로드캐스트 범위와 보안 문제를 야기하므로, 일반적으로 3계층(라우터)를 통해 VLAN 또는 서브넷으로 나누어 관리합니다.
+
+- **네트워크 인터페이스(NIC):** 각 호스트(PC, 서버 등)에 장착된 2계층 구현체입니다. NIC는 하드웨어로 MAC 프로토콜과 물리 계층을 처리합니다. NIC에는 자체 **버퍼**, **DMA 엔진** 등이 있어 OS가 전송할 패킷을 쓰면 직접 네트워크로 보냅니다. NIC 드라이버는 OS 커널과 통신하며, 수신 프레임을 인터럽트로 상위에 알립니다. 현대 NIC는 고속화를 위해 다중 큐, 오프로딩(TCP 체크섬, 분할 등), 심지어 전체 TCP/IP 스택을 일부 처리하는 **SmartNIC**도 존재합니다. 하지만 기본 동작은 링크 계층과 물리 계층 구현입니다.
+
+정리하면, 링크 계층은 물리적 링크 상의 데이터 전달을 책임지며, 주소 체계(MAC), 오류 검출(CRC), 매체 접근(CSMA/CD 등)과 같은 필수 기능을 제공합니다. 이 계층의 프로토콜과 장비들의 협력으로 하나의 로컬 네트워크가 형성되고, 상위의 네트워크 계층은 이를 기반으로 멀리까지 데이터를 보낼 수 있게 됩니다.
+
+## 7. 무선 및 이동 네트워크
+
+**핵심 개념 요약:** **무선 네트워크**는 유선과 달리 전파를 매개로 통신하므로, **전송 매체 공유**와 **신호 감쇠/간섭** 같은 특징이 있다. **무선 LAN (Wi-Fi, IEEE 802.11)**은 AP(액세스 포인트)가 중심이 되는 **인프라 모드** 또는 동등 노드 간 **애드혹 모드**로 구성되며, CSMA/CA 기반 MAC 프로토콜과 ACK로 링크 신뢰성을 확보한다. **SSID**와 **연결(association)** 개념을 통해 단말은 AP에 접속하고, AP는 **베이직 서비스 집합(BSS)**을 형성한다. 무선 전송에는 **숨은 단말 문제**(한 단말이 다른 단말의 신호를 못 듣는 문제) 등이 존재하며 RTS/CTS로 완화한다 ([Hidden node problem - Wikipedia](https://en.wikipedia.org/wiki/Hidden_node_problem#:~:text=Practical%20protocol%20solutions%20exist%20to,particularly%20for%20short%20data%20packets)). **모바일 네트워크(셀룰러)**에서는 지역을 **셀(cell)**로 나누고 각 셀에 **기지국(Base Station)**이 서비스하며, 사용자 단말은 이동 시 **셀 간 핸드오버(handover)**를 통해 통신 연속성을 유지한다 ([Handover - Wikipedia](https://en.wikipedia.org/wiki/Handover#:~:text=,up%20some%20capacity%20in)). 셀룰러 시스템은 세대별(3G, 4G LTE, 5G)로 진화하며, **주파수 재사용**과 **중앙 집중 스케줄링**(기지국이 각 단말에 자원 할당)로 높은 용량과 커버리지를 달성한다. 이동 중 IP 주소가 바뀌는 문제를 해결하기 위한 **Mobile IP** 프로토콜이 존재하지만, 실제 인터넷에서는 주로 상위 계층 (예: TCP 재연결 또는 응용 레벨)에서 대응하거나, 셀룰러 망 자체에서 이동성을 숨긴다. **기지국-코어 네트워크** 구조에서, 이동단말은 코어망의 MME/MSC 등을 통해 인증 및 호 세션 관리가 이루어지고, 패킷망에서는 게이트웨이를 통해 인터넷에 접속한다. 무선과 이동 환경에서는 **신호 세기와 SNR**, **오류율** 등이 시시각변화하여, 적응적 모뎀 기술(변조/코딩 변경), ARQ 조합(HARQ) 등이 쓰인다. 또한 전파 간섭과 매체 공유 문제로 인해, **셀 용량**은 사용자가 늘면 공유되고, 셀 경계에서는 간섭관리(예: 전력 제어)가 중요하다.
+
+**심화 설명:** 본 장에서는 **무선** 통신 기술과 **단말 이동성**이 네트워킹에 미치는 영향, 그리고 이러한 환경에서 사용되는 프로토콜/기법을 다룹니다.
+
+### 무선 통신의 특성
+
+무선 채널은 **방송(broadcast)** 매체이며, 신호가 **공기 중**으로 전파됩니다. 이로 인해 다음과 같은 특성이 있습니다:
+
+- **감쇠(Path loss)와 페이딩(Fading):** 신호는 거리에 따라 감쇠 (전파 손실)하며, 건물/지형에 의해 약해지거나 다중 경로로 인해 서로 간섭(페이딩)합니다. 따라서 송수신 간 거리에 크게 의존하며, 일정 거리 이상에서는 통신 불능이 됩니다. **전송 전력과 안테나 감도**가 통신 범위를 결정하고, **수신 SNR (신호대잡음비)**이 일정 임계 이하로 떨어지면 오류율이 급증합니다.
+
+- **간섭(Interference):** 무선은 주파수 자원을 공유하므로, 근처에서 같은 주파수 사용 시 간섭이 발생합니다. 이는 다른 네트워크의 전송이나, 같은 네트워크 내 동시 전송 (충돌)으로 인한 것일 수 있습니다. CSMA/CA같은 MAC으로 한 네트워크 내 동시 전송을 조절하지만, 인접 다른 네트워크 간 간섭(예: 옆집 Wi-Fi)까지 완벽히 제어하지는 못합니다.
+
+- **전파 범위와 채널 분할:** 주파수는 규제되어, ISM 밴드같이 공용 대역을 여러 네트워크가 사용할 때 **채널**로 분할하여 사용합니다. 예를 들어 2.4GHz Wi-Fi에는 1~13번 채널이 있어 인접 AP들은 간섭 적은 채널을 골라야 합니다. 셀룰러에서는 인접 셀 간 주파수 재사용 패턴을 둡니다.
+
+- **전이중 어려움:** 무선 단말은 동시에 송수신하면 자기 신호가 자신의 수신을 압도하므로, **동시 송수신**(전이중)이 기술적으로 까다롭습니다 (최근 전이중 무선 연구가 있지만, 대부분 반이중). 따라서 Wi-Fi는 CSMA/CA+ACK, 셀룰러는 시분할 또는 주파수 분할로 업링크/다운링크를 구분합니다 (FDD/TDD).
+
+이러한 특성 때문에, **무선 링크 계층** 프로토콜은 유선과 다르게 설계됩니다. IEEE 802.11의 CSMA/CA 및 ACK 기법은 앞서 설명한 대로 무선 오류와 충돌에 대비한 것이고, 셀룰러에서는 아예 중앙에서 시간/주파수 자원을 할당하는 MAC (스케줄링) 방식을 취합니다.
+
+### Wi-Fi (IEEE 802.11 무선 LAN)
+
+**802.11**은 가장 널리 쓰이는 WLAN 표준으로, 2.4GHz/5GHz 대역을 사용하며 다양한 PHY 모드(11a/b/g/n/ac/ax)를 발전시켜 왔습니다. 표준마다 최대 전송률이 향상되어, 초기 11Mbps(802.11b)에서 최근 9.6Gbps(802.11ax, 160MHz, 8x8 MIMO)까지 늘었습니다.
+
+**네트워크 구조:** 일반적으로 **인프라스트럭처 모드**로 운용되며, **AP(Access Point)**가 무선 셀 중심역할을 합니다. AP는 유선 LAN과 연결되어 있고, **STA(Station)**라 불리는 무선 단말(노트북, 스마트폰 등)이 AP와 통신합니다. AP와 STA로 이루어진 집합을 **BSS(Basic Service Set)**라 부르고, 각각 BSS에는 **BSSID** (MAC 주소 형태)가 있습니다. 여러 AP를 유선으로 연결해 한 네트워크를 구성하면 **DS(Distribution System)**라고 하고, 이 DS를 통해 **로밍(Roaming)**하는 STA를 지원합니다. 즉, STA가 한 AP에서 다른 AP로 이동(association 재설정)해도 상위 네트워크 접속은 유지되도록, AP간에 이동정보를 DS를 통해 전달합니다. ESS(Extended Service Set)는 이러한 인프라 전체를 가리키며, 흔히 SSID(네트워크 이름)로 사용자에게 표시됩니다.
+
+**접속과 보안:** STA가 새로운 AP에 접속하려면 먼저 **스캔(scan)**하여 주변 AP의 Beacon을 수집합니다. 사용자는 원하는 SSID(AP)에 **인증(Authentication)**을 시도하고, 이후 **어소시에이션(Association)** 절차를 거쳐 AP와 논리적 연결을 맺습니다. 인증은 개방형 or WPA2같은 방식을 통해 이뤄지며, WPA2-PSK의 경우 비밀번호를 양측이 공유하여 4-way handshake로 세션 키(PTK)를 만들어 데이터 암호화(TKIP/AES)합니다. Enterprise모드에선 RADIUS 서버와 802.1X/EAP를 사용해 인증합니다.
+
+**MAC 프로토콜:** 802.11 MAC은 **DCF(Distributed Coordination Function)**이라 불리는 CSMA/CA 메커니즘이 기본입니다. 앞서 상세 논의했듯, DCF에서는:
+
+- 채널이 idle이면 **DIFS** 기간 후 바로 전송.
+- busy->idle로 바뀌면 **랜덤 백오프** 타이머 작동. 매 슬롯마다 채널이 idle면 타이머 감소, busy되면 정지. 0 되면 프레임 전송.
+- 수신측은 **SIFS** (DIFS보다 짧음) 후 ACK 전송 (ACK 자신은 충돌 거의 없음: SIFS가 DIFS보다 짧아 채널 비우자마자 ACK가 나가므로).
+- 충돌 또는 ACK 미수신시, CW(Contension Window)를 두배 늘려 (최대 CWmax까지) 재시도.
+
+**숨은 단말**: A와 C가 서로 못 듣지만, 둘 다 B와 통신하려 할 때 충돌 위험. RTS/CTS: A가 RTS 보내고 B가 CTS 보내면, 이를 C도 들을 수 있어 일정시간 전송 피함. 그러나 RTS/CTS도 시간이 들고, 모든 상황에서 완벽하진 않으나 숨은 단말 문제를 상당히 줄임.
+
+**프레임 구조:** 802.11 프레임 헤더는 Ethernet과 달리 주소 필드가 4개까지 있습니다 (수신자, 송신자, 그리고 DS를 오가는 경우 AP BSSID 등). 또한 프레임 타입(데이터, 관리, 제어) 등이 있고, FCS 4바이트 CRC가 붙습니다. 관리 프레임 (Beacon, Probe, Auth, Assoc 등), 제어 프레임 (RTS, CTS, ACK 등), 데이터 프레임으로 유형이 나뉩니다.
+
+**채널 사용과 효율:** Wi-Fi는 같은 BSS 내에서는 DCF로 조율되지만, 이웃 다른 BSS는 완전히 비협조적으로 동작할 수 있어 간섭이 생기기도 합니다. 그래서 실제 성능은 환경 영향을 많이 받습니다. 신형 802.11ax(Wi-Fi 6)는 OFDMA 도입으로 여러 단말이 동시에 병렬 전송하는 것도 가능해지고, TWT(Target Wake Time) 등 IoT 친화적 기능도 있습니다. 그러나 CSMA/CA 특성상, 유선 Ethernet 스위치처럼 고정된 시간당 전송량을 모두 활용하기는 어렵고, 대신 설치 용이성과 이동성 측면의 이점이 큽니다.
+
+### 이동 통신 (Cellular Networks)
+
+**셀룰러 네트워크**는 광범위한 영역을 커버하기 위해 지리적으로 구획된 **셀(cell)** 단위로 나눠 각각 **기지국(Base Station)**이 무선 서비스를 제공하는 구조입니다. 예를 들어 도시를 여러 1~10km 반경 셀들로 나누고, 각 셀에 기지국 안테나를 둡니다. 인접 셀은 다른 주파수(또는 코드)를 사용하여 간섭 최소화 (**주파수 재사용**), 일정 거리 떨어진 셀이 같은 채널을 재사용합니다. 단말(휴대폰)은 이동 시 신호 세기를 모니터링하여 인접 셀로 **핸드오버(Handoff)**합니다 ([Handover - Wikipedia](https://en.wikipedia.org/wiki/Handover#:~:text=,up%20some%20capacity%20in)). 즉, 통화 중에도 새로운 셀이 신호가 더 강해지면 네트워크 코어의 제어로 세션을 끊김 없이 다른 기지국으로 넘겨줍니다. 이때 원활한 전환을 위해 두 셀이 일정 영역 겹치게 (핸드오버 지역) 하고, 단말이 둘을 모두 청취하며 제어 메시지로 전환 절차를 수행합니다 ([Handover - Wikipedia](https://en.wikipedia.org/wiki/Handover#:~:text=,up%20some%20capacity%20in)).
+
+**셀룰러망 구조:** 기본 구조는 **단말(UE)** – **기지국** – **코어망** – **인터넷/전화망**으로 볼 수 있습니다. 세대별로 명칭이 다른데, 예를 들어 4G LTE:
+
+- 단말: UE (User Equipment)
+- 기지국: eNodeB
+- 코어: MME (제어 시그널 담당), SGW/PGW (데이터 게이트웨이)
+- 외부 네트워크: PDN (Packet Data Network, 예: 인터넷) 또는 PSTN (전화망)
+
+전통 3G까지는 회선교환망(음성)을 별도로 두었지만, LTE부터 **올-IP 패킷망**으로 통합되어, 음성도 VoIP 형태(VoLTE)로 전송합니다.
+
+**다중 접속:** 셀룰러는 같은 셀 내 단말들을 **중앙에서 스케줄**합니다. 4G LTE의 경우 **OFDMA** 사용 - 다운링크는 eNodeB가 OFDM 서브캐리어와 시간슬롯 자원을 각 단말에게 할당 (PDSCH), 업링크는 단말들이 SC-FDMA 방식으로 할당된 자원에 전송 (PUSCH). 기지국은 주기적으로 단말들로부터 채널 상태 피드백을 받아, **채널 품질이 좋은 시점**에 해당 단말에게 더 많은 자원을 주는 등 **멀티유저 다이버시티** 이득을 취합니다. 5G는 이 개념을 확장한 OFDMA 기반의 유연한 프레임구조를 사용합니다.
+
+**이동성 관리:** 셀룰러 가입자는 이동할 때마다 IP주소가 변할 수 있습니다. 4G LTE에서는 UE가 이동해도 코어망의 S-GW/P-GW 앵커가 유지되어, IP 주소가 유지되도록 하며, 데이터 경로만 새로운 eNodeB로 터널링됩니다. 이를 일종의 Mobile IP로 볼 수도 있는데, LTE는 자체 프로토콜 (GTP 터널)을 사용하고, UE는 IP계층에서 이동을 느끼지 못합니다. 5G에서는 사용자 plane 기능(UPF)이 분산되어, 필요 시 IP 세션 앵커 이동도 가능하게 설계되었습니다.
+
+**핸드오버 과정:** 단말이 새 셀 신호 강도가 강해지면, Measurement Report 보내고, 현Serving 셀이 코어에 통지 -> 코어가 Target 셀 자원 요청 -> 두 셀과 UE 간 키 교환 및 버퍼된 데이터 전달 -> 특정 타이밍에 UE가 새 셀로 전환 -> 경로도 새 셀로 갱신. 이런 복잡한 절차가 수십 ms 내에 이뤄집니다 ([4G Wireless Handover - cs.umass.edu](https://gaia.cs.umass.edu/kurose_ross/interactive/4g_handover.php#:~:text=4G%20Wireless%20Handover%20,station%27s%20identity%20and%20channel)). 특히 **Ping-pong** (왕복) 현상을 줄이는 알고리즘도 필요합니다.
+
+**셀 설계 이슈:** 셀룰러에서는 **커버리지 vs 용량** trade-off가 있습니다. 셀이 작을수록 (micro/pico/femto cell) 1셀당 사용자수는 적어 용량증가, 대신 더 많은 기지국이 필요하고 핸드오버 빈번. **HetNet**(Heterogeneous Network)은 거시셀 아래 스몰셀들을 병용해, 트래픽 밀집지역 용량을 높입니다. 5G는 이외에도 **빔포밍**으로 신호이득을 향상, **mmWave** 대역 사용 등의 기술이 추가되었습니다.
+
+**무선 링크 프로토콜:** 셀룰러의 무선 링크는 신뢰성 향상을 위해 **HARQ (Hybrid ARQ)** 사용 - 오류시 자동 재전송 + FEC 결합. 또한 각 단말별 채널 환경에 맞춰 **적응 변조 코딩(AMC)** - SNR 높으면 64-QAM 고속, 낮으면 QPSK 저속 등으로 링크 적응.
+
+**이동 Ad-hoc 네트워크:** 기지국 없는 애드혹은 각 단말이 라우터 역할도 하여 멀티홉 통신을 합니다. 이런 경우 DSR, AODV 같은 특별한 라우팅 프로토콜이 동작하고, 군사, 재난 통신 등에 연구되었습니다. 상용화면에서는 Wi-Fi Direct나 블루투스 메시 등이 소규모로 활용될 뿐, 인터넷 규모의 ad-hoc는 잘 쓰이지 않습니다.
+
+### 이동성과 상위 프로토콜
+
+이동 노드가 IP 주소가 바뀌는 경우, 기존 TCP 연결이 끊기는 문제가 있습니다. Mobile IP (IETF 표준)은 **Home Agent**에 원래 IP 유지, **Care-of-Address** 현재 위치 등록, 패킷을 home agent가 받아 다시 터널링하는 방식으로 해결을 시도했습니다. 그러나 이는 비효율 (삼각 라우팅)과 복잡성으로 널리 도입되지 않았습니다. 대신, 모바일 기기는 대부분 이동시 새로운 IP로 TCP 재접속, 어플리케이션 레벨에서 세션 유지를 처리하거나, **MPTCP**처럼 복수 IP를 하나의 연결로 묶는 기법을 사용합니다. 또한 모바일 환경에서는 상위 계층에서 지연과 손실의 원인을 구분하기 어려운 문제가 있어 (손실은 무선오류? 혼잡?), TCP 성능 저하 이슈가 있습니다. 이를 개선하려고 TCP Westwood, SNOOP 프로토콜(기지국에서 TCP ACK 조작) 등 연구도 있었습니다.
+
+### 무선 보안과 기타 이슈
+
+무선은 매체가 개방되어 있어 **도청**과 **허가되지 않은 접속** 위험이 있습니다. 그래서 Wi-Fi에는 WPA2 같은 강력한 링크 암호화를 사용합니다. 셀룰러도 SIM 기반 인증과 강력한 암호화 (LTE는 AES 기반)로 보호됩니다.
+
+**전력 효율:** 모바일 단말은 배터리로 동작하므로, 무선 프로토콜은 절전 모드 지원이 필수입니다. Wi-Fi의 DTIM, LTE의 DRX, 5G의 C-DRX 등으로, 단말이 일정 기간 수신기 끄고 자주성 신호때만 깨어 패킷 체크, 내려온 데이터 있으면 깨우는 방식 등을 씁니다. IoT용 LPWAN (LoRa, NB-IoT 등)은 더 극단적으로 슬립 상태 위주 설계입니다.
+
+**통합/이동**: 현재 스마트폰은 Wi-Fi와 LTE/5G를 모두 지원하여, 사용자 데이터 트래픽은 둘 중 가용한 것으로 흐릅니다. 경우에 따라 통신사들이 Wi-Fi 오프로드 (트래픽을 셀망에서 Wi-Fi로 이동)하거나, IMS (IP 멀티미디어 시스템) 같은 코어망이 사용자 세션을 연동 관리합니다.
+
+마지막으로, 위성이동통신(LEO 위성 등)도 최근 Starlink 등으로 주목받고 있는데, 이는 전 지구적 커버리지 제공 대신 지연이 크고, 연결 유지시 핸드오버가 인공위성간 필요 등 특징이 있습니다.
+
+요약하면, 무선 및 이동 네트워크에서는 **링크 계층에서의 채널 공유와 오류 처리**가 중요한 이슈이며, **네트워크 계층에서는 이동성**이 별도 다뤄져야 합니다. Wi-Fi와 셀룰러는 상호보완적 기술로 각각 LAN 환경과 광역 이동 환경을 커버합니다. 이들을 아우르는 기술 발전으로 사용자는 어디서나 네트워크에 접속된 모바일 컴퓨팅의 혜택을 누리고 있습니다.
+
+## 8. 네트워크 보안
+
+**핵심 개념 요약:** **네트워크 보안(Network Security)**은 네트워크를 통한 통신의 **기밀성(confidentiality)**, **무결성(integrity)**, **인증(authentication)**, **가용성(availability)**을 확보하는 분야이다. 이를 위해 **암호화 기법(cryptography)**이 사용된다. **대칭키 암호화**는 하나의 공유된 비밀키로 암호화/복호화하며 속도가 빠르고 대용량 데이터에 적합하지만, 키 분배가 문제다. **공개키 암호화**는 공개키-개인키 한 쌍을 사용하여, 예를 들어 공개키로 암호화하면 개인키로만 복호화가 가능하다 ([Difference Between Symmetric and Asymmetric Key Encryption - GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-symmetric-and-asymmetric-key-encryption/#:~:text=,reducing%20the%20risk%20of%20exposure)). 이를 통해 안전하지 않은 경로로도 키 교환이 가능하고, **디지털 서명**을 통한 신원 인증과 **부인방지(non-repudiation)**가 가능하다. 실제 통신에서는 공개키로 **세션키(대칭키)를 교환**하고 이후는 대칭키 암호화를 활용하는 **하이브리드 암호 시스템**이 일반적이다 ([Difference Between Symmetric and Asymmetric Key Encryption - GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-symmetric-and-asymmetric-key-encryption/#:~:text=Many%20modern%20security%20systems%20use,TLS%2FSSL%20in%20HTTPS)) ([Difference Between Symmetric and Asymmetric Key Encryption - GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-symmetric-and-asymmetric-key-encryption/#:~:text=Many%20modern%20security%20systems%20use,TLS%2FSSL%20in%20HTTPS)). **해시 함수**는 주어진 입력을 고정 길이의 해시 값으로 매핑하며, 역상이나 충돌이 매우 어려워 메시지 무결성 검사(MAC, HMAC)에 쓰인다. **TLS/SSL**은 웹 등에서 쓰이는 대표적 보안 프로토콜로, 클라이언트-서버 간 **핸드셰이크**를 통해 대칭 세션키를 합의(공개키 기반)하고, 이후 모든 트래픽을 암호화한다 ([What happens in a TLS handshake? | SSL handshake | Cloudflare](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/#:~:text=4,message%20that%20is%20encrypted)) ([What happens in a TLS handshake? | SSL handshake | Cloudflare](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/#:~:text=5,The%20handshake%20is%20completed%2C%20and)). TLS 핸드셰이크는 서버 인증서 검증, 키 교환, 그리고 완료 메시지 교환으로 이루어지며 협상이 완료되면 대칭키 암호(예: AES)로 애플리케이션 데이터가 보호된다. **네트워크 공격**에는 **수동적 공격**(도청)과 **능동적 공격**(데이터 변경, 재연, 서비스 거부 등)이 있다. 예를 들어 **패킷 스니핑**은 공유 링크에서 남의 패킷을 훔쳐보는 공격이고, **IP 스푸핑**은 출발지 IP를 속여 권한 없는 패킷을 보내는 것이다. **DDoS 공격**은 수많은 분산 소스에서 한 타깃에 트래픽을 폭주시켜 서비스를 마비시키는 공격이며, 네트워크 가용성을 해친다 ([Denial-of-service attack - Wikipedia](https://en.wikipedia.org/wiki/Denial-of-service_attack#:~:text=Denial,originates%20from%20many%20different%20sources)). 이러한 위협에 대응하기 위해 **방화벽(Firewall)**과 **IDS/IPS**가 사용된다. 방화벽은 네트워크 경계에서 **트래픽 필터링 정책**을 적용하여 승인된 트래픽만 통과시키고 나머지는 차단함으로써 내부망을 보호한다. IDS는 악의적 활동 패턴을 모니터링/탐지하고, IPS는 이를 자동 차단하기도 한다. 또한 **VPN (Virtual Private Network)**은 암호화된 터널을 통해 인터넷 상에 사설 네트워크를 구현, 원격지 사용자가 안전하게 내부망에 접속할 수 있게 한다(IPsec 혹은 TLS 기반). 보안 설계에서 **종단 간 보안**과 **링크 계층 보안**(예: WPA2 for Wi-Fi) 등 계층별 접근법이 병행되며, 궁극적으로 신뢰모델(PKI 등)과 올바른 구현이 중요하다.
+
+**심화 설명:** 네트워크 보안은 컴퓨터 네트워크를 통한 통신에서 발생하는 다양한 위협을 파악하고, 이에 대응하는 기술과 방책들을 의미합니다. 본 절에서는 보안의 기본 요소, 암호학 기초, 대표적인 보안 프로토콜, 그리고 일반적인 공격과 방어 기법을 살펴봅니다.
+
+### 보안의 기본 목표와 암호학 기초
+
+**정보 보안의 3대 목표**로 흔히 **기밀성(Confidentiality)**, **무결성(Integrity)**, **가용성(Availability)**을 꼽습니다 (약자로 CIA triad). 기밀성은 정보가 인가되지 않은 자에게 노출되지 않도록 하는 것, 무결성은 정보가 허가 없이 변경되거나 위변조되지 않도록 하는 것, 가용성은 합법적 사용자가 언제든 정보와 서비스에 접근할 수 있도록 하는 것입니다. 네트워크 환경에서는 추가로 **인증(Authentication)** (통신 상대의 신원 확인)과 **부인 방지(Non-repudiation)** (나중에 발뺌하지 못하도록 송수신 사실 증명)이 중요한 목표가 됩니다.
+
+이러한 목표를 달성하기 위해 **암호학(cryptography)**이 핵심 도구로 사용됩니다. 암호학의 주요 구성요소:
+
+- **대칭키 암호화 (Symmetric Key Encryption):** 송신자와 수신자가 **동일한 비밀 키**를 공유하고, 그 키로 평문을 암호문으로, 암호문을 평문으로 전환합니다. 고전적인 **AES (고급 암호 표준)**, **DES/3DES** 등이 속합니다. 대칭 암호는 **연산 효율이 높고** 대량 데이터 암호화에 적합하지만 ([Symmetric vs. Asymmetric Encryption: What's the Difference?](https://www.trentonsystems.com/en-au/blog/symmetric-vs-asymmetric-encryption#:~:text=Symmetric%20encryption%20is%20much%20faster,to%20bog%20down%20networks)), **키 교환(분배)**이 어렵습니다. 안전한 채널 없이 어떻게 처음에 양측이 같은 키를 가질 것인가가 문제입니다. 예를 들어 둘이 미리 만나서 USB로 키를 교환하지 않는 이상, 인터넷을 통해 공유키를 교환하는 것은 위험합니다 (공격자가 중간서로 가로채면 비밀이 노출됨). 대칭 암호는 **기밀성** 확보에 주로 사용되며, 일정 블록 단위(예: 128비트)로 데이터를 암호화하는 **블록 암호**와 스트림 형태의 **스트림 암호**로 나뉩니다.
+
+- **공개키 암호화 (Public Key Encryption):** 1970년대 등장한 혁신으로, **키 한 쌍(개인키, 공개키)**을 사용합니다. 공개키는 모두에게 공개해도 되지만 개인키(비밀키)는 본인만 보관합니다. **RSA**, **ECC** 등이 대표적입니다. 공개키 암호 체계에서, 어떤 사람이 A의 공개키로 암호화한 메시지는 오직 A의 개인키로만 복호화할 수 있습니다 ([Difference Between Symmetric and Asymmetric Key Encryption - GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-symmetric-and-asymmetric-key-encryption/#:~:text=,reducing%20the%20risk%20of%20exposure)). 반대로, A가 자신의 **개인키**로 서명(또는 암호화)한 메시지는 A의 **공개키**로 검증(또는 복호화)할 수 있는데, 이는 **디지털 서명**으로 활용됩니다. 공개키 암호를 쓰면, 초기에 대칭키를 전달할 때도 일단 상대의 공개키로 대칭키를 암호화해서 보내면, 네트워크를 통과하며 탈취되더라도 공격자는 개인키 없이는 복호화 못하므로 안전하게 공유할 수 있습니다 ([TLS handshake, certificates and public-private key pairs - IBM](https://www.ibm.com/docs/en/informix-servers/14.10?topic=tls-handshake-certificates-public-private-key-pairs#:~:text=The%20TLS%20client%20uses%20the,symmetric%20key%20to%20the)) ([Demystifying the TLS Handshake: What it is and how it works](https://www.keyfactor.com/blog/what-is-tls-handshake-how-does-it-work/#:~:text=The%20goal%20of%20the%20TLS,key%20in%20a%20secure%20fashion)). 즉 **키 교환 문제**를 해결했지만, 단점은 **속도가 느리다**는 것입니다. RSA로 대량 데이터를 직접 암호화하는 것은 비효율적이고, 대신 작은 데이터(예: 세션키 교환)에 주로 사용됩니다. 공개키 기반으로 **인증서 (Certificate)**라는 개념이 나와, 공인된 기관(CA)이 사용자 공개키에 서명하여 진본임을 증명해주는 체계(**PKI, 공개키 기반구조**)도 만들어졌습니다.
+
+- **해시 함수 (Hash Function):** 임의 길이 메시지를 입력받아 **고정 길이 출력(hash value)**을 생성하는 함수로, **일방향성(one-way)**과 **충돌 회피성(collision-resistant)**을 가집니다. 즉, 해시값 -> 원문을 역추측이 극도로 어렵고, 두 개의 상이한 메시지가 같은 해시값을 갖는 **충돌**을 찾기도 극도로 어렵습니다. 대표로 **SHA-256**, **SHA-3**, 과거 **MD5**(이젠 충돌 취약) 등이 있습니다. 해시는 비밀번호 저장 시 (평문대신 해시 저장)나, 메시지 무결성 검증에 사용됩니다. 네트워크 보안에서는 **메시지 인증 코드(MAC)**에 사용되는데, 이는 혼동주의: 여기서 MAC은 Medium Access Control이 아니고 **Message Authentication Code**입니다. **HMAC**(해시 기반 MAC)는 송신자가 메시지와 공유 비밀을 합쳐 해시를 만들어 붙여 보내면, 수신자가 같은 해시를 계산해 비교함으로써, **무결성**과 **인증**을 동시에 만족합니다 (공유 비밀로 인해, 제3자가 메시지를 조작하더라도 올바른 MAC 붙이기 불가).
+
+- **디지털 서명 (Digital Signature):** 이는 공개키 암호의 응용으로, **서명자(private key 소유자)**가 메시지에 대해 서명을 생성하고, 검증자는 서명자의 **공개키**로 이를 검증합니다. RSA 서명, ECDSA 등이 있습니다. 보통 서명 대상이 되는 메시지는 해시(SHA-256 등)하여 짧게 만든 후 서명 연산합니다 (속도 문제 때문). 디지털 서명을 통해 메시지의 무결성과 송신자 인증, 부인방지까지 가능합니다. 예를 들어 웹사이트의 SSL 인증서에는 CA의 서명이 포함되어 브라우저가 검증합니다.
+
+정리하면, **대칭키 암호**는 빠른 기밀성 제공, **공개키 암호**는 키 교환과 인증에 유용, **해시**는 무결성 체크에 유용합니다. 현대 프로토콜은 이러한 구성요소를 조합하여 목적을 달성합니다.
+
+**하이브리드 암호 시스템:** 실제로는 두 방식을 결합합니다. 예를 들어 TLS에서는 클라이언트와 서버가 **공개키**를 사용해 **Pre-Master Secret**(예비 대칭키 재료)을 공유하고 ([What happens in a TLS handshake? | SSL handshake | Cloudflare](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/#:~:text=4,message%20that%20is%20encrypted)), 이를 양쪽에서 동일한 세션 대칭키로 변환해낸 후 그 다음부터는 **대칭 암호**로 암호화 통신을 합니다 ([What happens in a TLS handshake? | SSL handshake | Cloudflare](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/#:~:text=2,actual%20owner%20of%20the%20domain)) ([What happens in a TLS handshake? | SSL handshake | Cloudflare](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/#:~:text=can%20only%20be%20decrypted%20with,encrypted%20with%20a%20session%20key)). 이것이 하이브리드 방식이고, 이유는 공개키 암호의 연산비용을 줄이면서, 키 교환의 보안성은 유지하기 위함입니다 ([Difference Between Symmetric and Asymmetric Key Encryption - GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-symmetric-and-asymmetric-key-encryption/#:~:text=Many%20modern%20security%20systems%20use,TLS%2FSSL%20in%20HTTPS)) ([Difference Between Symmetric and Asymmetric Key Encryption - GeeksforGeeks](https://www.geeksforgeeks.org/difference-between-symmetric-and-asymmetric-key-encryption/#:~:text=Many%20modern%20security%20systems%20use,TLS%2FSSL%20in%20HTTPS)).
+
+### 네트워크 보안 프로토콜 (예: TLS/SSL, IPsec, SSH)
+
+**TLS (Transport Layer Security)**, 이전 명칭 SSL, 는 인터넷에서 가장 널리 사용되는 보안 프로토콜입니다. 웹의 HTTPS, 이메일의 SMTPS/IMAPS 등 여러 애플리케이션에 쓰입니다. TLS는 전송 계층과 응용 계층 사이에서 동작하며, **암호화된 TCP 바이트 스트림**을 제공합니다. 주요 절차:
+
+- **핸드셰이크 단계:** 클라이언트가 서버에 접속하면서 ClientHello (지원하는 TLS 버전, 암호스위트 목록 등)를 보냅니다 ([What happens in a TLS handshake? | SSL handshake | Cloudflare](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/#:~:text=1,server%27s%20SSL%20certificate%20with%20the)). 서버는 ServerHello (선택한 암호스위트, 서버 공개키가 담긴 인증서 등)를 답신합니다 ([What happens in a TLS handshake? | SSL handshake | Cloudflare](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/#:~:text=2,actual%20owner%20of%20the%20domain)). 클라이언트는 서버 인증서를 **CA의 공개키**로 검증하여 서버 신원을 확인합니다 ([What happens in a TLS handshake? | SSL handshake | Cloudflare](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/#:~:text=server%27s%20chosen%20cipher%20suite%2C%20and,%28The%20client%20gets%20the)). 그런 다음, 클라이언트는 **Premaster Secret**이라는 랜덤값을 생성하여 서버 공개키로 암호화해 서버에 전송합니다 ([What happens in a TLS handshake? | SSL handshake | Cloudflare](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/#:~:text=4,message%20that%20is%20encrypted)). 서버는 개인키로 이를 복호화해 Premaster Secret을 얻습니다 ([What happens in a TLS handshake? | SSL handshake | Cloudflare](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/#:~:text=can%20only%20be%20decrypted%20with,message%20that%20is%20encrypted)). 이제 양측에 **ClientRandom, ServerRandom, PremasterSecret** 세 요소가 공유되었으므로, 이를 조합해 **대칭 세션키**(여러 개: 암호화용, MAC용 등)를 생성합니다 ([What happens in a TLS handshake? | SSL handshake | Cloudflare](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/#:~:text=5,The%20handshake%20is%20completed%2C%20and)). 그 후, 클라이언트와 서버는 "Finished" 메시지를 보내 서로가 협상한 키로 암호화한 메시지를 주고받아(즉, 세션키가 제대로 공유되었는지 확인) 핸드셰이크를 마칩니다 ([What happens in a TLS handshake? | SSL handshake | Cloudflare](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/#:~:text=client%20random%2C%20the%20server%20random%2C,continues%20using%20the%20session%20keys)).
+
+- **데이터 전송 단계:** 이제 응용층 데이터(HTTP 등)가 TLS Record 프로토콜을 통해 암호화되어 전송됩니다 ([What happens in a TLS handshake? | SSL handshake | Cloudflare](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/#:~:text=9,continues%20using%20the%20session%20keys)). TLS Record는 지정된 대칭 암호 (예: AES_256_CBC)와 MAC 알고리즘 (예: HMAC-SHA256)으로 각 **레코드(일정 블록) 암호화 및 무결성 보호**를 하고, 필요시 조각화나 압축도 합니다. 수신 측은 역순으로 복원하며, MAC 검증 실패 시 해당 연결을 종료합니다.
+
+TLS는 또한 **완전한 포워드 보안(PFS)**을 옵션으로 제공합니다. RSA 키 교환은 서버 개인키가 나중에 유출되면 과거 녹화된 트래픽 복호화가 가능하지만, **ECDHE(타원 곡선 Diffie-Hellman Ephemeral)** 방식으로 키 교환하면 세션마다 휘발성 DH키가 사용되어, 설령 서버 장기키가 털려도 과거 세션키는 알아낼 수 없습니다 ([How does TLS protect the symmetric key : r/computerscience - Reddit](https://www.reddit.com/r/computerscience/comments/xu7hc6/how_does_tls_protect_the_symmetric_key/#:~:text=Reddit%20www,which%20both%20parties%20share)).
+
+**IPsec (IP Security):** TLS는 전송계층보안이라 종단 간(애플리케이션 간) 암호화입니다. 반면 IPsec은 **네트워크 계층**에서 작동하는 보안 프로토콜로, 호스트나 게이트웨이가 IP 패킷을 암호화/인증하여 **VPN 구현**에 많이 쓰입니다. IPsec은 동작 모드(터널, 전송)와 수많은 알고리즘 옵션이 있는데, 주로 **VPN 게이트웨이** 간 **터널 모드**로 사용됩니다. 이때 두 게이트웨이가 **IKE (Internet Key Exchange)** 프로토콜로 상호 인증과 키 합의 과정을 거쳐 **보안 연결(SA)**를 수립합니다. 이후 IP 패킷이 여행할 때, 송쪽 게이트웨이는 원본 IP패킷 전체를 암호화하고 새 IP헤더(목적지를 상대 게이트웨이로) 붙여 보내며, 수신 게이트웨이가 복호화하여 내부망으로 전달합니다. 이를 통해 인터넷을 통과하는 동안 패킷은 암호화되어 사설망이 구현됩니다. 전송 모드에선 IP헤더 빼고 페이로드(IP payload)만 보호하며 종단호스트에서도 사용가능합니다. IPsec ESP(Encapsulating Security Payload) 헤더는 암호화 및 무결성 기능 제공, AH(Authentication Header)는 선택적 무결성만 제공 (요즘은 ESP에 통합됨). IPsec은 구현과 설정이 복잡하지만, 운영체제(Windows, Linux 등)에 내장되어 VPN 등에 활용되고 있습니다.
+
+**SSH (Secure Shell):** 원격 터미널 접속을 안전하게 하기 위한 프로토콜입니다. SSH도 자체적으로 공개키 교환(보통 Diffie-Hellman)으로 세션키 설정 후, 대칭 암호로 터널을 만듭니다. 그 위에서 터미널, 파일전송(SCP/SFTP) 등을 수행합니다. TLS가 공개키 인증서(CA)에 의존하는 반면, SSH는 초기에 서버의 공개키 지문을 사용자가 **신뢰 저장**(known_hosts)해두고 이후 신원을 검증하는 **TOFU(Trust On First Use)** 모델을 쓰는 점이 다릅니다.
+
+**응용계층 보안:** 이 외에도 PGP(Pretty Good Privacy)는 이메일 내용 암호화/서명에 사용되는 응용계층 솔루션이고, HTTPS 외에 FTPS, SMTPS처럼 TLS를 사용한 각종 secure 버전 프로토콜, 혹은 HTTP 메시지에 서명/암호화를 추가하는 S/MIME, XML-Enc, JWT 등 다양한 기술이 존재합니다. 일반적으로 **암호화는 종단 간**이 가장 안전합니다. 예를 들어 메일을 TLS로 SMTP 전달하더라도, 결국 수신 메일서버에서는 복호화되므로 서버 저장 시 노출될 수 있는데, PGP로 이메일 내용을 종단간 암호화하면 수신자의 PGP 개인키로만 열람 가능합니다.
+
+### 네트워크 공격 유형과 대책
+
+네트워크를 노린 공격은 여러 형태로 나뉩니다:
+
+- **도청(Snooping/Eavesdropping):** 공격자가 통신을 몰래 엿듣는 행위입니다. 유선에서는 허브 환경이나 라우터, ISP의 권한 탈취로 패킷 캡처가 가능하고, 무선은 전파 자체가 broadcast이므로 더욱 쉬워 "패킷 스니퍼" 도구로 트래픽을 캡처할 수 있습니다. 해결법은 **암호화**입니다. 암호화하지 않은 통신 (예: HTTP, telnet)은 쉽게 내용이 새어나갑니다. TLS/SSH를 통해 암호화하면 도청자가 데이터를 훔쳐봐도 해독 불가하여 기밀성이 지켜집니다.
+
+- **메시지 삽입/변조 및 중간자 공격(Man-in-the-Middle):** 공격자가 네트워크 스트림에 몰래 참여해 메시지를 가로채고 변조하거나, 아예 양측 사이에 중간자로 앉아 (피어들은 각각 공격자를 통신상대라 믿음) 모든 통신을 중계하며 엿보고 조작합니다. 이런 공격은 ARP 스푸핑으로 LAN에서 트래픽을 가로채거나, 공짜 Wi-Fi AP를 운영해 유인하는 등으로 시작될 수 있습니다. 대응으로 **무결성 검사와 인증**이 필요합니다. TLS는 서버 인증서로 MITM를 방지합니다 (클라이언트가 CA로부터 서버공개키 신뢰). 만약 사용자가 가짜 인증서를 속아서 승인하면 MITM 가능해지므로, **사용자 주의**와 브라우저의 경고 준수도 필요합니다. IPsec/SSH도 무결성 검증이 있어 중간 변조시 세션이 종료됩니다.
+
+- **재전송 공격(Replay attack):** 도청한 메시지를 나중에 재전달하여 공격하는 방식입니다. 예를 들어 "송금 100만 원" 메시지를 가로채 여러 번 재전송하여 중복 처리하게 만들 수 있습니다. 방어는 메시지에 **시각/일련번호/난수(Nonce)** 등을 포함해, 이전에 처리된 메시지를 무시하도록 설계하는 것입니다. 예를 들어 TLS Handshake에는 난수가 포함되어 재생공격을 막고, Kerberos 등의 프로토콜은 타임스탬프와 수용 오차범위를 둡니다.
+
+- **서비스 거부(DoS) 및 분산 서비스거부(DDoS) 공격:** 이는 **가용성**을 노리는 공격으로, 서버나 네트워크에 과도한 요청이나 부하를 주어 정상 이용자들이 서비스를 못 쓰게 만드는 것입니다. 예를 들어 하나의 PC에서 초당 수십만 개의 HTTP 요청을 보내 웹 서버를 과부하시키면 DoS입니다. 더 흔한 것은 **DDoS (Distributed DoS)**로, 수많은 인터넷 기기(좀비 PC들)를 **봇넷(botnet)** 형태로 동원하여 한꺼번에 목표 서버에 트래픽을 퍼붓는 것입니다 ([Denial-of-service attack - Wikipedia](https://en.wikipedia.org/wiki/Denial-of-service_attack#:~:text=Denial,originates%20from%20many%20different%20sources)). 이 경우 트래픽 양이 워낙 커서 백본 라우터, 방화벽 등 네트워크 장비, 서버 자원 모두 소진되어 버립니다. DDoS는 일단 발생하면 막기 매우 어려운 공격 중 하나입니다. 일부 방어책:
+
+  - 네트워크 차원에서 **스크러빙 센터**: 통신사 망에서 공격 트래픽을 탐지하면, 트래픽을 우회시켜 정상 트래픽과 공격 트래픽을 분류/필터링해주는 시설. 패턴(시그니처)이나 비정상 행동으로 필터링.
+  - **라우터 필터**: 예를 들어 UDP 53번(Amplification 공격) 대량 온다면 임시로 차단. 그러나 공격이 정상 HTTP로 위장하면 필터 어렵습니다.
+  - **캐패시티 확장 및 Anycast**: 콘텐츠 전송망(CDN)처럼 여러 분산 서버로 IP를 Anycast 광고하여, 공격 트래픽을 지리적으로 분산시켜 한 곳에 몰리지 않게 함. 구글 Cloud Armor 등이 실제 사용.
+  - **SYN 쿠키**: SYN-flood 공격 (가짜 SYN 패킷 폭주로 서버의 half-open 연결 큐 고갈)을 막기 위해, 커널이 SYN 받으면 자원 할당 대신 SYN-ACK에 쿠키값(암호화된 인덱스) 보내고, 클라이언트 ACK 올 때 쿠키 검증 후 연결 만드는 기법.
+
+  완벽한 DDoS 방어는 난제라, **대역폭과 자원증대** + **탐지와 차단 시스템** 조합으로 대응합니다.
+
+- **인간적 취약점(Social engineering, 피싱 등):** 순수 기술 문제는 아니지만, 네트워크 보안의 큰 부분입니다. 예를 들어 사용자를 속여 가짜 웹사이트(피싱 사이트)에 로그인 정보를 입력하게 하거나, 악성 이메일 링크를 클릭하게 유도합니다. 이런 경우 사용자의 **도메인 이름 확인**, 브라우저의 **자물쇠 아이콘 (SSL 여부)** 확인 습관, 기업의 교육 등이 중요합니다. 기술적으로는 **웹브라우저, 메일서버의 필터링** (피싱 사이트 차단 목록, 스팸 메일 차단)이 대응책입니다.
+
+- **악성 SW (Malware) 전파:** 웜, 바이러스, 랜섬웨어 등이 네트워크 통해 전파되어 보안문제 일으킵니다. 이는 시스템 보안쪽이지만, 네트워크 장비에서도 알려진 악성 코드 패턴을 IDS/IPS로 검출하거나, DNS Filtering (악성 도메인 차단)등을 시행합니다.
+
+### 네트워크 경계 보안: 방화벽과 IDS/IPS
+
+**방화벽(Firewall)**은 기업/기관 네트워크의 **경계**에 배치되어, **보안 정책**에 따라 트래픽을 차단/허용하는 장치입니다. 전통 방화벽은 IP 패킷의 출발지/목적지 주소, 포트, 프로토콜, 패킷 플래그 등의 **헤더 정보**를 보고 규칙(rule)에 따라 필터링합니다. 예를 들어 `내부IP:any -> 외부IP:80 허용` (내부에서 웹포트로 나가는건 허용), `외부:any -> 내부 DB 서버:3306 차단` (외부에서 DB 접근 차단) 등의 룰을 설정합니다. 이렇게 하면 내부망을 스캔하거나 침투하려는 많은 시도를 막을 수 있습니다. 또 **스푸핑 방지**로 내부에서 나오는데 내부IP 아닌건 차단, 외부에서 들어오는데 소스가 내부IP로 위장된 것도 차단합니다.
+
+현대 방화벽(UTM, NGFW)은 **애플리케이션 계층**까지 검사하여, 포트만 80이라 해서 다 허용하지 않고, 그 안의 실제 프로토콜이 HTTP인지, 또는 우회 터널(예: SSH-over-80)인지 식별합니다. 또한 **침입 방지(IPS)** 기능도 있어, 알려진 공격 시그니처(특정 패턴 바이트 시퀀스 등)에 맞으면 패킷 폐기합니다. 이는 CPU부하가 크지만, 전용 하드웨어로 가속합니다.
+
+**IDS (Intrusion Detection System)**은 방화벽처럼 실시간 차단하진 않고, 네트워크 트래픽 로그를 모니터링하여 **수상한 활동을 관리자에게 경고**합니다. 예컨대 평소보다 트래픽이 갑자기 10배 증가, 특정 포트 스캔, 알려진 악성 패턴 발견 등. 관리자는 이를 확인해 대응합니다. IPS는 아예 자동으로 그 트래픽을 차단하기까지 하는 것으로, 잘못 설정시 false positive로 정상 트래픽을 막을 위험도 있어 신중해야 합니다.
+
+**DMZ**: 방화벽 설정 시, 내부망과 외부 인터넷 사이에 **DMZ (비무장 지대)**라는 중간 영역을 만들고, 외부에 서비스해야 하는 서버들(웹서버, 메일서버 등)을 DMZ에 둡니다. 내부망< >DMZ, DMZ< >인터넷 사이 방화벽 규칙을 다르게 적용하여, DMZ 서버가 해킹당해도 내부망이 직접 노출되지 않게 합니다.
+
+### 기타 보안 기술
+
+- **VPN (Virtual Private Network):** 위에서 언급한 IPsec 터널 등이 이 개념에 속합니다. 예를 들어 재택 근무자가 인터넷을 통해 회사 내부망에 접속할 때, 노트북에서 회사 VPN 게이트웨이에 IPsec 연결을 맺으면, 노트북은 마치 회사 내부 IP를 받은 것처럼 행동하고, 모든 통신이 암호화되어 게이트웨이로 가서 복호화 후 내부망으로 전달됩니다. 이를 **원격 액세스 VPN**이라 합니다. **사이트-투-사이트 VPN**은 본사-지사 간 전용선 대신 암호화 터널로 사설망 연결하는 것.
+
+- **WPA2, WPA3:** 무선 Wi-Fi의 링크 계층 암호화 표준으로, 클라이언트-AP 사이의 트래픽을 보호합니다. 이는 구간 암호화라 종단간 아님. 그러나 열린 Wi-Fi 환경에서는 필수적입니다. WPA2-Personal(사전 공유키)과 Enterprise(RADIUS 인증) 모드가 있고, 최근 WPA3에서는 난수 인증 및 forward secrecy 강화가 추가되었습니다.
+
+- **성층 보안 (Defense in Depth):** 실무에서는 단일 기법으로 안심하지 않고, 여러 겹의 보안을 적용합니다. 예: 클라이언트< >서버 TLS로 암호화 (종단간 보호) + 사내망 스위치에서 802.1X 접근제어 + 방화벽에서 포트제어 + DB서버 자체 암호화 저장 + 사용자 MFA(다중요소인증) 등. 이렇게 해야 한 부분이 뚫려도 다른 층이 완화시켜, 대형 사고를 예방할 수 있습니다.
+
+- **제로 트러스트 (Zero Trust):** 최근 각광받는 모델로, 내부망이라고 기본 신뢰하지 않고, 모든 접근에 대해 지속적으로 검증/인가를 요구하는 접근법입니다. 이는 경계 기반 보안 (방화벽으로 외부만 차단, 내부는 자유) 모델의 한계를 보완하려는 것으로, 마이크로 세그멘테이션, 지속 인증 등 방법론이 나옵니다.
+
+결론적으로, 네트워크 보안은 다층적인 기술과 관행을 요구합니다. 안전한 암호화 프로토콜(TLS 등)을 사용하고, 취약한 평문 프로토콜을 폐기하며, 강력한 인증체계를 도입하고, 네트워크 장비들에서 트래픽을 모니터/필터링하는 것 등이 함께 이루어져야 합니다. 또한 주기적 패치, 업그레이드 및 사용자 교육도 필수입니다. **인간이 가장 약한 고리**라는 말처럼, 기술적으로 완벽해도 사람이 피싱당하면 무용지물이므로, 총체적인 보안 문화와 절차 확립이 이루어져야 네트워크 보안이 유지됩니다.
