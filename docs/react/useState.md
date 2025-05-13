@@ -1,9 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 10
 created_date: "2025-03-17"
 last_updated: "2025-03-17"
 tags: ["react", "hooks", "useState"]
-draft: false # 초안 상태 (true면 프로덕션에서 숨겨짐)
 complexity: "초급" # 문서 난이도
 ---
 

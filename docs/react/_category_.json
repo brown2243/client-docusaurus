@@ -2,6 +2,7 @@
   "label": "React",
   "position": 81,
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "description": "리액트 및 생태계 기술들을 정리하는 페이지"
   }
 }
