@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 5
 ---
 
-# Hooks life cycle
+# Component Lifecycle
 
 ![react-hooks-lifecycle](https://raw.githubusercontent.com/Wavez/react-hooks-lifecycle/master/screenshot.jpg)
 
