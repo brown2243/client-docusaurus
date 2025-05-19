@@ -126,15 +126,41 @@ import LinkPreview from "@site/src/components/LinkPreview";
 
 ## 3. URI와 웹 브라우저 요청 흐름
 
-2개 ∙ (16분)
+### URI
 
-9. URI
+- URI(Uniform Resource Identifier)
+- "URI는 로케이터(locator), 이름(name) 또는 둘 다 추가로 분류될 수 있다"
+- URI는 자원을 식별하는 문자열
+- URL(Resource Locator): foo://example.com:8042/over/there?name=ferret#nose
 
-11:24
+  - URL - Locator: 리소스가 있는 위치를 지정
+  - **앞으로 URI를 URL과 같은 의미로 이야기하겠음**
 
-10. 웹 브라우저 요청 흐름
+- URN(Resource Name): urn:example:animal:ferret:nose
+  - URN - Name: 리소스에 이름을 부여
 
-04:57
+### URL
+
+- scheme://[userinfo@]host[:port][/path][?query][#fragment]
+- https://www.google.com:443/search?q=hello&hl=ko
+
+- 프로토콜(https)
+  - 프로토콜: 어떤 방식으로 자원에 접근할 것인가 하는 약속 규칙
+- 호스트명(www.google.com)
+- 포트 번호(443)
+- path(/search)
+  - 계층적 구조
+- 쿼리 파라미터(q=hello&hl=ko)
+  - 키 밸류
+- fragment
+  - html 내부 북마크 등에 사용
+  - 서버에 전송하는 정보 아님
+
+### 웹 브라우저 요청 흐름
+
+1. HTTP 요청 메세지 생성
+2. TCP/IP 4계층 따라 메세지 -> 패킷 -> 프레임으로 변환되어 LAN으로 전달
+3. 전달 받은 서버는 응답 메세지를 생성해 역으로 클라이언트에 전송
 
 ## 4. HTTP 기본
 
