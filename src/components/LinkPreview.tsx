@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { PacmanLoader } from "react-spinners";
 
 const LinkPreview = ({ url }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,7 +33,7 @@ const LinkPreview = ({ url }) => {
     })();
   }, [url]);
 
-  if (isLoading) return null;
+  if (isLoading) return <PacmanLoader color="#25c2a0" />;
   if (!meta)
     return (
       <div
