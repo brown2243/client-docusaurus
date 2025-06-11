@@ -10,6 +10,7 @@ endDate: "2025-06-09"
 ---
 
 import LinkPreview from "@site/src/components/LinkPreview";
+import img from "./assets/Deep-Live-Cam.jpg";
 
 # Deep Live Cam 후기
 
@@ -17,19 +18,23 @@ import LinkPreview from "@site/src/components/LinkPreview";
 
 최근에 굉장히 핫한 [Deep Live Cam](https://github.com/hacksider/Deep-Live-Cam)을 사용해본 후기를 포스팅해본다.
 
-본인은 전문가가 아닌 찍먹러라는 점 참고 바란다.
+참고로 본인은 전문가가 아니고 찍먹러다.
 
 <LinkPreview url="https://github.com/hacksider/Deep-Live-Cam" />
 
+~~쓰고나서 읽어보니 별 내용은 없다 ㅎㅎ...~~
+
 {/* truncate */}
 
-## 간단 배경지식 정리
+## 간단 배경지식
 
 **딥페이크(deepfake)의 정의는 딥러닝 기술을 사용하는 인간 이미지 합성 기술이다.**
 
 많은 악용 사례들로 안좋은 이미지를 가지고 있지만 원래 뜻은 위와 같다.
 
-그리고 deep fake는 생성을 포함하는, 얼굴을 바꿔주는 face swap보다 더 포괄적인 개념이다.
+`deepfake`는 생성을 포함하는, 얼굴을 바꿔주는 `face swap`보다 더 포괄적인 개념이다.
+
+아래는 퍼온 개념이다.
 
 딥페이크는 주로 GAN(Generative Adversarial Networks)을 기반으로 학습한 모델로 작동한다.
 
@@ -41,10 +46,49 @@ import LinkPreview from "@site/src/components/LinkPreview";
 
 Deep Live Cam은 추가적인 학습없이 한장의 이미지로 바로 얼굴을 바꿔주는 것이 흥미를 끌었다.
 
-{/* 여기서 우리는 학습 된 모델을 사용해 타겟의 얼굴을 소스의 얼굴로 바꿔주는 일을 하는 것이다. */}
+## 프로젝트 세팅
 
-## 환경 세팅
+[README](https://github.com/hacksider/Deep-Live-Cam?tab=readme-ov-file#installation-manual)에 이미 잘 정리되어 있어 세팅하는 건 어렵지 않았다.
 
-## 사용법
+`venv`를 추천하는데, `conda`로 해도 문제 없이 동작한다.
 
-## 후기
+GPU 가속 관련해 CUDA와 apple silicon이 다르니 본인 컴퓨터에 맞추자.
+
+모든 의존성을 설치하고 실행 명렁어를 치면 권한을 물어보는데 허용하고 한번 더 실행하면 된다.
+
+## 사용 후기
+
+<div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 32 }}>
+  <img
+    style={{
+      borderRadius: 12,
+    }}
+    src={img}
+  />
+</div>
+
+실행하면 해당 UI를 볼 수 있고, 매우 간단히 사용할 수 있다.
+
+보면 `face swap`으로 선택한 얼굴로 대상의 얼굴을 바꿔주는 것 같은데, 생각보다 자연스럽지만 약간 어색한 느낌은 있었다.
+
+입쪽 영역은 변경 여부를 옵션으로 선택할 수 있다.
+
+본인의 기기인 M1 Max 기준으로는 초당 1.5프레임정도 나와 좀 버벅이긴 해도, 캠모드도 테스트할 정도는 되었다.
+
+생각보다 자연스럽게 바뀌는 대상도 있었지만, 하나의 이미지를 바탕으로 변환하다 보니 한계는 있어보인다.
+
+4:6 정도? 어색한게 6이다. 본인은 크게 신경쓰지 않고 했지만
+
+유사한 체형의 대상을 골라 사진을 정말 잘고르면 더 좋은 결과를 얻을 것 같다.
+
+세팅부터 실행까지 간단해서, 관심있는 사람들은 한번 해보면 좋을 것 같다. 신기하긴 하다.
+
+참고로 저장 파일명이 `output` 고정이어서 매번 바꾸기 불편하던데, 아래를 참고해서 초기 파일명을 바꿔줄 수 있다.
+
+```python3
+# ui.py
+def select_output_path(start: Callable[[], None]) -> None:
+   ...
+   initialfile=f"{modules.globals.target_path.split('/').pop().split('.')[0]}-output.png",
+   ...
+```
