@@ -1,0 +1,8 @@
+{
+  "label": "Books",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "개발 관련 서적을 읽고 정리하는 공간"
+  }
+}
