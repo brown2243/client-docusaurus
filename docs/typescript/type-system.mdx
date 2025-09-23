@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+description: about type system
+---
+
 # 타입 시스템
 
 ## 구조적 타이핑(Structural Typing)
@@ -21,3 +26,47 @@
 브랜딩 패턴은 모양이 같더라도 의미(라벨)가 다르면 다른 타입으로 취급하게 만든다.
 `type Brand<K, T> = K & { __brand: T };`
 타입정보는 컴파일 시점에만 존재하고, 런타임에서는 없는 것 주의하자.
+
+## 서브타입 (Subtype) - 모든 개념의 기초
+
+서브타입은 간단히 말해 "더 구체적인 타입"을 의미합니다.
+
+**타입스크립트의 구조적 타이핑 관점에서 "B가 A의 서브타입이다"라는 말은 "B는 A가 가진 모든 속성과 메서드를 가지고 있으며, 추가로 더 가질 수도 있다"는 뜻입니다.**
+
+## 공변성과 반공변성에 대해
+
+> `공변성(Covariance) : A가 B의 서브타입이면, T<A>는 T<B>의 서브타입이다.` > `반공변성(Contravariance) : A가 B의 서브타입이면, T<B>는 T<A>의 서브타입이다.` > `이변성(Bivariance) : A가 B의 서브타입이면, T<A> → T<B>도 되고 T<B> → T<A>도 되는 경우` > `불변성(immutability) : A가 B의 서브타입이더라도, T<A> → T<B>도 안 되고 T<B> → T<A>도 안 되는 경우`
+
+**타입스크립트에서의 타입들은 기본적으로 공변성 규칙을 따르지만, 유일하게 함수의 매개변수는 반공변성을 갖고 있다.**
+
+### 공변성 (Covariance) - "나가는 값"은 그대로
+
+공변성은 서브타입 관계가 **그대로 유지**되는 성질을 말합니다.
+
+- **핵심 규칙:** `Cat`이 `Animal`의 서브타입이라면, `() => Cat`은 `() => Animal`의 서브타입입니다. (방향이 같음: **Co**variant)
+- **적용 대상:** 주로 함수의 **반환 타입(Return Type)**, 객체의 \*\*속성(Property)\*\*에 적용됩니다.
+- 어떤 함수가 `Animal`을 반환할 거라고 기대했는데, 더 구체적인 `Cat`이 반환되어도 아무 문제가 없습니다.
+  - 어차피 `Cat`은 `Animal`의 모든 기능을 가지고 있으니까요.
+  - 반환값이 더 구체적인 것은 안전하기 때문입니다.
+
+### 반공변성 (Contravariance) - "들어오는 값"은 반대로
+
+반공변성은 서브타입 관계가 **반대로 뒤집히는** 성질을 말합니다.
+
+- **핵심 규칙:** `Cat`이 `Animal`의 서브타입이라면, `(animal: Animal) => void`는 `(cat: Cat) => void`의 서브타입입니다. (방향이 반대: **Contra**variant)
+- **적용 대상:** 함수의 \*\*매개변수(Parameter)\*\*에 적용됩니다.
+- `Cat`만 다룰 줄 아는 함수(`(cat: Cat) => void`)가 있다고 해봅시다.
+  - 이 함수에 갑자기 `Dog`(`Animal`의 일종)를 인자로 넘기면 처리할 수 없습니다.
+  - 반면, 어떤 `Animal`이든 다룰 줄 아는 함수(`(animal: Animal) => void`)는 당연히 `Cat`도 안전하게 처리할 수 있습니다.
+  - 그래서 더 **덜 구체적인 타입을 받는 함수**가 더 **안전하고 포괄적인(서브타입)** 함수가 되는 것입니다.
+
+### strictFunctionTypes
+
+- **`strictFunctionTypes: true` (기본값):** 타입스크립트는 함수의 매개변수에 대해 **반공변성**을 올바르게 검사합니다. 이것이 타입-세이프한 동작입니다.
+- **`strictFunctionTypes: false`:** 이전 버전과의 호환성을 위해 매개변수를 **공변적**으로도 처리(Bivariance, 양변성)하는데, 이는 잠재적인 버그를 유발할 수 있어 권장되지 않습니다.
+
+## 참고
+
+- https://oliveyoung.tech/2024-08-11/type-and-type-system-with-typescript/
+- https://toss.tech/article/typescript-type-compatibility
+- https://inpa.tistory.com/entry/TS-%F0%9F%93%98-%ED%83%80%EC%9E%85%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EA%B3%B5%EB%B3%80%EC%84%B1-%EB%B0%98%EA%B3%B5%EB%B3%80%EC%84%B1-%F0%9F%92%A1-%ED%95%B5%EC%8B%AC-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0
