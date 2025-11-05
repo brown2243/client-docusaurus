@@ -1,0 +1,312 @@
+안녕하세요\! 최고의 웹 프로그래머가 될 주니어 개발자님을 위해, 제가 선배 개발자로서 타입스크립트 고급 개념과 면접 단골 질문들을 꼼꼼하게 정리해 드릴게요.
+
+이 개념들은 단순히 문법을 아는 것을 넘어, "왜" 사용하는지, 그리고 어떤 문제를 해결하는지를 이해하는 것이 핵심입니다. 각 개념을 단순히 암기하기보다는, 코드 예시와 함께 "나라면 이걸 언제 쓸까?"를 고민하며 공부하시면 훨씬 효과적일 거예요.
+
+---
+
+### 🔥 면접관이 사랑하는 타입스크립트 고급 개념 TOP 7
+
+면접에서는 주로 **타입을 얼마나 유연하고 안전하게 다룰 수 있는가**를 확인하고 싶어 합니다. 아래 개념들은 그 능력을 보여주기 가장 좋은 주제들입니다.
+
+#### 1\. 제네릭 (Generics)
+
+- **한 줄 요약:** 타입을 마치 함수의 파라미터처럼 사용하는 것. 클래스나 함수를 선언할 때가 아닌, **사용하는 시점**에 타입을 결정합니다.
+
+- **왜 중요할까요?**
+
+  - **재사용성:** 하나의 함수/클래스로 다양한 타입을 처리할 수 있게 해줍니다. `any`를 사용하는 것과 달리 타입 안정성도 지킬 수 있죠.
+  - **타입 추론:** 컴파일러가 코드를 분석하여 타입을 정확하게 추론할 수 있도록 도와줍니다.
+
+- **면접 예상 질문:**
+
+  - "제네릭이 무엇이고, 왜 사용해야 하나요? `any` 타입과 비교해서 설명해 주세요."
+  - "제네릭 제약(Generic Constraints)은 무엇이며, 언제 사용하나요?"
+
+- **간단한 코드 예시:**
+
+  ```typescript
+  // 제네릭을 사용하지 않으면, 타입별로 함수를 만들어야 하거나 any를 써야 합니다.
+  function logTextAny(text: any): any {
+    console.log(text);
+    return text;
+  }
+
+  // 제네릭 사용: T라는 타입 변수를 받습니다.
+  // 함수를 호출할 때 T의 타입이 결정됩니다.
+  function logText<T>(text: T): T {
+    console.log(text);
+    return text;
+  }
+
+  const str = logText<string>("Hello"); // T는 string이 됩니다.
+  const num = logText<number>(100); // T는 number가 됩니다.
+
+  // 제네릭 제약 예시: T는 반드시 length 속성을 가져야 한다!
+  interface withLength {
+    length: number;
+  }
+
+  function logTextLength<T extends withLength>(text: T): T {
+    console.log(text.length); // 제약 덕분에 .length 사용 가능
+    return text;
+  }
+
+  logTextLength("hello"); // OK
+  logTextLength([1, 2, 3]); // OK
+  // logTextLength(100); // Error: number 타입에는 length 속성이 없습니다.
+  ```
+
+#### 2\. 유틸리티 타입 (Utility Types)
+
+- **한 줄 요약:** 이미 존재하는 타입을 변환하여 새로운 타입을 만들 수 있도록 타입스크립트가 기본으로 제공하는 도구들입니다.
+
+- **왜 중요할까요?**
+
+  - **코드 중복 감소:** 비슷한 형태의 타입을 계속 새로 정의할 필요가 없습니다.
+  - **가독성 및 유지보수성 향상:** 타입의 의도가 명확해집니다. (예: `Partial<User>`는 "User의 일부 속성만 가진 타입"이라는 것을 바로 알 수 있죠.)
+
+- **면접 예상 질문:**
+
+  - "자주 사용하는 유틸리티 타입 몇 가지와 그 용도를 설명해 주세요."
+  - "API 응답 데이터에서 특정 필드만 골라 새로운 타입을 만들고 싶을 때 어떤 유틸리티 타입을 사용하시겠어요? (`Pick` 또는 `Omit`)"
+  - "`Partial`과 `Required`는 어떤 차이가 있나요?"
+
+- **자주 쓰이는 유틸리티 타입:**
+
+  - `Partial<T>`: T의 모든 속성을 선택적으로(optional, `?`) 만듭니다.
+  - `Required<T>`: T의 모든 속성을 필수로 만듭니다.
+  - `Pick<T, K>`: T에서 K 속성들만 골라서 새로운 타입을 만듭니다.
+  - `Omit<T, K>`: T에서 K 속성들을 제외하고 새로운 타입을 만듭니다.
+  - `Record<K, T>`: K를 키로, T를 값으로 갖는 객체 타입을 만듭니다.
+  - `ReturnType<T>`: 함수 T의 반환 타입을 추출합니다.
+
+  <!-- end list -->
+
+  ```typescript
+  interface User {
+    id: number;
+    name: string;
+    email: string;
+    age?: number;
+  }
+
+  // 유저 정보를 수정할 때는 모든 필드가 필요하지 않을 수 있습니다.
+  const updateUser = (user: Partial<User>) => {
+    /* ... */
+  };
+  updateUser({ name: "Rulu" }); // OK
+
+  // 유저의 공개 프로필에 보여줄 정보만 선택
+  type UserProfile = Pick<User, "name" | "email">;
+  const userProfile: UserProfile = { name: "Rulu", email: "rulu@example.com" };
+
+  // 민감한 정보(id)를 제외한 타입 생성
+  type PublicUserInfo = Omit<User, "id">;
+  ```
+
+#### 3\. 조건부 타입 (Conditional Types)
+
+- **한 줄 요약:** `A extends B ? C : D` 형태로, 입력된 타입에 따라 다른 타입을 반환하는 삼항 연산자와 같은 문법입니다.
+
+- **왜 중요할까요?**
+
+  - **타입 분기 처리:** 특정 조건에 따라 타입을 다르게 정의해야 할 때 매우 유용합니다.
+  - **고급 타입 로직:** `infer` 키워드와 함께 사용되면 타입에서 특정 부분을 "추론하고 추출"하는 강력한 기능을 수행할 수 있습니다.
+
+- **면접 예상 질문:**
+
+  - "조건부 타입이 무엇인지 설명하고, 어떤 상황에서 사용할 수 있을지 예시를 들어보세요."
+  - "타입스크립트의 `NonNullable<T>` 유틸리티 타입은 어떻게 구현될 수 있을까요?" (힌트: 조건부 타입을 사용합니다.)
+
+- **간단한 코드 예시:**
+
+  ```typescript
+  // T가 string을 확장(포함)하면 trueType을, 아니면 falseType을 반환
+  type Check<T, trueType, falseType> = T extends string ? trueType : falseType;
+
+  type IsString = Check<"hello", "YES", "NO">; // "YES"
+  type IsNotString = Check<123, "YES", "NO">; // "NO"
+
+  // NonNullable<T> 구현 예시
+  // T가 null 또는 undefined이면 never 타입을, 아니면 T 타입을 반환
+  // never 타입은 "아무것도 할당할 수 없는" 타입으로, 사실상 제거하는 효과를 줍니다.
+  type MyNonNullable<T> = T extends null | undefined ? never : T;
+
+  type NotNull = MyNonNullable<string | null>; // string
+  type AlsoNotNull = MyNonNullable<number | undefined>; // number
+  ```
+
+#### 4\. `infer` 키워드
+
+- **한 줄 요약:** 조건부 타입 내에서만 사용되며, 추론해야 할 타입을 담는 "변수" 역할을 합니다.
+
+- **왜 중요할까요?**
+
+  - **타입 추출:** 복잡한 타입 구조(예: 함수의 반환 타입, 프로미스가 감싸고 있는 타입, 배열의 요소 타입 등)에서 원하는 부분의 타입을 정확하게 뽑아낼 수 있습니다.
+
+- **면접 예상 질문:**
+
+  - "`infer` 키워드는 언제, 어떻게 사용하나요? `ReturnType<T>`을 `infer`를 사용해 직접 구현해 보세요."
+
+- **간단한 코드 예시:**
+
+  ```typescript
+  // 함수의 반환 타입을 추론하는 ReturnType 직접 만들기
+  // T가 '...args를 받아 R을 반환하는 함수' 형태라면 R 타입을, 아니면 any를 반환
+  type MyReturnType<T> = T extends (...args: any[]) => infer R ? R : any;
+
+  function getUser() {
+    return { id: 1, name: "Rulu" };
+  }
+
+  type UserType = MyReturnType<typeof getUser>;
+  // UserType은 { id: number, name: string } 이 됩니다.
+
+  // Promise가 감싸고 있는 타입을 추출하기
+  type UnpackPromise<T> = T extends Promise<infer R> ? R : T;
+
+  type UserPromise = Promise<{ id: number; name: string }>;
+  type UnpackedUser = UnpackPromise<UserPromise>;
+  // UnpackedUser는 { id: number, name: string } 이 됩니다.
+  ```
+
+#### 5\. Mapped Types & `keyof`
+
+- **한 줄 요약:** `keyof`는 객체 타입의 모든 키(key)들을 문자열 리터럴 유니온 타입으로 가져오고, Mapped Types는 이 키들을 순회하며 새로운 객체 타입을 만듭니다.
+
+- **왜 중요할까요?**
+
+  - **동적 타입 생성:** 기존 타입의 구조를 기반으로 모든 속성의 타입을 한 번에 변경하는 등 동적인 타입 생성이 가능합니다. (예: 모든 속성을 `readonly`로 만들기, 모든 속성을 `string` 타입으로 바꾸기)
+
+- **면접 예상 질문:**
+
+  - "`keyof` 연산자는 무엇을 반환하나요?"
+  - "Mapped Types를 이용해 기존 타입의 모든 속성을 읽기 전용(`readonly`)으로 만드는 타입을 구현해 보세요. (`Readonly<T>` 구현)"
+
+- **간단한 코드 예시:**
+
+  ```typescript
+  interface User {
+    name: string;
+    age: number;
+  }
+
+  // keyof User는 "name" | "age" 타입이 됩니다.
+  type UserKeys = keyof User;
+
+  let myKey: UserKeys = "name"; // OK
+  // myKey = "email"; // Error: "email"은 UserKeys에 속하지 않습니다.
+
+  // Mapped Types로 모든 속성을 string으로 바꾸기
+  // [P in keyof T] : P는 T의 각 키("name", "age")가 됩니다.
+  type AllString<T> = {
+    [P in keyof T]: string;
+  };
+
+  const stringUser: AllString<User> = {
+    name: "Rulu",
+    age: "서른 살", // age가 number가 아닌 string이어야 합니다.
+  };
+  ```
+
+#### 6\. 타입 가드 (Type Guards) & 타입 좁히기 (Type Narrowing)
+
+- **한 줄 요약:** 특정 코드 블록 내에서 변수의 타입을 더 구체적인 타입으로 좁혀나가는 과정과 그를 돕는 문법들입니다.
+
+- **왜 중요할까요?**
+
+  - **타입 안정성:** 유니온 타입(`string | number`)처럼 여러 타입을 가질 수 있는 변수를 조건문 안에서 안전하게 사용할 수 있도록 보장합니다.
+
+- **면접 예상 질문:**
+
+  - "타입스크립트에서 타입을 좁히는(narrowing) 방법에는 어떤 것들이 있나요?"
+  - "사용자 정의 타입 가드(User-Defined Type Guard)는 무엇이고, 언제 사용하나요?"
+
+- **주요 타입 가드 방법:**
+
+  - `typeof`
+  - `instanceof`
+  - `in` 연산자 (객체에 특정 속성이 있는지 확인)
+  - 사용자 정의 타입 가드 (`value is Type` 형태의 반환)
+
+  <!-- end list -->
+
+  ```typescript
+  function printValue(value: string | number | Date) {
+    if (typeof value === "string") {
+      // 이 블록 안에서 value는 string 타입으로 확신됩니다.
+      console.log(value.toUpperCase());
+    } else if (typeof value === "number") {
+      // 이 블록 안에서 value는 number 타입입니다.
+      console.log(value.toFixed(2));
+    } else {
+      // 나머지 경우, value는 Date 타입입니다.
+      console.log(value.getTime());
+    }
+  }
+
+  // 사용자 정의 타입 가드
+  interface Cat {
+    meow(): void;
+  }
+  interface Dog {
+    bark(): void;
+  }
+
+  function isCat(pet: Cat | Dog): pet is Cat {
+    return (pet as Cat).meow !== undefined;
+  }
+
+  function makeSound(pet: Cat | Dog) {
+    if (isCat(pet)) {
+      pet.meow(); // 이 블록 안에서 pet은 Cat 타입으로 좁혀집니다.
+    } else {
+      pet.bark(); // pet은 Dog 타입입니다.
+    }
+  }
+  ```
+
+#### 7\. `unknown` vs `any`
+
+- **한 줄 요약:** `any`는 타입 검사를 포기하는 것이고, `unknown`은 "타입을 아직 모르겠다"는 의미로, 사용하기 전에 반드시 타입을 확인(narrowing)하도록 강제하는 타입-안전(type-safe)한 `any`입니다.
+
+- **왜 중요할까요?**
+
+  - **안전한 코딩:** 외부 라이브러리나 API 응답처럼 타입을 확신할 수 없는 값을 다룰 때 `any` 대신 `unknown`을 사용하면 런타임 에러를 방지할 수 있습니다.
+
+- **면접 예상 질문:**
+
+  - "`unknown`과 `any`의 차이점은 무엇이며, 어떤 상황에서 `unknown`을 사용하는 것이 더 좋은 선택일까요?"
+
+- **간단한 코드 예시:**
+
+  ```typescript
+  let valueAny: any;
+  let valueUnknown: unknown;
+
+  valueAny = "hello";
+  valueUnknown = "world";
+
+  // any는 타입 검사를 하지 않으므로 위험합니다.
+  console.log(valueAny.toUpperCase()); // OK
+  valueAny.foo.bar(); // 런타임 에러 발생!
+
+  // unknown은 바로 사용할 수 없습니다.
+  // console.log(valueUnknown.toUpperCase()); // Error: 'valueUnknown' is of type 'unknown'.
+
+  // 타입을 확인한 후에만 안전하게 사용할 수 있습니다.
+  if (typeof valueUnknown === "string") {
+    console.log(valueUnknown.toUpperCase()); // OK!
+  }
+  ```
+
+---
+
+### 💡 주니어 개발자를 위한 학습 전략
+
+1.  **개념 이해:** 먼저 각 개념이 "어떤 문제를 해결하기 위해 등장했는지"를 중심으로 이해해 보세요.
+2.  **코드 따라 치기:** 위에 있는 예제들을 직접 타이핑하고, 타입을 바꿔보거나 에러를 일부러 내보면서 타입스크립트 컴파일러가 어떻게 반응하는지 관찰하세요.
+3.  **나만의 유틸리티 타입 만들어보기:** `Pick`, `Omit`, `ReturnType` 같은 유틸리티 타입들을 Mapped Types와 Conditional Types를 조합해서 직접 만들어보는 연습은 이해도를 비약적으로 높여줍니다.
+4.  **실전 프로젝트 적용:** 작은 토이 프로젝트를 진행하며 API 응답 데이터를 처리하는 부분에 유틸리티 타입을 적극적으로 사용해 보세요. 복잡한 데이터 구조를 다룰 때 이 개념들의 진정한 힘을 느낄 수 있을 겁니다.
+
+이 개념들이 처음에는 조금 어렵게 느껴질 수 있지만, 한번 익숙해지면 타입스크립트로 코드를 작성하는 것이 훨씬 더 즐거워지고 코드의 품질도 크게 향상될 거예요. 궁금한 점이 있다면 언제든지 다시 질문해 주세요\! 응원하겠습니다\!
