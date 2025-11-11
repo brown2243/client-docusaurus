@@ -1,10 +1,8 @@
 ---
-slug: /category/spring
 sidebar_position: 1
 created_date: "2025-11-06"
 last_updated: "2025-11-07"
 tags: ["spring"]
-draft: false # 초안 상태 (true면 프로덕션에서 숨겨짐)
 ---
 
 # Spring
