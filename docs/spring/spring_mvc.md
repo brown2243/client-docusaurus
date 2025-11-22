@@ -187,6 +187,16 @@ tags: ["spring", "spring boot", "sprinb mvc"]
 
 - Handler는 url 매핑된 컨트롤러 메서드(혹은 과거 방식의 컨트롤러)를 지칭한다.
 
+1. 드디어 우리가 작성한 코드가 실행되는데
+
+#### 4.1 ArgumentResolver
+
+### 5. 결과 return
+
+#### 5.1 문자열 반환
+
+#### 5.2 data 반환
+
 ## Filter vs intercepter
 
 - 지금까지 내용을 보면 서블릿 필터와 호출 되는 순서만 다르고, 제공하는 기능은 비슷해 보인다.

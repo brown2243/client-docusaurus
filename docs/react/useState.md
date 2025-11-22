@@ -3,7 +3,6 @@ sidebar_position: 10
 created_date: "2025-03-17"
 last_updated: "2025-03-17"
 tags: ["react", "hooks", "useState"]
-complexity: "초급" # 문서 난이도
 ---
 
 # useState
