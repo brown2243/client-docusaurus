@@ -14,16 +14,38 @@ const LinkPreview = ({ url }) => {
     (async () => {
       try {
         const urlObj = new URL(url);
+        const isYouTube =
+          urlObj.hostname.includes("youtube.com") ||
+          urlObj.hostname.includes("youtu.be");
+
+        let title = "";
+        let description = "";
+        let image = "";
         const domain = urlObj.hostname;
         const favicon = `https://www.google.com/s2/favicons?domain=${domain}`;
-        const res = await fetch(
-          `https://api.microlink.io?url=${encodeURIComponent(url)}`
-        );
-        const data = await res.json();
+
+        if (isYouTube) {
+          const res = await fetch(
+            `https://www.youtube.com/oembed?url=${encodeURIComponent(url)}&format=json`,
+          );
+          const data = await res.json();
+          title = data.title;
+          description = data.author_name; // 유튜브는 설명 대신 채널명을 주로 활용
+          image = data.thumbnail_url;
+        } else {
+          const res = await fetch(
+            `https://api.microlink.io?url=${encodeURIComponent(url)}`,
+          );
+          const data = await res.json();
+          title = data.data.title || url;
+          description = data.data.description || "설명 없음";
+          image = data.data.image?.url || "";
+        }
+
         setMeta({
-          title: data.data.title || url,
-          description: data.data.description || "설명 없음",
-          image: data.data.image?.url || "",
+          title,
+          description,
+          image,
           favicon,
         });
       } catch (error) {
