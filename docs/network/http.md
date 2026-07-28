@@ -48,7 +48,7 @@ HTTP/2에서 HTTP 계층의 HOLB는 해결되었으나, 하위 **TCP 계층의 �
 ### 주요 특징
 - **UDP 기반 전송 (QUIC Protocol)**: TCP의 커넥션 맺기 오버헤드(Handshake) 제거 (1RTT 또는 0RTT 커넥션 수립).
 - **독립적 스트림 (Transport-level No HOLB)**: 특정 패킷이 손실되어도 다른 독립 스트림에는 영향을 주지 않음.
-- **Connection ID 기반 연결**: IP 주소가 바뀌어도(Wi-Fi <-> LTE) 커넥션을 끊지 않고 재연결 없이 지속 전송 가능.
+- **Connection ID 기반 연결**: IP 주소가 바뀌어도(Wi-Fi ↔ LTE) 커넥션을 끊지 않고 재연결 없이 지속 전송 가능.
 
 ---
 
