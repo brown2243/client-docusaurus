@@ -1,11 +1,84 @@
 ---
 sidebar_position: 1
-slug: "spring-mvc"
+slug: /lectures/spring-mvc
+description: spring-boot-mvc-dispatcher-servlet-architecture
 ---
 
 import LinkPreview from "@site/src/components/LinkPreview";
 
-# 스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술
+# 스프링 웹 MVC 및 핵심 구조 요약
 
 <br />
+
 <LinkPreview url="https://github.com/brown2243/hello-spring" />
+
+<br />
+
+스프링 부트(Spring Boot)와 스프링 웹 MVC(Spring Web MVC) 프레임워크의 요청 처리 핵심 아키텍처와 프론트 컨트롤러 패턴을 정리한다.
+
+---
+
+## 1. DispatcherServlet과 프론트 컨트롤러 패턴 (Front Controller Pattern)
+
+스프링 MVC의 핵심은 **`DispatcherServlet`**이다.
+모든 클라이언트의 HTTP 요청을 가장 앞에서 받아 공통 작업을 처리한 후, 적절한 세부 컨트롤러(Handler)로 요청을 위임한다.
+
+```text
+[Client Request]
+       |
+       v
+[DispatcherServlet] (Front Controller)
+       |
+       |---> 1. HandlerMapping: 요청 URL에 매핑된 Handler(Controller) 탐색
+       |---> 2. HandlerAdapter: 탐색된 Handler를 실행할 수 있는 어댑터 찾기 & 컨트롤러 실행
+       |---> 3. Controller Execution: 비즈니스 로직 수행 및 Model/ModelAndView 반환
+       |---> 4. ViewResolver: 뷰 이름(ViewName)을 기반으로 물리적 View 객체 반환
+       v
+[Render View / Response Data (JSON)]
+```
+
+---
+
+## 2. Request Mapping과 Controller 어노테이션
+
+### `@Controller` vs `@RestController`
+- `@Controller`: View(HTML 파일)의 이름을 반환하는 전통적인 템플릿 엔진(Thymeleaf, JSP) 방식.
+- `@RestController`: `@Controller` + `@ResponseBody`의 조합으로, 반환된 데이터를 `HttpMessageConverter`를 통해 **JSON/XML 메시지 바디**로 직접 전송하는 REST API 방식.
+
+```java
+@RestController
+@RequestMapping("/api/members")
+public class MemberController {
+
+    private final MemberService memberService;
+
+    // 생성자 주입 (Constructor Injection - 권장)
+    public MemberController(MemberService memberService) {
+        this.memberService = memberService;
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<MemberDto> getMember(@PathVariable Long id) {
+        MemberDto dto = memberService.findMember(id);
+        return ResponseEntity.ok(dto);
+    }
+}
+```
+
+---
+
+## 3. Filter vs Interceptor
+
+요청/응답 전후에 공통 로직(인증, 인가, 로깅)을 처리하기 위한 두 메커니즘의 차이다.
+
+| 구분 | Filter (필터) | Interceptor (인터셉터) |
+| --- | --- | --- |
+| **속한 계층** | 서블릿 컨테이너 (Web Application Context 외곽) | 스프링 컨테이너 (Spring Context 내부) |
+| **실행 시점** | DispatcherServlet 호출 전/후 | DispatcherServlet과 Controller 사이 |
+| **스프링 빈 접근** | 빈 접근 제한적 (DelegatingFilterProxy 사용) | 스프링 빈 자유롭게 주입 및 사용 가능 |
+| **주요 용도** | 보안(Spring Security), CORS, 인코딩, 요청 파싱 | 세분화된 권한 검사, Controller 데이터 가공, 핸들러 로깅 |
+
+## 참조
+
+- 김영한 님의 "스프링 입문 - 코드로 배우는 스프링 부트, 웹 MVC, DB 접근 기술"
+- https://docs.spring.io/spring-framework/reference/web/webmvc.html

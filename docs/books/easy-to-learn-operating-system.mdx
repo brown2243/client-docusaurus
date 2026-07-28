@@ -1,9 +1,72 @@
 ---
+sidebar_position: 1
+slug: /books/easy-to-learn-operating-system
+description: operating-system-core-concepts-process-memory-deadlock
 ---
 
 import LinkPreview from "@site/src/components/LinkPreview";
 
-# 쉽게 배우는 운영체제
+# 쉽게 배우는 운영체제 (OS 핵심 정리)
 
 <br />
+
 <LinkPreview url="https://github.com/brown2243/easy-to-learn-operating-system" />
+
+<br />
+
+컴퓨터 하드웨어 자원을 관리하고 사용자 및 애플리케이션 프로그램에게 인터페이스를 제공하는 **운영체제(Operating System)**의 핵심 개념을 정리한다.
+
+---
+
+## 1. 프로세스(Process) vs 스레드(Thread)
+
+- **프로세스(Process)**: 실행 중인 프로그램 (메모리에 로드되어 CPU 자원을 할당받는 독립적 단위).
+  - 고유한 메모리 영역(`Code`, `Data`, `Heap`, `Stack`)을 독립적으로 소유함.
+  - 프로세스 제어 블록(**PCB - Process Control Block**)을 통해 상태 관리.
+- **스레드(Thread)**: 프로세스 내에서 실행되는 흐름의 단위.
+  - 같은 프로세스 내의 스레드들은 `Code`, `Data`, `Heap` 영역을 서로 공유하고, 독립된 `Stack` 영역만 소유함.
+  - 스레드 간 컨텍스트 스위칭(Context Switching) 오버헤드가 프로세스보다 적음.
+
+---
+
+## 2. CPU 스케줄링 (CPU Scheduling)
+
+CPU가 준비 상태(Ready Queue)에 있는 프로세스들 중 어떤 프로세스에게 CPU를 할당할지 결정하는 메커니즘이다.
+
+### 1) 선점형 스케줄링 (Preemptive)
+하나의 프로세스가 CPU를 점유하고 있더라도 강제로 빼앗을 수 있는 방식.
+- **Round Robin (RR)**: 각 프로세스에 동일한 시간 할당량(Time Quantum)을 부여.
+- **SRTF (Shortest Remaining Time First)**: 남은 실행 시간이 가장 짧은 프로세스 우선 실행.
+
+### 2) 비선점형 스케줄링 (Non-Preemptive)
+프로세스가 자발적으로 대기 상태로 들어가거나 종료될 때까지 CPU 점유를 보장함.
+- **FCFS (First-Come, First-Served)**: 먼저 온 순서대로 처리 (호위 효과 - Convoy Effect 발생 가능).
+- **SJF (Shortest Job First)**: 작업 시간이 가장 짧은 프로세스 우선.
+
+---
+
+## 3. 가상 메모리(Virtual Memory)와 페이징(Paging)
+
+실제 물리 메모리(RAM) 용량보다 더 큰 메모리 공간을 사용할 수 있도록 논리 주소와 물리 주소를 분리하는 기법이다.
+
+- **페이징 (Paging)**: 가상 메모리를 고정된 크기인 **페이지(Page)** 단위로 나누고, 물리 메모리를 동일 크기의 **프레임(Frame)**으로 나누어 매핑함.
+- **페이지 교체 알고리즘 (Page Replacement)**: 메모리가 가득 찼을 때 어떤 페이지를 Swapping할지 결정.
+  - **FIFO**: 가장 먼저 들어온 페이지 교체.
+  - **LRU (Least Recently Used)**: 가장 오랫동안 사용되지 않은 페이지 교체 (가장 효율적).
+
+---
+
+## 4. 교착 상태 (Deadlock)
+
+두 개 이상의 프로세스가 서로가 가진 자원을 얻기 위해 영원히 대기하는 상태이다.
+
+### 데드락 발생 4가지 필요충분조건 (모두 만족해야 발생)
+1. **상호 배제 (Mutual Exclusion)**: 한 번에 한 프로세스만 자원 사용 가능.
+2. **점유와 대기 (Hold and Wait)**: 자원을 점유한 상태에서 다른 자원을 대기함.
+3. **비선점 (No Preemption)**: 다른 프로세스가 보유한 자원을 강제로 빼앗을 수 없음.
+4. **환형 대기 (Circular Wait)**: 프로세스들이 순환 형태로 자원을 요구함.
+
+## 참조
+
+- 쉽게 배우는 운영체제 (조성호 저)
+- Silberschatz Operating System Concepts (공룡책)

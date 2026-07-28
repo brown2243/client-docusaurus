@@ -1,11 +1,68 @@
 ---
 sidebar_position: 2
-slug: "hello-jpa"
+slug: /lectures/hello-jpa
+description: jpa-persistence-context-and-orm-basics
 ---
 
 import LinkPreview from "@site/src/components/LinkPreview";
 
-# 자바 ORM 표준 JPA 프로그래밍 - 기본편
+# 자바 ORM 표준 JPA 프로그래밍 - 핵심 요약
 
 <br />
+
 <LinkPreview url="https://github.com/brown2243/hello-jpa" />
+
+<br />
+
+자바 애플리케이션과 관계형 데이터베이스(RDB) 간의 객체-관계 패러다임 불일치를 해결하기 위한 ORM 표준인 **JPA(Java Persistence API)**의 내부 메커니즘을 정리한다.
+
+---
+
+## 1. 영속성 컨텍스트 (Persistence Context)
+
+영속성 컨텍스트는 **"엔티티를 영구 저장하는 환경"**을 의미하며, `EntityManager`를 통해 엔티티를 관리하는 가상의 공간이다.
+
+```text
+[Application] -> EntityManager -> Persistence Context (1차 캐시 / 쓰기 지연 SQL 버퍼) -> Database
+```
+
+### 영속성 컨텍스트의 4가지 엔티티 생명주기
+- **비영속 (Transient)**: 영속성 컨텍스트와 전혀 관계가 없는 상태 (`new Entity()`)
+- **영속 (Managed)**: 영속성 컨텍스트에 저장되어 관리되는 상태 (`em.persist(entity)`)
+- **준영속 (Detached)**: 영속성 컨텍스트에 저장되었다가 분리된 상태 (`em.detach(entity)`, `em.clear()`)
+- **삭제 (Removed)**: 엔티티를 영속성 컨텍스트와 DB에서 삭제 (`em.remove(entity)`)
+
+---
+
+## 2. 영속성 컨텍스트가 제공하는 이점
+
+### 1) 1차 캐시 및 동일성(Identity) 보장
+한 트랜잭션 내에서 동일한 PK로 조회 시 DB를 다시 조회하지 않고 1차 캐시의 엔티티를 반환한다.
+
+```java
+Member m1 = em.find(Member.class, 1L); // DB 조회 후 1차 캐시 저장
+Member m2 = em.find(Member.class, 1L); // 1차 캐시에서 조회 (SQL 전송 안됨)
+
+System.out.println(m1 == m2); // true (동일성 보장)
+```
+
+### 2) 트랜잭션을 지원하는 쓰기 지연 (Transactional Write-Behind)
+`em.persist()` 호출 시 DB에 즉시 `INSERT SQL`을 보내지 않고, **쓰기 지연 SQL 저장소**에 모아두었다가 트랜잭션 커밋 시점(`transaction.commit()`)에 한 번에 `flush` 전송한다.
+
+### 3) 변경 감지 (Dirty Checking)
+JPA는 엔티티를 영속성 컨텍스트에 보관할 때 **스냅샷(Snapshot)**을 뜬다.
+트랜잭션 커밋 시점에 엔티티와 스냅샷을 비교하여 변경 사항이 있다면 자동으로 `UPDATE SQL`을 생성하여 실행하므로 `em.update()` 같은 별도 호출이 필요 없다.
+
+---
+
+## 3. 프록시(Proxy)와 지연 로딩 (Lazy Loading)
+
+- **지연 로딩 (`FetchType.LAZY`)**: 연관된 엔티티를 실제 사용하는 시점에 DB에서 조회한다. (실체 객체 대신 가짜 **Proxy 객체** 삽입)
+- **즉시 로딩 (`FetchType.EAGER`)**: 엔티티 조회 시 연관된 엔티티까지 조인(JOIN)하여 한 번에 조회한다.
+
+> **실무 권장사항**: 모든 연관관계는 **지연 로딩(`LAZY`)으로 설정**하고, N+1 문제가 발생하는 곳은 `Fetch Join`이나 `EntityGraph`를 통해 필요 시점에만 한 번에 조인 조회한다.
+
+## 참조
+
+- 김영한 님의 "자바 ORM 표준 JPA 프로그래밍 - 기본편"
+- https://docs.jboss.org/hibernate/orm/current/userguide/html_single/Hibernate_User_Guide.html
