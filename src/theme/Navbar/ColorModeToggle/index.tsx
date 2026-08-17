@@ -8,10 +8,10 @@ export default function NavbarColorModeToggle({
   className,
 }: Props): JSX.Element | null {
   const navbarStyle = useThemeConfig().navbar.style;
-  const disabled = useThemeConfig().colorMode.disableSwitch;
+  const {disableSwitch, respectPrefersColorScheme} = useThemeConfig().colorMode;
   const {colorMode, setColorMode} = useColorMode();
 
-  if (disabled) {
+  if (disableSwitch) {
     return null;
   }
 
@@ -23,6 +23,7 @@ export default function NavbarColorModeToggle({
       }
       value={colorMode}
       onChange={setColorMode}
+      respectPrefersColorScheme={respectPrefersColorScheme}
     />
   );
 }

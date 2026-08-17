@@ -13,6 +13,7 @@ const config: Config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
+  trailingSlash: false,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -41,6 +42,12 @@ const config: Config = {
           trackingID: G_TAG_ID,
           anonymizeIP: true,
         },
+        sitemap: {
+          changefreq: "weekly",
+          priority: 0.5,
+          ignorePatterns: ["/tags/**"],
+          filename: "sitemap.xml",
+        },
         docs: {
           routeBasePath: "/studies",
         },
@@ -49,6 +56,10 @@ const config: Config = {
           blogSidebarCount: 7,
           showReadingTime: true,
           archiveBasePath: "archive",
+          feedOptions: {
+            type: ["rss", "atom"],
+            xslt: true,
+          },
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -61,7 +72,15 @@ const config: Config = {
     metadata: [
       {
         name: "description",
-        content: "개발 및 다양한 주제에 대해 작성하는 블로그입니다.",
+        content: "개발 및 다양한 기술 주제를 다루는 brown의 블로그입니다.",
+      },
+      {
+        name: "keywords",
+        content: "개발, 프론트엔드, 백엔드, React, Next.js, TypeScript, Rust, Spring, AI",
+      },
+      {
+        name: "author",
+        content: "brown",
       },
     ],
     algolia: {
