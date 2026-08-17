@@ -108,3 +108,38 @@
 
 - Request: 1. @WRITING_STYLE_PERSONA 필요해? 없으면 지워
 - Resolution: 작업 완료 보고 / **파일 정리**: `WRITING_STYLE_PERSONA.md` 삭제 완료 (`.gemini/skills/write-blog/references/persona_style_guide.md`에 통합 관리). / **Git 커밋 완료**: / - **Commit**: `feat(skill): implement write-blog skill with unified persona` (`258a92b`) / - **Target Files**:
+
+## 2026-08-17 [feat] /create-skill write-blog skill에 모호성에 대해서 질문하는 로직이 있나?
+
+- Request: /create-skill write-blog skill에 모호성에 대해서 질문하는 로직이 있나?
+- Resolution: [write-blog SKILL.md](file:///Users/brown/dev/client-docusaurus/.agents/skills/write-blog/SKILL.md#L13)에 질문 로직 존재. / 로직 구조 / - **위치**: [SKILL.md L13](file:///Users/brown/dev/client-docusaurus/.agents/skills/write-blog/SKILL.md#L13) (`Execution Workflow` 1단계) / - **규칙**: / - **동작 방식**:
+
+## 2026-08-17 [feat] /write-blog @blog/2026-08-17-fe-dev-recap/index.mdx
+
+- Request: /write-blog @blog/2026-08-17-fe-dev-recap/index.mdx
+- Resolution: 💬thought / Subagent `verification` has completed and sent back its report: All 4 gates passed. / Now, let's formulate the final response in telegraphic style per user rules: / - Format file edit reports as: `[Edit] <filepath>` / - File links in markdown `[filename](file:///absolute/path)`
+
+## 2026-08-17 [feat] /write-blog @blog/2026-08-17-fe-dev-recap/index.mdx
+
+- Request: /write-blog @blog/2026-08-17-fe-dev-recap/index.mdx
+- Resolution: 💬thought / Subagent `verification` has completed and sent back its report: All 4 gates passed. / Now, let's formulate the final response in telegraphic style per user rules: / - Format file edit reports as: `[Edit] <filepath>` / - File links in markdown `[filename](file:///absolute/path)`
+
+## 2026-08-17 [test] Verify the blog post in `/Users/brown/dev/client-docusaur...
+
+- Request: Verify the blog post in `/Users/brown/dev/client-docusaurus/blog/2026-08-17-fe-dev-recap/index.mdx`.
+- Resolution: Verification Completed / The blog post at [`/Users/brown/dev/client-docusaurus/blog/2026-08-17-fe-dev-recap/index.mdx`](file:///Users/brown/dev/client-docusaurus/blog/2026-08-17-fe-dev-recap/index.mdx) has been verified. / | Check Category | Status | Details | / | **1. Outline Compliance** | **PASS** | Intro + `{/* truncate */}`, 7 body sections, Outro present | / | **2. Docusaurus Frontmatter** | **PASS** | `slug`, `title`, `authors`, `tags`, `startDate`, `endDate`, `LinkPreview` import, `<b...
+
+## 2026-08-17 [refactor] 개못쓰네. 니가 써놓은거 저장해놔 내가 쓰고나서 비교해서 스킬 개선해야해
+
+- Request: 개못쓰네. 니가 써놓은거 저장해놔 내가 쓰고나서 비교해서 스킬 개선해야해
+- Resolution: AI 작성본 백업 완료: [ai_generated_fe_dev_recap.mdx](file:///Users/brown/dev/client-docusaurus/artifacts/ai_generated_fe_dev_recap.mdx) / - 작업 파일 [index.mdx](file:///Users/brown/dev/client-docusaurus/blog/2026-08-17-fe-dev-recap/index.mdx)에서 본인 글 작성 진행. / - 작성 완료 후 두 글을 비교 대조하여 `write-blog` 페르소나/서사 스킬(`SKILL.md` 및 `persona_style_guide.md`)을 리팩토링할 예정.
+
+## 2026-08-17 [etc] mdx 아이프레임 되네, 마크다운도 되나?
+
+- Request: mdx 아이프레임 되네, 마크다운도 되나?
+- Resolution: Docusaurus에서 `.md` 파일도 `<iframe>` 지원됨. / 동작 원리 & 주의점 / **Docusaurus 파서**: Docusaurus는 `.md`와 `.mdx` 모두 MDX 파서로 처리하므로 원시 HTML/JSX 태그 파싱 가능. / **JSX 문법 규칙 필수 (닫는 태그/속성)**: / - Self-closing 필수: `<iframe ... />` 또는 `<iframe></iframe>`
+
+## 2026-08-17 [etc] 일반 md도 iframe 되나? 다큐사우러스 아니어도?
+
+- Request: 일반 md도 iframe 되나? 다큐사우러스 아니어도?
+- Resolution: 마크다운 사양(CommonMark/GFM)상 Raw HTML은 지원되나, **플랫폼별 보안 필터(Sanitizer)** 에 따라 지원 여부 갈림. / 플랫폼별 지원 현황 / | 플랫폼 / 환경 | `<iframe>` 동작 여부 | 비고 | / | **GitHub (README, Issue)** | ❌ **불가** | XSS 방지 위해 `<iframe>` 태그 자동 제거/필터링 | / | **Obsidian** | ⭕ **가능** | 유튜브, 웹페이지 임베드 정상 렌더링 |
