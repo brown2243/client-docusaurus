@@ -53,3 +53,13 @@
 
 - Request: 1번 진행
 - Resolution: [Build] `npm run build` 실행 중... 완료 시 즉시 결과 확인 및 다음 단계 안내 예정. / [Build] `npm run build` 재검증 중... 완료 시 즉시 결과 보고 예정. / [Build] `npm run build` 번들 생성 확인 중... 완료 시 즉시 보고 예정. / SEO & 검색 엔진 설정 적용 완료 보고 / 1. 변경 및 생성 파일
+
+## 2026-08-17 [ops] /commit
+
+- Request: /commit
+- Resolution: Git Commit 완료 / `f124a6e` **feat(seo): add robots.txt and configure sitemap metadata** / - [static/robots.txt](vscode://file/Users/brown/dev/client-docusaurus/static/robots.txt) 생성 / - [docusaurus.config.ts](vscode://file/Users/brown/dev/client-docusaurus/docusaurus.config.ts) sitemap, feed, metadata, trailingSlash 설정 / - [src/theme/Navbar/ColorModeToggle/index.tsx](vscode://file/Users/brown/dev/client-docusaurus/src/theme/Navbar/ColorModeToggle/index.tsx) Docusaurus v3 타입 호환 수정
+
+## 2026-08-17 [refactor] @[bgmInjector.js] 리팩토링
+
+- Request: @[bgmInjector.js] 리팩토링
+- Resolution: [Edit] [bgmInjector.js](vscode://file/Users/brown/dev/client-docusaurus/bgmInjector.js) 리팩토링 완료 / 1. 주요 개선 사항 / - **Web Audio API 현대화 및 안정화**: / - `AudioContext` autoplay 정책 호환 (`ctx.state === 'suspended'` 시 `ctx.resume()` 처리). / - 마스터 `GainNode` 추가 (기본 볼륨 0.5 설정 및 향후 페이드 제어 확장성 확보).
