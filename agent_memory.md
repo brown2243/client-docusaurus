@@ -103,3 +103,8 @@
 
 - Request: /create-skill @[blog] 아래 모든 글을 읽고 하나의 페르소나로 write-blog skill 에 통합해
 - Resolution: [Analysis] 43개 블로그 포스트 전수 분석 서브에이전트 실행 중. 완료 후 페르소나 스타일 가이드 및 스킬 정의에 통합 예정. / [Analysis] 서브에이전트 블로그 포스트 분석 진행 중... / [Analysis] 마크다운 어노테이션 및 어투 패턴 심층 분석 중... / [Analysis] 페르소나 분석 결과 종합 및 요약 중... / [Analysis] 블로그 전수 분석 리포트 생성 중...
+
+## 2026-08-17 [ops] @WRITING_STYLE_PERSONA 필요해? 없으면 지워
+
+- Request: 1. @WRITING_STYLE_PERSONA 필요해? 없으면 지워
+- Resolution: 작업 완료 보고 / **파일 정리**: `WRITING_STYLE_PERSONA.md` 삭제 완료 (`.gemini/skills/write-blog/references/persona_style_guide.md`에 통합 관리). / **Git 커밋 완료**: / - **Commit**: `feat(skill): implement write-blog skill with unified persona` (`258a92b`) / - **Target Files**:
