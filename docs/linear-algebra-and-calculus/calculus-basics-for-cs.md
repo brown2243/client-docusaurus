@@ -18,30 +18,35 @@ description: "극한과 연속, 미분법과 체인 룰(Chain Rule), 편미분�
 ## 1. 극한과 연속성 (Limits & Continuity)
 
 ### 1.1 극한의 정의
-
-함수 $f(x)$에서 $x$가 $a$에 접근할 때 $f(x)$가 목표값 $L$에 한없이 가까워지면 $\\lim_{x \\to a} f(x) = L$이라고 표기한다.
+함수 $f(x)$에서 $x$가 $a$에 접근할 때 $f(x)$가 목표값 $L$에 한없이 가까워지면 `lim_{x -> a} f(x) = L`이라고 표기한다.
 
 ### 1.2 로피탈의 정리 (L'Hôpital's Rule)
+알고리즘 복잡도 비교 시 부정형(Indeterminate Forms: `0/0` 또는 `∞/∞`)의 극한을 계산할 때 사용한다.
 
-알고리즘 복잡도 비교 시 부정형(Indeterminate Forms: $\\frac{0}{0}$ 또는 $\\frac{\\infty}{\\infty}$)의 극한을 계산할 때 사용한다.
-
-$$
-\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\lim_{x \\to a} \\frac{f'(x)}{g'(x)} \\quad (\\text{단, } g'(x) \
-eq 0)
-$$
-
-> **응답 예시**: $x \\to \\infty$ 일 때 $\\frac{\\ln x}{x}$의 극한:
-> $\\lim_{x \\to \\infty} \\frac{\\ln x}{x} = \\lim_{x \\to \\infty} \\frac{1/x}{1} = 0$. (다항식이 로그 함수보다 훨씬 빠르게 증가함을 증명)
+- `lim_{x -> a} [f(x) / g(x)] = lim_{x -> a} [f'(x) / g'(x)]` (단, `g'(x) != 0`)
 
 ---
 
-## 2. 미분법과 주요 연산 규칙 (Differentiation)
+## 2. 미분법과 연산 규칙 (Differentiation)
 
-미분(Derivative)이란 순간 변화율(Instantaneous Rate of Change)이자 접선의 기울기(Tangent Slope)다.
+### 2.1 체인 룰 (Chain Rule, 합성함수 미분법)
+딥러닝의 역전파(Backpropagation) 계산의 수학적 근간이다.
 
-$$f'(x) = \\frac{df}{dx} = \\lim_{h \\to 0} \\frac{f(x + h) - f(x)}{h}$$
+- `dz/dx = (dz/dy) * (dy/dx)`
 
-### 2.1 미분 기본 공식
+### 2.2 편미분 (Partial Derivative)
+다변수 함수 $f(x_1, x_2, \dots, x_n)$에서 하나의 변수만 변수로 취급하고 나머지 변수는 상수로 간주하여 미분하는 기법이다.
 
-- \*\*다항함수 (Power Ru
-  <truncated 4306 bytes>
+---
+
+## 3. 그래디언트(Gradient)와 경사하강법 (Gradient Descent)
+
+### 3.1 그래디언트 벡터
+모든 입력 변수에 대한 편미분 값들을 모아둔 벡터로, 함수값이 가장 가파르게 증가하는 방향을 가리킨다.
+
+- `∇f(x) = [∂f/∂x1, ∂f/∂x2, ..., ∂f/∂xn]^T`
+
+### 3.2 경사하강법 업데이트 공식
+손실 함수(Loss Function)를 최소화하기 위해 그래디언트의 반대 방향으로 파라미터를 점진적으로 갱신한다.
+
+- `θ_(t+1) = θ_(t) - η * ∇L(θ_(t))` (`η`: 학습률 / Learning Rate)

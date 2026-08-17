@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
 slug: /topics/web-performance-masterpiece
-title: 웹 성능 최적화 마스터피스: Critical Rendering Path부터 Core Web Vitals까지
-description: 브라우저 렌더링 파이프라인 CRP, Core Web Vitals(LCP, INP, CLS) 심층 분해 및 튜닝, 리소스 힌트(Resource Hints), HTTP/3 프로토콜과 코드 스플리팅 통합 가이드
+title: "웹 성능 최적화 마스터피스: Critical Rendering Path부터 Core Web Vitals까지"
+description: "브라우저 렌더링 파이프라인 CRP, Core Web Vitals(LCP, INP, CLS) 심층 분해 및 튜닝, 리소스 힌트(Resource Hints), HTTP/3 프로토콜과 코드 스플리팅 통합 가이드"
 ---
 
 # 웹 성능 최적화 마스터피스: Critical Rendering Path부터 Core Web Vitals까지
@@ -29,8 +29,36 @@ flowchart LR
     Layout --> Paint[Paint / Composite]
 ```
 
-### 1.1 렌더 블로킹(Render-Blocking) 리소스의 물리적 이유
+### 1.1 DOM 및 CSSOM 구성
+- **DOM (Document Object Model)**: 점진적(Incremental) 스트리밍 파싱 가능.
+- **CSSOM (CSS Object Model)**: **렌더 차단 리소스(Render-Blocking)**. 스타일 규칙이 덮어씌워질 수 있으므로 CSS 파싱이 완료될 때까지 Render Tree 구성이 차단됨.
 
-- **HTML & DOM**: 증분 파싱(Incremental Parsing)이 가능하다. 브라우저는 HTML 패킷이 도착하는 대로 파싱하여 DOM 노드를 부분적으로 생성한다.
-- **CSS & CSSOM**: **렌더 차단(Render-Blocking)** 리소스다. CSSOM이 완전히 구성되지 않은 상태에서 렌더링하면 스타일이 입혀지지 않은 가공되지 않은 텍스
-  <truncated 7639 bytes>
+### 1.2 Layout vs Paint vs Composite
+- **Layout (Reflow)**: 각 노드의 기하학적 위치와 크기 계산 (`width`, `height`, `margin`, `display`).
+- **Paint (Repaint)**: 픽셀을 채우는 작업 (`color`, `background-color`, `border-radius`).
+- **Composite**: GPU 레이어를 합성하여 화면에 표시 (`transform`, `opacity`). Layout과 Paint를 유발하지 않아 가장 빠름.
+
+---
+
+## 2. Core Web Vitals 핵심 3요소 튜닝
+
+| 지표 | 측정 대상 | 권장 기준 (Good) | 주요 최적화 기법 |
+|---|---|---|---|
+| **LCP (Largest Contentful Paint)** | 로딩 성능 (최대 콘텐츠 렌더 시간) | 2.5초 이하 | `<link rel="preload">`, CDN 엣지 캐싱, FetchPriority="high" |
+| **INP (Interaction to Next Paint)** | 반응성 (사용자 입력 후 다음 프레임까지 지연) | 200ms 이하 | `yieldToMain()`, Long Task 분할, Web Worker 오프로딩 |
+| **CLS (Cumulative Layout Shift)** | 시각적 안정성 (예상치 못한 레이아웃 흔들림) | 0.1 이하 | 이미지/동영상 `aspect-ratio` 지정, 폰트 `font-display: swap` |
+
+---
+
+## 3. 리소스 로딩 전략 (Resource Hints)
+
+```html
+<!-- 1. DNS 사전 조회 및 TCP/TLS 사전 연결 -->
+<link rel="preconnect" href="https://api.braurus.dev" crossorigin />
+
+<!-- 2. 중요 LCP 히어로 이미지 사전 로드 -->
+<link rel="preload" as="image" href="/img/hero.webp" fetchpriority="high" />
+
+<!-- 3. 미래 방문 가능성이 높은 페이지 리소스 프리페치 -->
+<link rel="prefetch" href="/studies/react" />
+```

@@ -38,3 +38,18 @@
 
 - Request: Update Output Control rule to default to extreme compression / telegram style word listing, switching to standard sentences only when explicitly requested.
 - Resolution: Refactored Rule 1 (Output Control) directives. Set default to telegram-style extreme compression (omitting particles/connectives) with conditional fallback to standard sentence structure upon explicit user request.
+
+## 2026-08-17 [feat] 이 블로그를 꽤 오랜 시간 방치했는데, 다시 좀 써볼까해.
+
+- Request: 이 블로그를 꽤 오랜 시간 방치했는데, 다시 좀 써볼까해.
+- Resolution: 블로그 재활성화를 위한 현황 분석 및 단계별 작업 리스트업입니다. / 1. SEO & 검색 엔진 최적화 (Google Search Console / Naver / Bing) / A. 긴급 적용 필요 항목 / - **`robots.txt` 파일 생성**: 현재 [static/](vscode://file/Users/brown/dev/client-docusaurus/static) 내 `robots.txt` 부재 -> 검색 크롤러의 `sitemap.xml` 인지 및 인덱싱 효율 저하. / - `static/robots.txt` 추가 필요:
+
+## 2026-08-17 [edit] 번 진행
+
+- Request: 1번 진행
+- Resolution: [Build] `npm run build` 실행 중... 완료 시 즉시 결과 확인 및 다음 단계 안내 예정.
+
+## 2026-08-17 [edit] 번 진행
+
+- Request: 1번 진행
+- Resolution: [Build] `npm run build` 실행 중... 완료 시 즉시 결과 확인 및 다음 단계 안내 예정. / [Build] `npm run build` 재검증 중... 완료 시 즉시 결과 보고 예정. / [Build] `npm run build` 번들 생성 확인 중... 완료 시 즉시 보고 예정. / SEO & 검색 엔진 설정 적용 완료 보고 / 1. 변경 및 생성 파일
