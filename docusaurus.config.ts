@@ -48,9 +48,9 @@ const config: Config = {
           ignorePatterns: ["/tags/**"],
           filename: "sitemap.xml",
         },
-        docs: {
-          routeBasePath: "/studies",
-        },
+        // docs: {
+        //   routeBasePath: "/studies",
+        // },
         blog: {
           routeBasePath: "/",
           blogSidebarCount: 7,
@@ -76,7 +76,8 @@ const config: Config = {
       },
       {
         name: "keywords",
-        content: "개발, 프론트엔드, 백엔드, React, Next.js, TypeScript, Rust, Spring, AI",
+        content:
+          "개발, 프론트엔드, 백엔드, React, Next.js, TypeScript, Rust, Spring, AI",
       },
       {
         name: "author",
@@ -99,7 +100,7 @@ const config: Config = {
         src: "img/favicon/android-chrome-192x192.png",
       },
       items: [
-        { to: "/studies", label: "Studies", position: "left" },
+        // { to: "/studies", label: "Studies", position: "left" },
         { to: "/archive", label: "Archive", position: "left" },
         {
           href: "https://github.com/brown2243",
@@ -163,7 +164,7 @@ const config: Config = {
     [
       "vercel-analytics",
       {
-        debug: true,
+        debug: process.env.NODE_ENV !== "production",
         mode: "auto",
       },
     ],

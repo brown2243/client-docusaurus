@@ -143,3 +143,8 @@
 
 - Request: 일반 md도 iframe 되나? 다큐사우러스 아니어도?
 - Resolution: 마크다운 사양(CommonMark/GFM)상 Raw HTML은 지원되나, **플랫폼별 보안 필터(Sanitizer)** 에 따라 지원 여부 갈림. / 플랫폼별 지원 현황 / | 플랫폼 / 환경 | `<iframe>` 동작 여부 | 비고 | / | **GitHub (README, Issue)** | ❌ **불가** | XSS 방지 위해 `<iframe>` 태그 자동 제거/필터링 | / | **Obsidian** | ⭕ **가능** | 유튜브, 웹페이지 임베드 정상 렌더링 |
+
+## 2026-08-23 [config] @[docusaurus.config.ts]
+
+- Request: @[docusaurus.config.ts]
+- Resolution: [docusaurus.config.ts](vscode://file/Users/brown/dev/client-docusaurus/docusaurus.config.ts) 보안 점검 결과입니다. / 1. 주요 항목별 점검 결과 / | 점검 항목 | 상태 | 설명 | / | **Algolia API Key 노출** (L89) | ⚠️ 주의 (확인 필요) | `apiKey: "9fa8995538ca578305f853bbcd7949a2"`<br>- 프론트엔드 노출용 **Search-Only API Key**(Search 권한만 부여된 키)인 경우 정상.<br>- **Admin / Write Key**가 아닌지 Algolia 대시보드 권한 확인 필요. | / | **Vercel Analytics 디버그 모드** (L167) | 💡 권장 수정 | `debug: true`<br>- 프로덕션 빌드 시 브라우저 콘솔에 이벤트/데이터 로깅 발생.<br>- `debug: process.env.NODE...
