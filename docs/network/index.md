@@ -1,5 +1,4 @@
 ---
-slug: /category/network
 sidebar_position: 1
 created_date: "2025-03-23"
 last_updated: "2025-03-23"

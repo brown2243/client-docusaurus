@@ -21,7 +21,11 @@ const config: Config = {
   projectName: "client-docusaurus", // Usually your repo name.
 
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -56,6 +60,7 @@ const config: Config = {
           blogSidebarCount: 7,
           showReadingTime: true,
           archiveBasePath: "archive",
+          onUntruncatedBlogPosts: "ignore",
           feedOptions: {
             type: ["rss", "atom"],
             xslt: true,
