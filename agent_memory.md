@@ -148,3 +148,23 @@
 
 - Request: @[docusaurus.config.ts]
 - Resolution: [docusaurus.config.ts](vscode://file/Users/brown/dev/client-docusaurus/docusaurus.config.ts) 보안 점검 결과입니다. / 1. 주요 항목별 점검 결과 / | 점검 항목 | 상태 | 설명 | / | **Algolia API Key 노출** (L89) | ⚠️ 주의 (확인 필요) | `apiKey: "9fa8995538ca578305f853bbcd7949a2"`<br>- 프론트엔드 노출용 **Search-Only API Key**(Search 권한만 부여된 키)인 경우 정상.<br>- **Admin / Write Key**가 아닌지 Algolia 대시보드 권한 확인 필요. | / | **Vercel Analytics 디버그 모드** (L167) | 💡 권장 수정 | `debug: true`<br>- 프로덕션 빌드 시 브라우저 콘솔에 이벤트/데이터 로깅 발생.<br>- `debug: process.env.NODE...
+
+## 2026-08-29 [fix] 빌드 에러에 대해서 아래 경고 원인 분석
+
+- Request: 빌드 에러에 대해서 아래 경고 원인 분석
+- Resolution: 원인 분석 / Docusaurus 프로덕션 빌드 시 유효하지 않은 내부 링크(Broken Link) 감지로 인한 빌드 실패. / | 항목 | 내용 | / | **발생 위치** | [docs/data-structure/queue.md:L51](file:///Users/brown/dev/client-docusaurus/docs/data-structure/queue.md#L51) | / | **잘못된 링크** | `/studies/data-structure/tree#heap-tree` |
+
+## 2026-08-29 [etc] 다큐 사우러스 v4가 있나?
+
+- Request: 다큐 사우러스 v4가 있나?
+- Resolution: **아직 미출시 (개발 진행 중)**. / 현황 / - **현재 최신 안정 버전**: `v3.10.x` (v3 시리즈 마지막 릴리스) / - **경고 배경**: v3.10은 v4 전환 준비 버전으로, v4에서 제거/변경될 옵션(`onBrokenMarkdownLinks` 등)에 대해 사전 deprecation 경고를 출력함. / - **v4 주요 변경 예정**:
+
+## 2026-08-29 [fix] 에러 및 경고 사항 수정
+
+- Request: 에러 및 경고 사항 수정
+- Resolution: 빌드 검증 진행 중입니다. 완료 후 결과를 안내하겠습니다. / 빌드가 실행 중입니다. 완료 시 결과를 안내하겠습니다.
+
+## 2026-08-29 [fix] 에러 및 경고 사항 수정
+
+- Request: 에러 및 경고 사항 수정
+- Resolution: 빌드 검증 진행 중입니다. 완료 후 결과를 안내하겠습니다. / 빌드가 실행 중입니다. 완료 시 결과를 안내하겠습니다. / 수정 완료 내역 / | 구분 | 파일 | 변경 내용 | / | **Broken Link 에러 해결** | [docs/data-structure/queue.md:L51](file:///Users/brown/dev/client-docusaurus/docs/data-structure/queue.md#L51) | `/studies/...` -> `./tree#heap-tree` 경로 수정 |
