@@ -168,3 +168,13 @@
 
 - Request: 에러 및 경고 사항 수정
 - Resolution: 빌드 검증 진행 중입니다. 완료 후 결과를 안내하겠습니다. / 빌드가 실행 중입니다. 완료 시 결과를 안내하겠습니다. / 수정 완료 내역 / | 구분 | 파일 | 변경 내용 | / | **Broken Link 에러 해결** | [docs/data-structure/queue.md:L51](file:///Users/brown/dev/client-docusaurus/docs/data-structure/queue.md#L51) | `/studies/...` -> `./tree#heap-tree` 경로 수정 |
+
+## 2026-08-30 [etc] 다큐사우러스 블로그 프론트매터 draft 동작하나?
+
+- Request: 다큐사우러스 블로그 프론트매터 draft 동작하나?
+- Resolution: **정상 동작함**. / 환경별 동작 방식 / | 환경 / 명령어 | `draft: true` 동작 | / | **개발 모드 (`npm start`)** | **노출됨** (작성 중 미리보기 지원, `[DRAFT]` 배지 표시) | / | **프로덕션 빌드 (`npm run build`)** | **완전 제외됨** (HTML 미생성, 목록/피드/사이트맵 제외) |
+
+## 2026-08-30 [edit] @[blog/2026-09-05-쓰레기통-수리하는-이야기/index.mdx]
+
+- Request: @[blog/2026-09-05-쓰레기통-수리하는-이야기/index.mdx]
+- Resolution: [blog/2026-09-05-쓰레기통-수리하는-이야기/index.mdx](file:///Users/brown/dev/client-docusaurus/blog/2026-09-05-쓰레기통-수리하는-이야기/index.mdx) 작성 완료. / 적용된 페르소나 및 서사 구조 / - **메타데이터**: `slug: repair-townew-trash-can`, `authors: [brown]`, 기간(`2026-08-16` ~ `2026-08-26`) / - **시그니처 표현**: `본인`, `(제발...)`, `~~취소선 혼잣말~~`, `따란🔥🔥🔥`, `한잔해🥂`, `(The Gotcha 😵)` / - **서사 흐름 (5단계)**:
