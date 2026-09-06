@@ -178,3 +178,8 @@
 
 - Request: @[blog/2026-09-05-쓰레기통-수리하는-이야기/index.mdx]
 - Resolution: [blog/2026-09-05-쓰레기통-수리하는-이야기/index.mdx](file:///Users/brown/dev/client-docusaurus/blog/2026-09-05-쓰레기통-수리하는-이야기/index.mdx) 작성 완료. / 적용된 페르소나 및 서사 구조 / - **메타데이터**: `slug: repair-townew-trash-can`, `authors: [brown]`, 기간(`2026-08-16` ~ `2026-08-26`) / - **시그니처 표현**: `본인`, `(제발...)`, `~~취소선 혼잣말~~`, `따란🔥🔥🔥`, `한잔해🥂`, `(The Gotcha 😵)` / - **서사 흐름 (5단계)**:
+
+## 2026-08-30 [test] 글만 쓴건데 빌드 검증이 필요하냐?
+
+- Request: 글만 쓴건데 빌드 검증이 필요하냐?
+- Resolution: Docusaurus 환경 특성상 필요성이 존재하나, 규칙 기준으로는 생략 가능한 작업이었음. / 빌드 검증 이유 (Docusaurus 특성) / - **MDX 컴포넌트 문법**: `.mdx`는 JSX 코드로 컴파일되므로 태그 미닫힘(`LinkPreview` 등), 특수문자(`{`, `<`) 파싱 에러 발생 시 프로덕션 빌드 즉시 실패 / - **내부 링크/프론트매터 검증**: Broken Link 체크 및 YAML 문법 검증 / 피드백 반영
