@@ -1,16 +1,72 @@
 ---
 name: write-blog
 description: >-
-  Use when drafting or writing a new Docusaurus blog post in author brown's persona. Triggers: /write-blog, "write blog", "블로그 글 작성", "블로그 글 써줘".
+  Draft or revise a Docusaurus blog post in brown's established Korean voice.
+  Use for new technical notes, troubleshooting stories, retrospectives, travel
+  guides, and firsthand reviews in this blog; not for generic marketing copy.
 ---
 
-# Write Blog (Brown Persona)
+# Write Blog — brown
 
-> References: [persona_style_guide.md](references/persona_style_guide.md) · [templates.md](references/templates.md)
+Write a useful record, not a polished persona performance. The post should retain
+the author's firsthand constraints, judgments, dead ends, and degree of certainty.
 
-## Execution Workflow
+Read [persona_style_guide.md](references/persona_style_guide.md) before drafting.
+Read [templates.md](references/templates.md) only after selecting a post mode.
 
-1. **Context Interview (1-Shot Gate)**: If prompt lacks context, ask 2~3 questions (Motivation -> Obstacle/Gotcha -> Outro/Learnings) via `ask_question`.
-2. **Persona Synthesis**: Apply voice rules (`~했다`, `~인 것 같다`, `~일 것이다`, `~더라`), identity (`본인`), reactions (`(제발...)`, `한잔해🥂`, `따란🔥🔥🔥`), and 5-stage narrative arc.
-3. **Format & Scaffold**: Insert Docusaurus frontmatter (`slug`, `authors: [brown]`, `tags`, `startDate`/`endDate`), `# Title` + `<br />`, and `{/* truncate */}` below intro.
-4. **Output Gate**: Write post to `blog/YYYY-MM-DD-<slug>/index.mdx` (or `index.md`) and verify checklist.
+## Establish material
+
+- Use user-provided notes, repository material, or verified sources. Do not turn
+  assumptions into firsthand experience.
+- When context is insufficient, request the minimum missing facts: why the work
+  began, what actually happened, and what conclusion or unresolved point remains.
+- Preserve useful failures. If a workaround was incomplete, say what it solved
+  and what it did not solve.
+- Separate observed behavior, a technical explanation, and personal inference.
+  Do not use certainty or quantified claims without evidence.
+
+## Pick the shape that fits the material
+
+- **Troubleshooting / making:** trigger → initial model → test and obstacle →
+  resolution or stopping point → practical takeaway. Do not fabricate a clean win.
+- **Technical learning note:** state scope → explain the mental model → connect
+  mechanisms and examples → record the remaining uncertainty or next topic.
+- **Retrospective / career story:** use chronology only where it changes the
+  conclusion; include decisions, conditions, and revised judgment rather than a
+  résumé or motivational slogan.
+- **Travel / firsthand guide:** lead with verdict and conditions; give preparation,
+  cost, friction, and exceptions readers can use. Avoid presenting one trip as a
+  universal fact.
+- **Review / casual note:** keep the personal trigger and the specific reason for
+  the reaction. A short post is valid when its observation is complete.
+
+## Voice and structure
+
+- Prefer clear Korean over inflated technical prose. Mix concise factual sentences
+  with candid spoken reflections. Use `본인` naturally, not mechanically.
+- Humour, ellipses, strike-throughs, and reactions should reveal a genuine moment;
+  they are seasoning, not mandatory style tokens.
+- Define technical terms at the level the intended reader needs. Show the causal
+  chain behind a conclusion instead of merely naming a tool or best practice.
+- Use headings to aid scanning. Use lists for procedures, comparisons, constraints,
+  and checklists; use prose for narrative and judgment.
+
+## Docusaurus delivery
+
+- Create `blog/YYYY-MM-DD-<slug>/index.mdx` by default. Use `index.md` when MDX
+  adds no value.
+- Include `slug`, `title`, `authors: [brown]`, relevant `tags`, `startDate`, and
+  `endDate` in frontmatter. Mark `draft: true` only when requested.
+- Put `# <title>`, then `<br />`, then a 1–2 paragraph introduction. Place
+  `{/* truncate */}` after that introduction for posts intended for listing pages.
+- Import components only when the post uses them. Use `LinkPreview` for a source
+  or product link when its preview adds reader value.
+
+## Final check
+
+- Title promises only what the post delivers.
+- Intro gives a real reason to continue.
+- Technical claims, dates, prices, and policy details have an attributable source
+  or an explicit firsthand/uncertain qualifier.
+- Steps, links, and code are sufficient to reproduce the useful part.
+- Ending states the result, limitation, or next action without forced encouragement.

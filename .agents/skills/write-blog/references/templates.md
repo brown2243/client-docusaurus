@@ -1,152 +1,53 @@
-# Blog Templates for Author `brown`
+# Post-shape prompts
 
-Docusaurus 블로그 포스트 생성을 위한 3대 황금 템플릿.
+Use these as outlines, not copyable prose. Keep only sections supported by the
+source material.
 
+## Troubleshooting or repair
+
+1. Situation and why the problem mattered
+2. First assumption and the test that challenged it
+3. Constraint, diagnosis, and attempts that did not work
+4. Resolution—or the reason work stopped—with verification conditions
+5. Reader takeaway: compatibility, cost, safety, or remaining limitation
+
+## Technical learning note
+
+1. Scope: question being answered and why it matters
+2. Model: terms and relationships required to understand it
+3. Walkthrough: representative example or lifecycle
+4. Trade-offs, failure cases, or distinction from a nearby concept
+5. Concise summary and unresolved topic
+
+## Retrospective or career post
+
+1. Timeframe and current position
+2. Events that changed a decision or expectation
+3. What worked, what did not, and conditions that shaped both
+4. Updated view—not a mandatory lesson for everyone
+5. Next intention if one genuinely exists
+
+## Travel or firsthand guide
+
+1. Destination, dates, group, and the reader this is useful for
+2. Overall verdict with important caveats
+3. Preparation: payment, transport, connectivity, booking, safety, and costs as
+   relevant
+4. Actual itinerary or incidents that qualify the advice
+5. What to do differently next time
+
+## Lightweight frontmatter
+
+```yaml
 ---
-
-## 1. 개발/트러블슈팅 템플릿 (Dev Troubleshooting)
-
-```mdx
----
-slug: my-feature-story
-title: 기능명 이슈 해결하는 이야기
+slug: semantic-kebab-slug
+title: Specific Korean title
 authors: [brown]
-tags: [Tech1, Tech2, 트러블슈팅, 개발]
-
+tags: [relevant, tags]
 startDate: "YYYY-MM-DD"
 endDate: "YYYY-MM-DD"
 ---
-
-import LinkPreview from "@site/src/components/LinkPreview";
-
-# 기능명 이슈 해결하는 이야기
-
-<br />
-
-최근 업무/사이드 프로젝트를 진행하다가 ~를 다룰 일이 있었다.
-듣다보니 나도 가능한지 궁금해져서 진행하게 되는데...
-
-{/* truncate */}
-
-## 1. 발단 및 초기 접근
-
-처음에 든 생각은 **~하면 되겠네** 였다.
-솔직히 라이브러리에서 기본 제공하는 기능을 쓰면 금방 끝날 줄 알았다.
-
-<LinkPreview url="https://example.com" />
-
-## 2. 그런데 문제가 발생했다!
-
-**그런데 자세히 보니 ~가 되지 않는 것이 아닌가!** 😵
-
-이것저것 테스트해보니 다음과 같은 원인이었다:
-1. **문제점 1**: 상세 설명
-2. **문제점 2**: 상세 설명
-
-~~처음에는 ~로 우회하려 했는데 역시나 안 됨 ㅎㅎ...~~
-
-## 3. 해결책 및 적용
-
-결국 라이브러리 내부 코드를 뜯어보고 아래와 같이 커스텀 로직을 작성했다.
-
-```typescript
-// 해결 코드 및 주석
-function solveIssue() {
-  // 로직 설명
-}
 ```
 
-따란🔥🔥🔥
-
-이렇게 적용해주니 원하던 대로 깔끔하게 동작했다.
-
-## Outro
-
-나름 재미있게 삽질해서 기록으로 남긴다.
-비슷한 문제를 겪는 분들에게 도움이 되길 바라며, 오류가 있다면 언제든 피드백 부탁드립니다!
-```
-
----
-
-## 2. 기술 심층 분석 템플릿 (Tech Deep-Dive)
-
-```mdx
----
-slug: tech-deep-dive
-title: 기술/개념 완벽 정리
-authors: [brown]
-tags: [자바, 스프링, 아키텍처]
-
-startDate: "YYYY-MM-DD"
-endDate: "YYYY-MM-DD"
----
-
-# 기술/개념 완벽 정리
-
-<br />
-
-개발자로 살아가면서 **[주제]**에 대한 이해는 기본으로 깔고 가야 한다는 생각이 들었다.
-간단정리 및 핵심 개념을 포스팅해본다.
-
-{/* truncate */}
-
-## 1. 왜 필요한가?
-
-내가 생각하는 **[주제]**의 핵심은 ~이다.
-이는 시스템의 결합도를 낮추고 유지보수성을 극대화하기 위한 선택일 것이다.
-
-:::note
-**참고:** 공식 문서에서는 ~라고 정의하고 있다.
-:::
-
-## 2. 동작 원리 및 아키텍처
-
-| 구분 | 역할 | 특징 |
-| :--- | :--- | :--- |
-| **A 컴포넌트** | 요청 처리 | 빠르고 가벼움 |
-| **B 컴포넌트** | 비즈니스 로직 | 트랜잭션 관리 |
-
-## 3. 개인적인 생각 및 결론
-
-직접 써보면서 느낀 점은 확실히 러닝커브는 있지만 그만한 가치가 있다는 것이다.
-앞으로 프로젝트에 적극 활용해볼 생각이다.
-```
-
----
-
-## 3. 회고/후기 템플릿 (Retrospective / Review)
-
-```mdx
----
-slug: monthly-or-exam-review
-title: N월 회고 / 자격증 시험 후기
-authors: [brown]
-tags: [회고, 후기, 일상]
-
-startDate: "YYYY-MM-DD"
-endDate: "YYYY-MM-DD"
----
-
-# N월 회고 / 자격증 시험 후기
-
-<br />
-
-시간이 참 빠르다. 벌써 N월이 지나갔다.
-그동안 있었던 일들과 느낀 점들을 담담하게 정리해보겠다.
-
-{/* truncate */}
-
-## 1. 이번 기간 동안 한 일
-- **공부/프로젝트**: 상세 내용
-- **일상/운동**: MMA 수련 등
-
-## 2. 잘한 점과 아쉬운 점
-- **잘한 점**: 꾸준하게 루틴을 지킨 것 같다.
-- **아쉬운 점**: 이번 달은 열심히 살아서 딱히 없는 것 같다 ㅎㅎ...
-
-## 3. 다음 목표
-- [ ] 목표 1
-- [ ] 목표 2
-
-올려보자 나의 생산성... 제발 합격 가즈아!!!
-```
+For MDX posts, add `# <title>`, `<br />`, a short introduction, then
+`{/* truncate */}`. Do not import a component before there is a real use for it.

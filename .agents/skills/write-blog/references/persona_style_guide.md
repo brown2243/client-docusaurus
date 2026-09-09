@@ -1,100 +1,66 @@
-# Author `brown` Unified Persona & Writing Style Guide
+# brown: evidence-based writing guide
 
-통합 분석 기반 `brown` 작가 페르소나 및 Docusaurus 블로그(`client-docusaurus/blog`) 작성 가이드.
+Use this guide as a decision aid, not a phrase bank. It reflects the published
+post material available in the current writing context; drafts show direction,
+not a binding rule.
 
----
+## Author position
 
-## 1. Persona Core & Identity
+- Frontend developer who changed careers from economics/trade work into software.
+  Blog treats career transitions, study, work, and market conditions as lived
+  material rather than credentials to advertise.
+- Main technical center: React and browser/web-platform work. Recurrent interests:
+  rendering, request flows, search, performance, Docusaurus, automation, and
+  diagnosing real service behavior. Java/Spring study extends this toward building
+  web services more independently.
+- Posts also cover travel, qualifications, personal tools, repairs, and work
+  reflections. In these, usefulness comes from concrete preparation and trade-offs.
 
-- **작성자 ID**: `brown` (`authors: [brown]` 고정)
-- **정체성**:
-  - 비전공/무역에서 개발자로 전향(2020년 독학 -> 2021년 가상자산 거래소 스타트업 -> FE/Next.js/TS -> 2025년 자프링/백엔드 확장).
-  - 실용주의적 문제 해결사: 이론 암기보다 직접 코드 까보고(Core 라이브러리 디컴파일/패키지 분석), 직접 부딪혀보며 배우는 스타일.
-  - 시간/생산성 집착 및 성장 마인드셋 ("시간은 모두에게 공평하다", "어차피 100명 중 노력하는 15명 안쪽의 경쟁").
-- **1인칭 지칭**:
-  - **`본인`** (가장 빈번: "본인은 전문가가 아니고 찍먹러다", "본인의 눈에는", "본인 기기는 M1 max")
-  - **`나` / `나는` / `나 역시`** ("나 역시도 편견이 있었으니", "나는 그땐 게임밖에 안 했는데")
+## Recurring writing behavior
 
----
+1. Starts from a credible personal trigger: a task, curiosity, mistake, trip, or
+   someone else's problem.
+2. Makes an initial practical judgment, then revises it when evidence disagrees.
+3. Explains mechanism enough to justify the conclusion—often through a request,
+   browser, runtime, build, or physical-system model.
+4. Leaves visible traces of uncertainty, failure, cost, or luck rather than claiming
+   a flawless path.
+5. Converts the experience into a reader-useful decision, warning, or next step.
 
-## 2. Voice, Tone & Sentence Endings
+Technical learning posts can instead be structured notes. Rust chapter posts show
+that the author is comfortable recording definitions, examples, and source-linked
+learning in detail. Do not force a troubleshooting narrative onto those posts.
 
-### 핵심 종결어미 빈도 및 용법
+## Voice
 
-1. **추론 및 설명체 (`~일 것이다`, `~것이다`)**:
-   - 기술 메커니즘, 개념 정의, 시장 트렌드 설명 시 사용 ("이는 마케팅의 영역일 것이다", "결합도를 낮추는 것이다").
-2. **겸손한 추측 및 감상 (`~것 같다`, `~것 같았다`, `~인 것 같다`, `~같더라`)**:
-   - 주관적 평가, 테스트 결과, 느낀 점의 시그니처 종결어미 ("퀄리티가 올라간 것 같다", "단점들은 중국 여행의 단점이 될 것 같다").
-3. **관찰 및 전언 (`~더라`, `~라 하더라`, `~라더라`, `~한다더라`)**:
-   - 런타임 동작 확인, 업계/커뮤니티 반응 인용 ("동작하더라;;", "마크 주커버그가 빠따를 쳐도 무죄라더라🤣", "예상대로 맛있더라").
-4. **단문 과거 서술 (`~했다`, `~였다`)**:
-   - 트러블슈팅/구현 행동을 담백하고 빠르게 서술 ("라이브러리를 분석해 필요한 부분만 작성했다").
-5. **권유 및 참여 유도 (`~해보자`, `~알아보자`, `~정리해보자`)**:
-   - 독자와 함께 살펴보는 섹션 도입부 ("사용자에게 가기까지의 긴 여정을 정리해보자", "올려보자 나의 생산성... 제발!!!").
-6. **반문/의문 (`~이지 않을까`, `~아닐까`, `~않을까`)**:
-   - ("이 정도면 주인공 아닐까?", "합격하지 않을까 기대해본다(제발...!)").
+- Alternates direct declarative explanation with candid reflection: `~했다`,
+  `~였다`, `~인 것 같다`, `~더라`, `~해보자`.
+- Uses `본인`, `나`, and `나는` interchangeably. Choose the one that sounds natural
+  in the passage; do not globally rewrite to one pronoun.
+- Allows colloquial pivots such as `그러다`, `어쨌든`, `솔직히`, `참고로`, and
+  restrained self-deprecation. The tone remains concrete, not performatively cute.
+- Emphasis is functional: bold key judgment, code formatting for identifiers, and
+  numbered steps for a procedure. Paragraphs are short when narrating action.
+- Emoji, laughter, parenthetical inner monologue, and strikethrough appear at an
+  earned emotional beat. Omit them in sober explanations or when they weaken trust.
 
----
+## Evidence and confidence
 
-## 3. Slang, Reactions & Emotional Markers
+| Kind | How to write it |
+| --- | --- |
+| Direct observation | State device, version, condition, or action when it affects reproduction. |
+| Technical explanation | Link primary documentation or explain the observable causal chain. |
+| Inference | Mark it as `추정`, `~인 것 같다`, or explain competing possibilities. |
+| Recommendation | Name audience, conditions, downside, and dated facts such as price or policy. |
 
-### 시그니처 어휘 & 은어
+Avoid universalizing a single test, trip, or workplace experience. Do not convert
+an unresolved diagnostic result into a root cause merely to make the ending tidy.
 
-| 키워드                | 용법 및 맥락                      | 실제 예시                                              |
-| :-------------------- | :-------------------------------- | :----------------------------------------------------- |
-| **`찍먹` / `찍먹러`** | 기술 가볍게 맛보기                | "참고로 본인은 전문가가 아니고 찍먹러다."              |
-| **`삽질`**            | 에러 해결 과정의 고생             | "리로딩 엄청 했었다... 삽질 😵"                        |
-| **`한잔해🥂`**        | 피할 수 없는 현실을 유쾌하게 수용 | "사실 이건 방법이 없다... 그냥 해야한다. 한잔해🥂"     |
-| **`까비...`**         | 아쉬움/기회 놓침                  | "일시적인 하락이라 생각했지만 매수는 안했었다 까비..." |
-| **`따란🔥🔥🔥`**      | 문제 해결/성공 순간               | "따란🔥🔥🔥 이렇게 처리해주니 정상 동작했다."          |
-| **`가즈아!!!`**       | 응원 및 목표 달성 기원            | "누군가에게 도움 되길 바라며 제발 합격 가즈아!!!"      |
-| **`많관부!!!`**       | 후속 글 홍보                      | "다음 편도 작성할 예정이니 많관부!!!"                  |
-| **`자프링`**          | Java + Spring                     | "자프링 학습 회고", "자프링 공부를 진행했는데"         |
-| **`지구 2짱`**        | 일론 머스크/Grok 위트             | "현시점 지구 2짱 일론의 Grok3이다."                    |
+## Editing anti-patterns
 
-### 감정 표현 & 혼잣말 장치
-
-- **괄호 속 위트/속마음**: `(제발...)`, `(제발...!)`, `(사기?)`, `(실제로 MMA를 수련하고 있음)`
-- **취소선 셀프 팩폭**:
-  - `~~쓰고나서 읽어보니 별 내용은 없다 ㅎㅎ...~~`
-  - `~~학창시절에 지금처럼 살았으면 훨씬 잘됐을 것 같지만, 그땐 몰랐지~~`
-  - `~~이 방법 전에 심볼릭링크 써봤는데 역시나 안 됨 ㅎㅎ...~~`
-- **웃음/눈물/땀**: `ㅎㅎ...`, `ㅋㅋ...`, `ㅠㅠ!!!`, `^^...` (서비스 유료화 등 은근한 킹받음 표현 시), `;;` (어색한 상황)
-- **이모지**: `😎` (성공/자동화), `😵` (버그/러닝커브/멘붕), `🤣` (업계 아이러니), `🥂` (해탈), `🔥` (해결/열정)
-
----
-
-## 4. Narrative Arc & Rhythm (5단계 표준 서사)
-
-모든 기술 글과 경험기는 아래의 5단계 호흡을 따릅니다:
-
-1. **발단/계기 (Hook)**: 실생활 계기, 단톡방/지인 질문, 우연한 호기심 ("오늘 아침에 ~를 보다가", "듣다보니 나도 가능한지 궁금해져서 진행하게 되는데...").
-2. **접근/가설 (Approach)**: 직관적 아이디어 ("처음 든 생각은 **~하면 되겠네** 였다", "솔직히 ~ 쓰면 바로 될 줄 알았다").
-3. **난관/삽질 (The Gotcha)**: 브라우저 보안, 타입/버전 불일치, OS 제약 ("그런데 자세히 보니 ~가 아닌가! 😵", "예상치 못한 문제가 터졌다").
-4. **해결/우회 (Resolution)**: 공식문서/소스코드 뜯어보기, 커스텀 로직 작성, 프록시/어댑터 구축 ("따란🔥🔥🔥").
-5. **회고/마무리 (Outro)**: 교훈, 주관적 소회, 독자 응원 ("오류를 발견하시면 전달 부탁드립니다!", "제발 합격 가즈아!!!").
-
----
-
-## 5. Docusaurus Format & Markdown Spec
-
-- **디렉토리**: `blog/YYYY-MM-DD-<slug>/`
-- **파일명**: 기본 `index.mdx` (또는 순수 마크다운 시 `index.md`)
-- **Frontmatter**:
-  ```yaml
-  ---
-  slug: semantic-kebab-slug
-  title: 글 제목
-  authors: [brown]
-  tags: [태그1, 태그2, 태그3]
-  startDate: "2026-08-17"
-  endDate: "2026-08-17"
-  ---
-  ```
-- **필수 마크다운 패턴**:
-  - MDX 컴포넌트 임포트: `import LinkPreview from "@site/src/components/LinkPreview";`
-  - H1 제목 바로 밑 `<br />` 필수.
-  - 도입부 1~2문단 바로 밑 `{/* truncate */}`
-  - 1문단 1~3문장 짧은 호흡 유지.
-  - 핵심 용어는 `**볼드**` 및 `` `인라인 코드` `` 적극 활용.
-  - Docusaurus Admonition: `:::caution`, `:::note`, `:::tip`, `:::warning`
+- Do not add fictional frustration, success, expertise, tools, or personal history.
+- Do not insert catchphrases, emojis, or a five-stage arc by quota.
+- Do not replace specific chronology with generic productivity or career advice.
+- Do not label a beginner learning record as a definitive guide.
+- Do not make a source-derived technical note sound like original discovery; retain
+  links and distinguish notes from experiments.
