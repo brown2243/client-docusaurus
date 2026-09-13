@@ -77,7 +77,7 @@ const config: Config = {
     metadata: [
       {
         name: "description",
-        content: "개발 및 다양한 기술 주제를 다루는 brown의 블로그입니다.",
+        content: "개발 및 일상을 공유하는 brown의 블로그입니다.",
       },
       {
         name: "keywords",

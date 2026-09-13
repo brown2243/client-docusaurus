@@ -37,7 +37,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title={``}
-      description={`Welcome to ${siteConfig.title}, braurus.dev, a blog for software development and tech trends.`}
+      description={`Welcome to ${siteConfig.title}, braurus.dev, a blog for software development, daily life, and tech trends.`}
     >
       <HomepageHeader />
       <main>
