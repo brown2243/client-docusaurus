@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 import { GTM_ID, G_TAG_ID, PROD_URL } from "./constant";
 
 const config: Config = {
-  title: `Braurus`,
+  title: `브라운의 끄적끄적`,
   tagline: "",
   favicon: "favicon.ico",
 
